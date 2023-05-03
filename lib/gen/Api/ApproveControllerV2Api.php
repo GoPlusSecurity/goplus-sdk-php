@@ -89,11 +89,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1
      *
-     * AuthorizationAuthorizedAddressListNFT1155
+     * Check risk of all erc1155 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,11 +108,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1WithHttpInfo
      *
-     * AuthorizationAuthorizedAddressListNFT1155
+     * Check risk of all erc1155 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -185,11 +185,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1Async
      *
-     * AuthorizationAuthorizedAddressListNFT1155
+     * Check risk of all erc1155 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -207,11 +207,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1AsyncWithHttpInfo
      *
-     * AuthorizationAuthorizedAddressListNFT1155
+     * Check risk of all erc1155 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -263,7 +263,7 @@ class ApproveControllerV2Api
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -375,11 +375,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1
      *
-     * AuthorizationAuthorizedAddressListNFT721
+     * Check risk of all erc721 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -394,11 +394,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1WithHttpInfo
      *
-     * AuthorizationAuthorizedAddressListNFT721
+     * Check risk of all erc721 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -471,11 +471,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1Async
      *
-     * AuthorizationAuthorizedAddressListNFT721
+     * Check risk of all erc721 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -493,11 +493,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1AsyncWithHttpInfo
      *
-     * AuthorizationAuthorizedAddressListNFT721
+     * Check risk of all erc721 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -549,7 +549,7 @@ class ApproveControllerV2Api
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -661,11 +661,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1
      *
-     * AuthorizationERC20AuthorizedAddressList
+     * Check risk of all erc20 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -680,11 +680,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1WithHttpInfo
      *
-     * AuthorizationERC20AuthorizedAddressList
+     * Check risk of all erc20 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -757,11 +757,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1Async
      *
-     * AuthorizationERC20AuthorizedAddressList
+     * Check risk of all erc20 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -779,11 +779,11 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1AsyncWithHttpInfo
      *
-     * AuthorizationERC20AuthorizedAddressList
+     * Check risk of all erc20 approvals under one EOA.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -835,7 +835,7 @@ class ApproveControllerV2Api
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

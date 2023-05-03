@@ -91,7 +91,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -109,7 +109,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -185,7 +185,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -257,7 +257,7 @@ class TokenControllerV1Api
     /**
      * Create request for operation 'getChainsListUsingGET'
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -354,7 +354,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -373,7 +373,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -450,7 +450,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -472,7 +472,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -524,7 +524,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
