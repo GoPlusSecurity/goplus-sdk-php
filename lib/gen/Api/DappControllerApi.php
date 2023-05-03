@@ -89,9 +89,9 @@ class DappControllerApi
     /**
      * Operation getDappInfoUsingGET
      *
-     * DappInformationByUrl
+     * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -107,9 +107,9 @@ class DappControllerApi
     /**
      * Operation getDappInfoUsingGETWithHttpInfo
      *
-     * DappInformationByUrl
+     * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -183,9 +183,9 @@ class DappControllerApi
     /**
      * Operation getDappInfoUsingGETAsync
      *
-     * DappInformationByUrl
+     * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \InvalidArgumentException
@@ -204,9 +204,9 @@ class DappControllerApi
     /**
      * Operation getDappInfoUsingGETAsyncWithHttpInfo
      *
-     * DappInformationByUrl
+     * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \InvalidArgumentException
@@ -257,7 +257,7 @@ class DappControllerApi
     /**
      * Create request for operation 'getDappInfoUsingGET'
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW1zQ9cCv8WrbB1) (optional)
+     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \InvalidArgumentException
