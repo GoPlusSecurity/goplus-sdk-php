@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849
+ * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849LpHolders
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 Class Doc Comment
+ * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849LpHolders Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 implements ModelInterface, ArrayAccess
+class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849LpHolders implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«TaTokenSecurityResponse»-730b76cb-8887-4c8b-bfd0-494baf55b849';
+    protected static $swaggerModelName = 'ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849_lp_holders';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,13 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-'message' => 'string',
-'result' => 'map[string,\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Result]'    ];
+        'is_locked' => 'int',
+'is_contract' => 'int',
+'address' => 'string',
+'balance' => 'string',
+'locked_detail' => 'string[]',
+'tag' => 'string',
+'percent' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +70,13 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-'message' => null,
-'result' => null    ];
+        'is_locked' => 'int32',
+'is_contract' => 'int32',
+'address' => null,
+'balance' => null,
+'locked_detail' => null,
+'tag' => null,
+'percent' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +105,13 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message',
-'result' => 'result'    ];
+        'is_locked' => 'is_locked',
+'is_contract' => 'is_contract',
+'address' => 'address',
+'balance' => 'balance',
+'locked_detail' => 'locked_detail',
+'tag' => 'tag',
+'percent' => 'percent'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +119,13 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage',
-'result' => 'setResult'    ];
+        'is_locked' => 'setIsLocked',
+'is_contract' => 'setIsContract',
+'address' => 'setAddress',
+'balance' => 'setBalance',
+'locked_detail' => 'setLockedDetail',
+'tag' => 'setTag',
+'percent' => 'setPercent'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +133,13 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage',
-'result' => 'getResult'    ];
+        'is_locked' => 'getIsLocked',
+'is_contract' => 'getIsContract',
+'address' => 'getAddress',
+'balance' => 'getBalance',
+'locked_detail' => 'getLockedDetail',
+'tag' => 'getTag',
+'percent' => 'getPercent'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +199,13 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['is_locked'] = isset($data['is_locked']) ? $data['is_locked'] : null;
+        $this->container['is_contract'] = isset($data['is_contract']) ? $data['is_contract'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
+        $this->container['locked_detail'] = isset($data['locked_detail']) ? $data['locked_detail'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['percent'] = isset($data['percent']) ? $data['percent'] : null;
     }
 
     /**
@@ -209,73 +233,169 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
 
 
     /**
-     * Gets code
+     * Gets is_locked
      *
      * @return int
      */
-    public function getCode()
+    public function getIsLocked()
     {
-        return $this->container['code'];
+        return $this->container['is_locked'];
     }
 
     /**
-     * Sets code
+     * Sets is_locked
      *
-     * @param int $code Code 1：Success
+     * @param int $is_locked It describes whether the tokens owned by the holder are locked \"1\" means true; \"0\" means false;  (3) “tag” describes the address's public tag. Example:Burn (Notice:About \"locked\": We only support the token lock addresses or black hole addresses that we have included. )
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setIsLocked($is_locked)
     {
-        $this->container['code'] = $code;
+        $this->container['is_locked'] = $is_locked;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets is_contract
+     *
+     * @return int
+     */
+    public function getIsContract()
+    {
+        return $this->container['is_contract'];
+    }
+
+    /**
+     * Sets is_contract
+     *
+     * @param int $is_contract It describes whether the holder is a contract \"1\" means true; \"0\" means false.
+     *
+     * @return $this
+     */
+    public function setIsContract($is_contract)
+    {
+        $this->container['is_contract'] = $is_contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
      *
      * @return string
      */
-    public function getMessage()
+    public function getAddress()
     {
-        return $this->container['message'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets message
+     * Sets address
      *
-     * @param string $message Response message
+     * @param string $address It describes the holder address;
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setAddress($address)
     {
-        $this->container['message'] = $message;
+        $this->container['address'] = $address;
 
         return $this;
     }
 
     /**
-     * Gets result
+     * Gets balance
      *
-     * @return map[string,\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Result]
+     * @return string
      */
-    public function getResult()
+    public function getBalance()
     {
-        return $this->container['result'];
+        return $this->container['balance'];
     }
 
     /**
-     * Sets result
+     * Sets balance
      *
-     * @param map[string,\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Result] $result Response result
+     * @param string $balance It describes the balance of the holder.
      *
      * @return $this
      */
-    public function setResult($result)
+    public function setBalance($balance)
     {
-        $this->container['result'] = $result;
+        $this->container['balance'] = $balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked_detail
+     *
+     * @return string[]
+     */
+    public function getLockedDetail()
+    {
+        return $this->container['locked_detail'];
+    }
+
+    /**
+     * Sets locked_detail
+     *
+     * @param string[] $locked_detail It is an array, decribes lock position info of this holder, only shows when \"locked\": 1. This Array may contain multiple objects for multiple locking info. In every objetc, \"amount\" describes the number of token locked, \"end_time\" describes when the token will be unlocked, \"opt_time\" describes when the token was locked.(Notice:When \"locked\":0, or lock address is a black hole address,  \"locked_detail\" will be no return.)
+     *
+     * @return $this
+     */
+    public function setLockedDetail($locked_detail)
+    {
+        $this->container['locked_detail'] = $locked_detail;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag
+     *
+     * @return string
+     */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+     * Sets tag
+     *
+     * @param string $tag It describes the address's public tag. Example:Burn Address/Deployer;
+     *
+     * @return $this
+     */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent
+     *
+     * @return string
+     */
+    public function getPercent()
+    {
+        return $this->container['percent'];
+    }
+
+    /**
+     * Sets percent
+     *
+     * @param string $percent It  describes the percentage of tokens held by this holder (Notice:About \"percent\": 1 means 100% here.)
+     *
+     * @return $this
+     */
+    public function setPercent($percent)
+    {
+        $this->container['percent'] = $percent;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849
+ * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Dex
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 Class Doc Comment
+ * ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Dex Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 implements ModelInterface, ArrayAccess
+class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Dex implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«TaTokenSecurityResponse»-730b76cb-8887-4c8b-bfd0-494baf55b849';
+    protected static $swaggerModelName = 'ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849_dex';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,9 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-'message' => 'string',
-'result' => 'map[string,\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Result]'    ];
+        'name' => 'string',
+'liquidity' => 'string',
+'pair' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +66,9 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-'message' => null,
-'result' => null    ];
+        'name' => null,
+'liquidity' => null,
+'pair' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +97,9 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message',
-'result' => 'result'    ];
+        'name' => 'name',
+'liquidity' => 'liquidity',
+'pair' => 'pair'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +107,9 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage',
-'result' => 'setResult'    ];
+        'name' => 'setName',
+'liquidity' => 'setLiquidity',
+'pair' => 'setPair'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +117,9 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage',
-'result' => 'getResult'    ];
+        'name' => 'getName',
+'liquidity' => 'getLiquidity',
+'pair' => 'getPair'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +179,9 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['liquidity'] = isset($data['liquidity']) ? $data['liquidity'] : null;
+        $this->container['pair'] = isset($data['pair']) ? $data['pair'] : null;
     }
 
     /**
@@ -209,73 +209,73 @@ class ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849 imp
 
 
     /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code Code 1：Success
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
+     * Gets name
      *
      * @return string
      */
-    public function getMessage()
+    public function getName()
     {
-        return $this->container['message'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets message
+     * Sets name
      *
-     * @param string $message Response message
+     * @param string $name name
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setName($name)
     {
-        $this->container['message'] = $message;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets result
+     * Gets liquidity
      *
-     * @return map[string,\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Result]
+     * @return string
      */
-    public function getResult()
+    public function getLiquidity()
     {
-        return $this->container['result'];
+        return $this->container['liquidity'];
     }
 
     /**
-     * Sets result
+     * Sets liquidity
      *
-     * @param map[string,\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bbfd0494baf55b849Result] $result Response result
+     * @param string $liquidity Liquidity is converted to USDT denomination.
      *
      * @return $this
      */
-    public function setResult($result)
+    public function setLiquidity($liquidity)
     {
-        $this->container['result'] = $result;
+        $this->container['liquidity'] = $liquidity;
+
+        return $this;
+    }
+
+    /**
+     * Gets pair
+     *
+     * @return string
+     */
+    public function getPair()
+    {
+        return $this->container['pair'];
+    }
+
+    /**
+     * Sets pair
+     *
+     * @param string $pair It only counts when the token has a marketing pair with mainstream
+     *
+     * @return $this
+     */
+    public function setPair($pair)
+    {
+        $this->container['pair'] = $pair;
 
         return $this;
     }
