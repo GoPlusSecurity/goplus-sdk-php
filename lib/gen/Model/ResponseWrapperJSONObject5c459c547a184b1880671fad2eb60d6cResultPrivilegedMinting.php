@@ -1,6 +1,6 @@
 <?php
 /**
- * ParseAbiDataRequest
+ * ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6cResultPrivilegedMinting
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ParseAbiDataRequest Class Doc Comment
+ * ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6cResultPrivilegedMinting Class Doc Comment
  *
  * @category Class
+ * @description It describes whether the NFT contract has  minting methods which can only be triggered by an address with special privileges. (Notice:Some minting methods can only be triggered by an address with special privileges. Generally speaking, these are usually for the owner to mint.)
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ParseAbiDataRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6cResultPrivilegedMinting implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ParseAbiDataRequest';
+    protected static $swaggerModelName = 'ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c_result_privileged_minting';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,11 +57,9 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chain_id' => 'string',
-'contract_address' => 'string',
-'data' => 'string',
-'signer' => 'string',
-'transcation_type' => 'string'    ];
+        'owner_address' => 'string',
+'value' => 'int',
+'owner_type' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,11 +67,9 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'chain_id' => null,
-'contract_address' => null,
-'data' => null,
-'signer' => null,
-'transcation_type' => null    ];
+        'owner_address' => null,
+'value' => 'int32',
+'owner_type' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,11 +98,9 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'chain_id' => 'chain_id',
-'contract_address' => 'contract_address',
-'data' => 'data',
-'signer' => 'signer',
-'transcation_type' => 'transcation_type'    ];
+        'owner_address' => 'owner_address',
+'value' => 'value',
+'owner_type' => 'owner_type'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -113,11 +108,9 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'chain_id' => 'setChainId',
-'contract_address' => 'setContractAddress',
-'data' => 'setData',
-'signer' => 'setSigner',
-'transcation_type' => 'setTranscationType'    ];
+        'owner_address' => 'setOwnerAddress',
+'value' => 'setValue',
+'owner_type' => 'setOwnerType'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -125,11 +118,9 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'chain_id' => 'getChainId',
-'contract_address' => 'getContractAddress',
-'data' => 'getData',
-'signer' => 'getSigner',
-'transcation_type' => 'getTranscationType'    ];
+        'owner_address' => 'getOwnerAddress',
+'value' => 'getValue',
+'owner_type' => 'getOwnerType'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -172,24 +163,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TRANSCATION_TYPE_COMMON = 'COMMON';
-const TRANSCATION_TYPE_ETH_SIGNTYPEDDATA_V4 = 'ETH_SIGNTYPEDDATA_V4';
-const TRANSCATION_TYPE_PERSONAL_SIGN = 'PERSONAL_SIGN';
-const TRANSCATION_TYPE_ETH_SIGN = 'ETH_SIGN';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTranscationTypeAllowableValues()
-    {
-        return [
-            self::TRANSCATION_TYPE_COMMON,
-self::TRANSCATION_TYPE_ETH_SIGNTYPEDDATA_V4,
-self::TRANSCATION_TYPE_PERSONAL_SIGN,
-self::TRANSCATION_TYPE_ETH_SIGN,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -206,11 +180,9 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['chain_id'] = isset($data['chain_id']) ? $data['chain_id'] : null;
-        $this->container['contract_address'] = isset($data['contract_address']) ? $data['contract_address'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['signer'] = isset($data['signer']) ? $data['signer'] : null;
-        $this->container['transcation_type'] = isset($data['transcation_type']) ? $data['transcation_type'] : null;
+        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
     }
 
     /**
@@ -221,20 +193,6 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['chain_id'] === null) {
-            $invalidProperties[] = "'chain_id' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($this->container['transcation_type']) && !in_array($this->container['transcation_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transcation_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -252,130 +210,73 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
 
 
     /**
-     * Gets chain_id
+     * Gets owner_address
      *
      * @return string
      */
-    public function getChainId()
+    public function getOwnerAddress()
     {
-        return $this->container['chain_id'];
+        return $this->container['owner_address'];
     }
 
     /**
-     * Sets chain_id
+     * Sets owner_address
      *
-     * @param string $chain_id Chain id, (ETH: 1, Cronos:25, BSC: 56, Heco: 128, Polygon: 137, Fantom:250, KCC: 321, Arbitrum: 42161, Avalanche: 43114)
+     * @param string $owner_address Owner_address describes the owner address.  null: the owner address cannot be fetched.
      *
      * @return $this
      */
-    public function setChainId($chain_id)
+    public function setOwnerAddress($owner_address)
     {
-        $this->container['chain_id'] = $chain_id;
+        $this->container['owner_address'] = $owner_address;
 
         return $this;
     }
 
     /**
-     * Gets contract_address
+     * Gets value
      *
-     * @return string
+     * @return int
      */
-    public function getContractAddress()
+    public function getValue()
     {
-        return $this->container['contract_address'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets contract_address
+     * Sets value
      *
-     * @param string $contract_address Carrying the signer and contract address will help to decode more information.
+     * @param int $value The \"value\" describes the status of the risk. null: the contract is not open source or there is a proxy, it is not possible to detect whether the risk exists. -1: the risk is detected but the ownership give up. If the detection of a code vulnerability, it can also be considered risk-free.  0: the risk is not detected.  1: the risk is detected, and the owner address is a common address (EOA), then it can be said that there is a clear risk.  2: The risk is detected, but the owner address is a contract address, the risk is not significant.  3: The risk is detected, but the owner address is not detectable / or an array.
      *
      * @return $this
      */
-    public function setContractAddress($contract_address)
+    public function setValue($value)
     {
-        $this->container['contract_address'] = $contract_address;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets owner_type
      *
      * @return string
      */
-    public function getData()
+    public function getOwnerType()
     {
-        return $this->container['data'];
+        return $this->container['owner_type'];
     }
 
     /**
-     * Sets data
+     * Sets owner_type
      *
-     * @param string $data Transaction input
+     * @param string $owner_type \"blackhole\" : the owner is a blackhole address. \"contract\" : the owner is a contract. \"eoa\" : the owner is a common address (eoa). \"multi-address\": the owner is an array/list. null: the address is not detected.
      *
      * @return $this
      */
-    public function setData($data)
+    public function setOwnerType($owner_type)
     {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets signer
-     *
-     * @return string
-     */
-    public function getSigner()
-    {
-        return $this->container['signer'];
-    }
-
-    /**
-     * Sets signer
-     *
-     * @param string $signer Carrying the signer and contract address will help to decode more information.
-     *
-     * @return $this
-     */
-    public function setSigner($signer)
-    {
-        $this->container['signer'] = $signer;
-
-        return $this;
-    }
-
-    /**
-     * Gets transcation_type
-     *
-     * @return string
-     */
-    public function getTranscationType()
-    {
-        return $this->container['transcation_type'];
-    }
-
-    /**
-     * Sets transcation_type
-     *
-     * @param string $transcation_type Transaction type
-     *
-     * @return $this
-     */
-    public function setTranscationType($transcation_type)
-    {
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($transcation_type) && !in_array($transcation_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transcation_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['transcation_type'] = $transcation_type;
+        $this->container['owner_type'] = $owner_type;
 
         return $this;
     }

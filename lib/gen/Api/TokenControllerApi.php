@@ -91,17 +91,15 @@ class TokenControllerApi
      *
      * get token
      *
-     * @param  string $app_key app_key (required)
-     * @param  string $sign Concatenate app_key, time, app_secret in turn, and do sha1().app_key &#x3D; mBOMg20QW11BbtyH4Zh0 \\n\&quot; +             \&quot;time &#x3D; 1647847498 \\n\&quot; +             \&quot;app_secret &#x3D; V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh \\n\&quot; +             \&quot;sign &#x3D; sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)\\n\&quot; +             \&quot;        &#x3D; 7293d385b9225b3c3f232b76ba97255d0e21063e (required)
-     * @param  int $time Quest timestamp (Second) (required)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_
      */
-    public function getAccessTokenUsingPOST($app_key, $sign, $time)
+    public function getAccessTokenUsingPOST($body = null)
     {
-        list($response) = $this->getAccessTokenUsingPOSTWithHttpInfo($app_key, $sign, $time);
+        list($response) = $this->getAccessTokenUsingPOSTWithHttpInfo($body);
         return $response;
     }
 
@@ -110,18 +108,16 @@ class TokenControllerApi
      *
      * get token
      *
-     * @param  string $app_key app_key (required)
-     * @param  string $sign Concatenate app_key, time, app_secret in turn, and do sha1().app_key &#x3D; mBOMg20QW11BbtyH4Zh0 \\n\&quot; +             \&quot;time &#x3D; 1647847498 \\n\&quot; +             \&quot;app_secret &#x3D; V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh \\n\&quot; +             \&quot;sign &#x3D; sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)\\n\&quot; +             \&quot;        &#x3D; 7293d385b9225b3c3f232b76ba97255d0e21063e (required)
-     * @param  int $time Quest timestamp (Second) (required)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAccessTokenUsingPOSTWithHttpInfo($app_key, $sign, $time)
+    public function getAccessTokenUsingPOSTWithHttpInfo($body = null)
     {
         $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_';
-        $request = $this->getAccessTokenUsingPOSTRequest($app_key, $sign, $time);
+        $request = $this->getAccessTokenUsingPOSTRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -187,16 +183,14 @@ class TokenControllerApi
      *
      * get token
      *
-     * @param  string $app_key app_key (required)
-     * @param  string $sign Concatenate app_key, time, app_secret in turn, and do sha1().app_key &#x3D; mBOMg20QW11BbtyH4Zh0 \\n\&quot; +             \&quot;time &#x3D; 1647847498 \\n\&quot; +             \&quot;app_secret &#x3D; V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh \\n\&quot; +             \&quot;sign &#x3D; sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)\\n\&quot; +             \&quot;        &#x3D; 7293d385b9225b3c3f232b76ba97255d0e21063e (required)
-     * @param  int $time Quest timestamp (Second) (required)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAccessTokenUsingPOSTAsync($app_key, $sign, $time)
+    public function getAccessTokenUsingPOSTAsync($body = null)
     {
-        return $this->getAccessTokenUsingPOSTAsyncWithHttpInfo($app_key, $sign, $time)
+        return $this->getAccessTokenUsingPOSTAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -209,17 +203,15 @@ class TokenControllerApi
      *
      * get token
      *
-     * @param  string $app_key app_key (required)
-     * @param  string $sign Concatenate app_key, time, app_secret in turn, and do sha1().app_key &#x3D; mBOMg20QW11BbtyH4Zh0 \\n\&quot; +             \&quot;time &#x3D; 1647847498 \\n\&quot; +             \&quot;app_secret &#x3D; V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh \\n\&quot; +             \&quot;sign &#x3D; sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)\\n\&quot; +             \&quot;        &#x3D; 7293d385b9225b3c3f232b76ba97255d0e21063e (required)
-     * @param  int $time Quest timestamp (Second) (required)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAccessTokenUsingPOSTAsyncWithHttpInfo($app_key, $sign, $time)
+    public function getAccessTokenUsingPOSTAsyncWithHttpInfo($body = null)
     {
         $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_';
-        $request = $this->getAccessTokenUsingPOSTRequest($app_key, $sign, $time);
+        $request = $this->getAccessTokenUsingPOSTRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -261,33 +253,13 @@ class TokenControllerApi
     /**
      * Create request for operation 'getAccessTokenUsingPOST'
      *
-     * @param  string $app_key app_key (required)
-     * @param  string $sign Concatenate app_key, time, app_secret in turn, and do sha1().app_key &#x3D; mBOMg20QW11BbtyH4Zh0 \\n\&quot; +             \&quot;time &#x3D; 1647847498 \\n\&quot; +             \&quot;app_secret &#x3D; V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh \\n\&quot; +             \&quot;sign &#x3D; sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)\\n\&quot; +             \&quot;        &#x3D; 7293d385b9225b3c3f232b76ba97255d0e21063e (required)
-     * @param  int $time Quest timestamp (Second) (required)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAccessTokenUsingPOSTRequest($app_key, $sign, $time)
+    protected function getAccessTokenUsingPOSTRequest($body = null)
     {
-        // verify the required parameter 'app_key' is set
-        if ($app_key === null || (is_array($app_key) && count($app_key) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_key when calling getAccessTokenUsingPOST'
-            );
-        }
-        // verify the required parameter 'sign' is set
-        if ($sign === null || (is_array($sign) && count($sign) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $sign when calling getAccessTokenUsingPOST'
-            );
-        }
-        // verify the required parameter 'time' is set
-        if ($time === null || (is_array($time) && count($time) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $time when calling getAccessTokenUsingPOST'
-            );
-        }
 
         $resourcePath = '/api/v1/token';
         $formParams = [];
@@ -296,22 +268,13 @@ class TokenControllerApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($app_key !== null) {
-            $queryParams['appKey'] = ObjectSerializer::toQueryValue($app_key, null);
-        }
-        // query params
-        if ($sign !== null) {
-            $queryParams['sign'] = ObjectSerializer::toQueryValue($sign, null);
-        }
-        // query params
-        if ($time !== null) {
-            $queryParams['time'] = ObjectSerializer::toQueryValue($time, 'int64');
-        }
 
 
         // body params
         $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -320,7 +283,7 @@ class TokenControllerApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['*/*'],
-                []
+                ['application/json']
             );
         }
 

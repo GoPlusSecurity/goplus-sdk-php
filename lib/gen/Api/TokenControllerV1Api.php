@@ -91,12 +91,12 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperListJSONObject4e98b9e2Fbdb43329976A30066e02b73
+     * @return \Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3
      */
     public function getChainsListUsingGET($authorization = null, $name = null)
     {
@@ -109,16 +109,16 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperListJSONObject4e98b9e2Fbdb43329976A30066e02b73, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChainsListUsingGETWithHttpInfo($authorization = null, $name = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject4e98b9e2Fbdb43329976A30066e02b73';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3';
         $request = $this->getChainsListUsingGETRequest($authorization, $name);
 
         try {
@@ -170,7 +170,7 @@ class TokenControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperListJSONObject4e98b9e2Fbdb43329976A30066e02b73',
+                        '\Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class TokenControllerV1Api
      */
     public function getChainsListUsingGETAsyncWithHttpInfo($authorization = null, $name = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject4e98b9e2Fbdb43329976A30066e02b73';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3';
         $request = $this->getChainsListUsingGETRequest($authorization, $name);
 
         return $this->client
@@ -257,7 +257,7 @@ class TokenControllerV1Api
     /**
      * Create request for operation 'getChainsListUsingGET'
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -354,11 +354,11 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849
+     * @return \Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2
      */
     public function tokenSecurityUsingGET1($chain_id, $contract_addresses, $authorization = null)
     {
@@ -373,15 +373,15 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2, HTTP status code, HTTP response headers (array of strings)
      */
     public function tokenSecurityUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2';
         $request = $this->tokenSecurityUsingGET1Request($chain_id, $contract_addresses, $authorization);
 
         try {
@@ -433,7 +433,7 @@ class TokenControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849',
+                        '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -450,7 +450,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -472,14 +472,14 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function tokenSecurityUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse730b76cb88874c8bBfd0494baf55b849';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2';
         $request = $this->tokenSecurityUsingGET1Request($chain_id, $contract_addresses, $authorization);
 
         return $this->client
@@ -524,7 +524,7 @@ class TokenControllerV1Api
      *
      * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

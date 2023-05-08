@@ -93,12 +93,12 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional, default to NFT token id)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperJSONObject59da6cfeB2f246e4936a6968cc97141b
+     * @return \Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c
      */
     public function getNftInfoUsingGET1($chain_id, $contract_addresses, $authorization = null, $token_id = 'NFT token id')
     {
@@ -113,16 +113,16 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional, default to NFT token id)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperJSONObject59da6cfeB2f246e4936a6968cc97141b, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNftInfoUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = 'NFT token id')
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperJSONObject59da6cfeB2f246e4936a6968cc97141b';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c';
         $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
 
         try {
@@ -174,7 +174,7 @@ class NftControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperJSONObject59da6cfeB2f246e4936a6968cc97141b',
+                        '\Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -191,7 +191,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional, default to NFT token id)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional, default to NFT token id)
      *
      * @throws \InvalidArgumentException
@@ -222,7 +222,7 @@ class NftControllerApi
      */
     public function getNftInfoUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = 'NFT token id')
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperJSONObject59da6cfeB2f246e4936a6968cc97141b';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c';
         $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
 
         return $this->client
@@ -267,7 +267,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional, default to NFT token id)
      *
      * @throws \InvalidArgumentException
