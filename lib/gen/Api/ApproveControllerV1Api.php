@@ -92,16 +92,16 @@ class ApproveControllerV1Api
      * Check if the address is malicious
      *
      * @param  string $address address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (optional)
+     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperObjectF7b82021Fc934bb69009542c33e30a39
+     * @return \Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255
      */
-    public function addressContractUsingGET1($address, $authorization = null, $chain_id = null)
+    public function addressContractUsingGET1($address, $chain_id, $authorization = null)
     {
-        list($response) = $this->addressContractUsingGET1WithHttpInfo($address, $authorization, $chain_id);
+        list($response) = $this->addressContractUsingGET1WithHttpInfo($address, $chain_id, $authorization);
         return $response;
     }
 
@@ -111,17 +111,17 @@ class ApproveControllerV1Api
      * Check if the address is malicious
      *
      * @param  string $address address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (optional)
+     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperObjectF7b82021Fc934bb69009542c33e30a39, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addressContractUsingGET1WithHttpInfo($address, $authorization = null, $chain_id = null)
+    public function addressContractUsingGET1WithHttpInfo($address, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperObjectF7b82021Fc934bb69009542c33e30a39';
-        $request = $this->addressContractUsingGET1Request($address, $authorization, $chain_id);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255';
+        $request = $this->addressContractUsingGET1Request($address, $chain_id, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -172,7 +172,7 @@ class ApproveControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperObjectF7b82021Fc934bb69009542c33e30a39',
+                        '\Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -188,15 +188,15 @@ class ApproveControllerV1Api
      * Check if the address is malicious
      *
      * @param  string $address address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (optional)
+     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addressContractUsingGET1Async($address, $authorization = null, $chain_id = null)
+    public function addressContractUsingGET1Async($address, $chain_id, $authorization = null)
     {
-        return $this->addressContractUsingGET1AsyncWithHttpInfo($address, $authorization, $chain_id)
+        return $this->addressContractUsingGET1AsyncWithHttpInfo($address, $chain_id, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -210,16 +210,16 @@ class ApproveControllerV1Api
      * Check if the address is malicious
      *
      * @param  string $address address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (optional)
+     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addressContractUsingGET1AsyncWithHttpInfo($address, $authorization = null, $chain_id = null)
+    public function addressContractUsingGET1AsyncWithHttpInfo($address, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperObjectF7b82021Fc934bb69009542c33e30a39';
-        $request = $this->addressContractUsingGET1Request($address, $authorization, $chain_id);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255';
+        $request = $this->addressContractUsingGET1Request($address, $chain_id, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -262,18 +262,24 @@ class ApproveControllerV1Api
      * Create request for operation 'addressContractUsingGET1'
      *
      * @param  string $address address (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (optional)
+     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; “25” means Cronos; \&quot;56\&quot; means BSC;  “66” means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59140\&quot; means Linea; \&quot;1666600000\&quot; means Harmony; \&quot;tron\&quot; means Tron. (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addressContractUsingGET1Request($address, $authorization = null, $chain_id = null)
+    protected function addressContractUsingGET1Request($address, $chain_id, $authorization = null)
     {
         // verify the required parameter 'address' is set
         if ($address === null || (is_array($address) && count($address) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $address when calling addressContractUsingGET1'
+            );
+        }
+        // verify the required parameter 'chain_id' is set
+        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $chain_id when calling addressContractUsingGET1'
             );
         }
 
@@ -372,16 +378,16 @@ class ApproveControllerV1Api
      * Check if the approval is secure
      *
      * @param  string $chain_id Chain id, (ETH: 1,  BSC: 56, OKC: 66, Heco: 128, Polygon: 137, Fantom:250, Arbitrum: 42161, Avalanche: 43114) (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $contract_addresses Contract needs to be detected (optional)
+     * @param  string $contract_addresses Contract needs to be detected (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\ResponseWrapperContractApproveResponse_
      */
-    public function approvalContractUsingGET($chain_id, $authorization = null, $contract_addresses = null)
+    public function approvalContractUsingGET($chain_id, $contract_addresses, $authorization = null)
     {
-        list($response) = $this->approvalContractUsingGETWithHttpInfo($chain_id, $authorization, $contract_addresses);
+        list($response) = $this->approvalContractUsingGETWithHttpInfo($chain_id, $contract_addresses, $authorization);
         return $response;
     }
 
@@ -391,17 +397,17 @@ class ApproveControllerV1Api
      * Check if the approval is secure
      *
      * @param  string $chain_id Chain id, (ETH: 1,  BSC: 56, OKC: 66, Heco: 128, Polygon: 137, Fantom:250, Arbitrum: 42161, Avalanche: 43114) (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $contract_addresses Contract needs to be detected (optional)
+     * @param  string $contract_addresses Contract needs to be detected (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ResponseWrapperContractApproveResponse_, HTTP status code, HTTP response headers (array of strings)
      */
-    public function approvalContractUsingGETWithHttpInfo($chain_id, $authorization = null, $contract_addresses = null)
+    public function approvalContractUsingGETWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
         $returnType = '\Swagger\Client\Model\ResponseWrapperContractApproveResponse_';
-        $request = $this->approvalContractUsingGETRequest($chain_id, $authorization, $contract_addresses);
+        $request = $this->approvalContractUsingGETRequest($chain_id, $contract_addresses, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -468,15 +474,15 @@ class ApproveControllerV1Api
      * Check if the approval is secure
      *
      * @param  string $chain_id Chain id, (ETH: 1,  BSC: 56, OKC: 66, Heco: 128, Polygon: 137, Fantom:250, Arbitrum: 42161, Avalanche: 43114) (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $contract_addresses Contract needs to be detected (optional)
+     * @param  string $contract_addresses Contract needs to be detected (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function approvalContractUsingGETAsync($chain_id, $authorization = null, $contract_addresses = null)
+    public function approvalContractUsingGETAsync($chain_id, $contract_addresses, $authorization = null)
     {
-        return $this->approvalContractUsingGETAsyncWithHttpInfo($chain_id, $authorization, $contract_addresses)
+        return $this->approvalContractUsingGETAsyncWithHttpInfo($chain_id, $contract_addresses, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -490,16 +496,16 @@ class ApproveControllerV1Api
      * Check if the approval is secure
      *
      * @param  string $chain_id Chain id, (ETH: 1,  BSC: 56, OKC: 66, Heco: 128, Polygon: 137, Fantom:250, Arbitrum: 42161, Avalanche: 43114) (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $contract_addresses Contract needs to be detected (optional)
+     * @param  string $contract_addresses Contract needs to be detected (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function approvalContractUsingGETAsyncWithHttpInfo($chain_id, $authorization = null, $contract_addresses = null)
+    public function approvalContractUsingGETAsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
         $returnType = '\Swagger\Client\Model\ResponseWrapperContractApproveResponse_';
-        $request = $this->approvalContractUsingGETRequest($chain_id, $authorization, $contract_addresses);
+        $request = $this->approvalContractUsingGETRequest($chain_id, $contract_addresses, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -542,18 +548,24 @@ class ApproveControllerV1Api
      * Create request for operation 'approvalContractUsingGET'
      *
      * @param  string $chain_id Chain id, (ETH: 1,  BSC: 56, OKC: 66, Heco: 128, Polygon: 137, Fantom:250, Arbitrum: 42161, Avalanche: 43114) (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
-     * @param  string $contract_addresses Contract needs to be detected (optional)
+     * @param  string $contract_addresses Contract needs to be detected (required)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function approvalContractUsingGETRequest($chain_id, $authorization = null, $contract_addresses = null)
+    protected function approvalContractUsingGETRequest($chain_id, $contract_addresses, $authorization = null)
     {
         // verify the required parameter 'chain_id' is set
         if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $chain_id when calling approvalContractUsingGET'
+            );
+        }
+        // verify the required parameter 'contract_addresses' is set
+        if ($contract_addresses === null || (is_array($contract_addresses) && count($contract_addresses) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $contract_addresses when calling approvalContractUsingGET'
             );
         }
 

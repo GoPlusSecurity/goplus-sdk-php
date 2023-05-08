@@ -92,11 +92,11 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperMapStringStringA9a4024aE50a4a3aA475Dba457d7c10e
+     * @return \Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8
      */
     public function phishingSiteUsingGET($url, $authorization = null)
     {
@@ -110,15 +110,15 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperMapStringStringA9a4024aE50a4a3aA475Dba457d7c10e, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8, HTTP status code, HTTP response headers (array of strings)
      */
     public function phishingSiteUsingGETWithHttpInfo($url, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperMapStringStringA9a4024aE50a4a3aA475Dba457d7c10e';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8';
         $request = $this->phishingSiteUsingGETRequest($url, $authorization);
 
         try {
@@ -170,7 +170,7 @@ class WebsiteControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperMapStringStringA9a4024aE50a4a3aA475Dba457d7c10e',
+                        '\Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -186,7 +186,7 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -207,14 +207,14 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperMapStringStringA9a4024aE50a4a3aA475Dba457d7c10e';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8';
         $request = $this->phishingSiteUsingGETRequest($url, $authorization);
 
         return $this->client
@@ -258,7 +258,7 @@ class WebsiteControllerApi
      * Create request for operation 'phishingSiteUsingGET'
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

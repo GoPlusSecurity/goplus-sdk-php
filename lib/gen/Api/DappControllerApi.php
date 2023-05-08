@@ -91,7 +91,7 @@ class DappControllerApi
      *
      * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -109,7 +109,7 @@ class DappControllerApi
      *
      * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -185,7 +185,7 @@ class DappControllerApi
      *
      * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class DappControllerApi
      *
      * Check risk of dapp through URL
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \InvalidArgumentException
@@ -257,7 +257,7 @@ class DappControllerApi
     /**
      * Create request for operation 'getDappInfoUsingGET'
      *
-     * @param  string $authorization Authorization example：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW... (optional)
+     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $url Url or domain (optional)
      *
      * @throws \InvalidArgumentException
