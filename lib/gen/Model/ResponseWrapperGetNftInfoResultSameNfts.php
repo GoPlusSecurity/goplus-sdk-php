@@ -1,6 +1,6 @@
 <?php
 /**
- * ParseAbiDataRequest
+ * ResponseWrapperGetNftInfoResultSameNfts
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ParseAbiDataRequest Class Doc Comment
+ * ResponseWrapperGetNftInfoResultSameNfts Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ParseAbiDataRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperGetNftInfoResultSameNfts implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ParseAbiDataRequest';
+    protected static $swaggerModelName = 'ResponseWrapperGetNftInfo_result_same_nfts';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +56,11 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chain_id' => 'string',
-'contract_address' => 'string',
-'data' => 'string',
-'input' => 'map[string,object]',
-'signer' => 'string',
-'transcation_type' => 'string'    ];
+        'nft_address' => 'string',
+'nft_name' => 'string',
+'nft_owner_number' => 'int',
+'create_block_number' => 'int',
+'nft_symbol' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,12 +68,11 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'chain_id' => null,
-'contract_address' => null,
-'data' => null,
-'input' => null,
-'signer' => null,
-'transcation_type' => null    ];
+        'nft_address' => null,
+'nft_name' => null,
+'nft_owner_number' => 'int64',
+'create_block_number' => 'int64',
+'nft_symbol' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,12 +101,11 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'chain_id' => 'chain_id',
-'contract_address' => 'contract_address',
-'data' => 'data',
-'input' => 'input',
-'signer' => 'signer',
-'transcation_type' => 'transcation_type'    ];
+        'nft_address' => 'nft_address',
+'nft_name' => 'nft_name',
+'nft_owner_number' => 'nft_owner_number',
+'create_block_number' => 'create_block_number',
+'nft_symbol' => 'nft_symbol'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,12 +113,11 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'chain_id' => 'setChainId',
-'contract_address' => 'setContractAddress',
-'data' => 'setData',
-'input' => 'setInput',
-'signer' => 'setSigner',
-'transcation_type' => 'setTranscationType'    ];
+        'nft_address' => 'setNftAddress',
+'nft_name' => 'setNftName',
+'nft_owner_number' => 'setNftOwnerNumber',
+'create_block_number' => 'setCreateBlockNumber',
+'nft_symbol' => 'setNftSymbol'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,12 +125,11 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'chain_id' => 'getChainId',
-'contract_address' => 'getContractAddress',
-'data' => 'getData',
-'input' => 'getInput',
-'signer' => 'getSigner',
-'transcation_type' => 'getTranscationType'    ];
+        'nft_address' => 'getNftAddress',
+'nft_name' => 'getNftName',
+'nft_owner_number' => 'getNftOwnerNumber',
+'create_block_number' => 'getCreateBlockNumber',
+'nft_symbol' => 'getNftSymbol'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -177,24 +172,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TRANSCATION_TYPE_COMMON = 'common';
-const TRANSCATION_TYPE_ETH_SIGN_TYPED_DATA_V4 = 'eth_signTypedData_v4';
-const TRANSCATION_TYPE_PERSONAL_SIGN = 'personal_sign';
-const TRANSCATION_TYPE_ETH_SIGN = 'eth_sign';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTranscationTypeAllowableValues()
-    {
-        return [
-            self::TRANSCATION_TYPE_COMMON,
-self::TRANSCATION_TYPE_ETH_SIGN_TYPED_DATA_V4,
-self::TRANSCATION_TYPE_PERSONAL_SIGN,
-self::TRANSCATION_TYPE_ETH_SIGN,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -211,12 +189,11 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['chain_id'] = isset($data['chain_id']) ? $data['chain_id'] : null;
-        $this->container['contract_address'] = isset($data['contract_address']) ? $data['contract_address'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['input'] = isset($data['input']) ? $data['input'] : null;
-        $this->container['signer'] = isset($data['signer']) ? $data['signer'] : null;
-        $this->container['transcation_type'] = isset($data['transcation_type']) ? $data['transcation_type'] : null;
+        $this->container['nft_address'] = isset($data['nft_address']) ? $data['nft_address'] : null;
+        $this->container['nft_name'] = isset($data['nft_name']) ? $data['nft_name'] : null;
+        $this->container['nft_owner_number'] = isset($data['nft_owner_number']) ? $data['nft_owner_number'] : null;
+        $this->container['create_block_number'] = isset($data['create_block_number']) ? $data['create_block_number'] : null;
+        $this->container['nft_symbol'] = isset($data['nft_symbol']) ? $data['nft_symbol'] : null;
     }
 
     /**
@@ -227,20 +204,6 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['chain_id'] === null) {
-            $invalidProperties[] = "'chain_id' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($this->container['transcation_type']) && !in_array($this->container['transcation_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transcation_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -258,154 +221,121 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
 
 
     /**
-     * Gets chain_id
+     * Gets nft_address
      *
      * @return string
      */
-    public function getChainId()
+    public function getNftAddress()
     {
-        return $this->container['chain_id'];
+        return $this->container['nft_address'];
     }
 
     /**
-     * Sets chain_id
+     * Sets nft_address
      *
-     * @param string $chain_id Chain id, (ETH: 1, Cronos:25, BSC: 56, Heco: 128, Polygon: 137, Fantom:250, KCC: 321, Arbitrum: 42161, Avalanche: 43114)
+     * @param string $nft_address It describes the address of the NFTs;
      *
      * @return $this
      */
-    public function setChainId($chain_id)
+    public function setNftAddress($nft_address)
     {
-        $this->container['chain_id'] = $chain_id;
+        $this->container['nft_address'] = $nft_address;
 
         return $this;
     }
 
     /**
-     * Gets contract_address
+     * Gets nft_name
      *
      * @return string
      */
-    public function getContractAddress()
+    public function getNftName()
     {
-        return $this->container['contract_address'];
+        return $this->container['nft_name'];
     }
 
     /**
-     * Sets contract_address
+     * Sets nft_name
      *
-     * @param string $contract_address Carrying the signer and contract address will help to decode more information.
+     * @param string $nft_name It describes the name of the NFT;
      *
      * @return $this
      */
-    public function setContractAddress($contract_address)
+    public function setNftName($nft_name)
     {
-        $this->container['contract_address'] = $contract_address;
+        $this->container['nft_name'] = $nft_name;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets nft_owner_number
      *
-     * @return string
+     * @return int
      */
-    public function getData()
+    public function getNftOwnerNumber()
     {
-        return $this->container['data'];
+        return $this->container['nft_owner_number'];
     }
 
     /**
-     * Sets data
+     * Sets nft_owner_number
      *
-     * @param string $data Transaction input
+     * @param int $nft_owner_number It describes the holders of the NFT;
      *
      * @return $this
      */
-    public function setData($data)
+    public function setNftOwnerNumber($nft_owner_number)
     {
-        $this->container['data'] = $data;
+        $this->container['nft_owner_number'] = $nft_owner_number;
 
         return $this;
     }
 
     /**
-     * Gets input
+     * Gets create_block_number
      *
-     * @return map[string,object]
+     * @return int
      */
-    public function getInput()
+    public function getCreateBlockNumber()
     {
-        return $this->container['input'];
+        return $this->container['create_block_number'];
     }
 
     /**
-     * Sets input
+     * Sets create_block_number
      *
-     * @param map[string,object] $input input info
+     * @param int $create_block_number describes the number of blocks created for the NFT. Return \"null\" means no NFTs with duplicate name and symbol.
      *
      * @return $this
      */
-    public function setInput($input)
+    public function setCreateBlockNumber($create_block_number)
     {
-        $this->container['input'] = $input;
+        $this->container['create_block_number'] = $create_block_number;
 
         return $this;
     }
 
     /**
-     * Gets signer
+     * Gets nft_symbol
      *
      * @return string
      */
-    public function getSigner()
+    public function getNftSymbol()
     {
-        return $this->container['signer'];
+        return $this->container['nft_symbol'];
     }
 
     /**
-     * Sets signer
+     * Sets nft_symbol
      *
-     * @param string $signer Carrying the signer and contract address will help to decode more information.
+     * @param string $nft_symbol It describes the symbol of the NFT;
      *
      * @return $this
      */
-    public function setSigner($signer)
+    public function setNftSymbol($nft_symbol)
     {
-        $this->container['signer'] = $signer;
-
-        return $this;
-    }
-
-    /**
-     * Gets transcation_type
-     *
-     * @return string
-     */
-    public function getTranscationType()
-    {
-        return $this->container['transcation_type'];
-    }
-
-    /**
-     * Sets transcation_type
-     *
-     * @param string $transcation_type Transaction type
-     *
-     * @return $this
-     */
-    public function setTranscationType($transcation_type)
-    {
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($transcation_type) && !in_array($transcation_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transcation_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['transcation_type'] = $transcation_type;
+        $this->container['nft_symbol'] = $nft_symbol;
 
         return $this;
     }

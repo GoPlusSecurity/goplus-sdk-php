@@ -98,7 +98,7 @@ class NftControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c
+     * @return \Swagger\Client\Model\ResponseWrapperGetNftInfo_
      */
     public function getNftInfoUsingGET1($chain_id, $contract_addresses, $authorization = null, $token_id = 'NFT token id')
     {
@@ -118,11 +118,11 @@ class NftControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperGetNftInfo_, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNftInfoUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = 'NFT token id')
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo_';
         $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
 
         try {
@@ -174,7 +174,7 @@ class NftControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c',
+                        '\Swagger\Client\Model\ResponseWrapperGetNftInfo_',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class NftControllerApi
      */
     public function getNftInfoUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = 'NFT token id')
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperJSONObject5c459c547a184b1880671fad2eb60d6c';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo_';
         $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
 
         return $this->client

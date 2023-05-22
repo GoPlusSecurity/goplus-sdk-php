@@ -1,6 +1,6 @@
 <?php
 /**
- * ParseAbiDataRequest
+ * ResponseWrapperPhishingSiteResult
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ParseAbiDataRequest Class Doc Comment
+ * ResponseWrapperPhishingSiteResult Class Doc Comment
  *
  * @category Class
+ * @description Response result
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ParseAbiDataRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ParseAbiDataRequest';
+    protected static $swaggerModelName = 'ResponseWrapperPhishingSite_result';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +57,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chain_id' => 'string',
-'contract_address' => 'string',
-'data' => 'string',
-'input' => 'map[string,object]',
-'signer' => 'string',
-'transcation_type' => 'string'    ];
+        'website_contract_security' => 'string[]',
+'phishing_site' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,12 +66,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'chain_id' => null,
-'contract_address' => null,
-'data' => null,
-'input' => null,
-'signer' => null,
-'transcation_type' => null    ];
+        'website_contract_security' => null,
+'phishing_site' => 'int32'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,12 +96,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'chain_id' => 'chain_id',
-'contract_address' => 'contract_address',
-'data' => 'data',
-'input' => 'input',
-'signer' => 'signer',
-'transcation_type' => 'transcation_type'    ];
+        'website_contract_security' => 'website_contract_security',
+'phishing_site' => 'phishing_site'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,12 +105,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'chain_id' => 'setChainId',
-'contract_address' => 'setContractAddress',
-'data' => 'setData',
-'input' => 'setInput',
-'signer' => 'setSigner',
-'transcation_type' => 'setTranscationType'    ];
+        'website_contract_security' => 'setWebsiteContractSecurity',
+'phishing_site' => 'setPhishingSite'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,12 +114,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'chain_id' => 'getChainId',
-'contract_address' => 'getContractAddress',
-'data' => 'getData',
-'input' => 'getInput',
-'signer' => 'getSigner',
-'transcation_type' => 'getTranscationType'    ];
+        'website_contract_security' => 'getWebsiteContractSecurity',
+'phishing_site' => 'getPhishingSite'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -177,24 +158,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TRANSCATION_TYPE_COMMON = 'common';
-const TRANSCATION_TYPE_ETH_SIGN_TYPED_DATA_V4 = 'eth_signTypedData_v4';
-const TRANSCATION_TYPE_PERSONAL_SIGN = 'personal_sign';
-const TRANSCATION_TYPE_ETH_SIGN = 'eth_sign';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTranscationTypeAllowableValues()
-    {
-        return [
-            self::TRANSCATION_TYPE_COMMON,
-self::TRANSCATION_TYPE_ETH_SIGN_TYPED_DATA_V4,
-self::TRANSCATION_TYPE_PERSONAL_SIGN,
-self::TRANSCATION_TYPE_ETH_SIGN,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -211,12 +175,8 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['chain_id'] = isset($data['chain_id']) ? $data['chain_id'] : null;
-        $this->container['contract_address'] = isset($data['contract_address']) ? $data['contract_address'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['input'] = isset($data['input']) ? $data['input'] : null;
-        $this->container['signer'] = isset($data['signer']) ? $data['signer'] : null;
-        $this->container['transcation_type'] = isset($data['transcation_type']) ? $data['transcation_type'] : null;
+        $this->container['website_contract_security'] = isset($data['website_contract_security']) ? $data['website_contract_security'] : null;
+        $this->container['phishing_site'] = isset($data['phishing_site']) ? $data['phishing_site'] : null;
     }
 
     /**
@@ -227,20 +187,6 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['chain_id'] === null) {
-            $invalidProperties[] = "'chain_id' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($this->container['transcation_type']) && !in_array($this->container['transcation_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transcation_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -258,154 +204,49 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
 
 
     /**
-     * Gets chain_id
+     * Gets website_contract_security
      *
-     * @return string
+     * @return string[]
      */
-    public function getChainId()
+    public function getWebsiteContractSecurity()
     {
-        return $this->container['chain_id'];
+        return $this->container['website_contract_security'];
     }
 
     /**
-     * Sets chain_id
+     * Sets website_contract_security
      *
-     * @param string $chain_id Chain id, (ETH: 1, Cronos:25, BSC: 56, Heco: 128, Polygon: 137, Fantom:250, KCC: 321, Arbitrum: 42161, Avalanche: 43114)
+     * @param string[] $website_contract_security website_contract_security
      *
      * @return $this
      */
-    public function setChainId($chain_id)
+    public function setWebsiteContractSecurity($website_contract_security)
     {
-        $this->container['chain_id'] = $chain_id;
+        $this->container['website_contract_security'] = $website_contract_security;
 
         return $this;
     }
 
     /**
-     * Gets contract_address
+     * Gets phishing_site
      *
-     * @return string
+     * @return int
      */
-    public function getContractAddress()
+    public function getPhishingSite()
     {
-        return $this->container['contract_address'];
+        return $this->container['phishing_site'];
     }
 
     /**
-     * Sets contract_address
+     * Sets phishing_site
      *
-     * @param string $contract_address Carrying the signer and contract address will help to decode more information.
+     * @param int $phishing_site It means whether the website is a phishing site. \"1\" means true; \"0\" means that we have not found malicious behavior of this website.
      *
      * @return $this
      */
-    public function setContractAddress($contract_address)
+    public function setPhishingSite($phishing_site)
     {
-        $this->container['contract_address'] = $contract_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return string
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param string $data Transaction input
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets input
-     *
-     * @return map[string,object]
-     */
-    public function getInput()
-    {
-        return $this->container['input'];
-    }
-
-    /**
-     * Sets input
-     *
-     * @param map[string,object] $input input info
-     *
-     * @return $this
-     */
-    public function setInput($input)
-    {
-        $this->container['input'] = $input;
-
-        return $this;
-    }
-
-    /**
-     * Gets signer
-     *
-     * @return string
-     */
-    public function getSigner()
-    {
-        return $this->container['signer'];
-    }
-
-    /**
-     * Sets signer
-     *
-     * @param string $signer Carrying the signer and contract address will help to decode more information.
-     *
-     * @return $this
-     */
-    public function setSigner($signer)
-    {
-        $this->container['signer'] = $signer;
-
-        return $this;
-    }
-
-    /**
-     * Gets transcation_type
-     *
-     * @return string
-     */
-    public function getTranscationType()
-    {
-        return $this->container['transcation_type'];
-    }
-
-    /**
-     * Sets transcation_type
-     *
-     * @param string $transcation_type Transaction type
-     *
-     * @return $this
-     */
-    public function setTranscationType($transcation_type)
-    {
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($transcation_type) && !in_array($transcation_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transcation_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['transcation_type'] = $transcation_type;
+        $this->container['phishing_site'] = $phishing_site;
 
         return $this;
     }
