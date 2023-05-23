@@ -96,7 +96,7 @@ class WebsiteControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8
+     * @return \Swagger\Client\Model\ResponseWrapperPhishingSite_
      */
     public function phishingSiteUsingGET($url, $authorization = null)
     {
@@ -114,11 +114,11 @@ class WebsiteControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperPhishingSite_, HTTP status code, HTTP response headers (array of strings)
      */
     public function phishingSiteUsingGETWithHttpInfo($url, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite_';
         $request = $this->phishingSiteUsingGETRequest($url, $authorization);
 
         try {
@@ -170,7 +170,7 @@ class WebsiteControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8',
+                        '\Swagger\Client\Model\ResponseWrapperPhishingSite_',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class WebsiteControllerApi
      */
     public function phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperMapStringString2a740de0Be5a4eb3B6e4A2cf0a2d8bf8';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite_';
         $request = $this->phishingSiteUsingGETRequest($url, $authorization);
 
         return $this->client

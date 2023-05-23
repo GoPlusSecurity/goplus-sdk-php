@@ -1,6 +1,6 @@
 <?php
 /**
- * ParseAbiDataRequest
+ * ResponseWrapperListJSONObject877c2b4f74b04546b8a06d6e416a60b5Result
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ParseAbiDataRequest Class Doc Comment
+ * ResponseWrapperListJSONObject877c2b4f74b04546b8a06d6e416a60b5Result Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ParseAbiDataRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperListJSONObject877c2b4f74b04546b8a06d6e416a60b5Result implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ParseAbiDataRequest';
+    protected static $swaggerModelName = 'ResponseWrapperListJSONObject877c2b4f74b04546b8a06d6e416a60b5_result';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +56,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chain_id' => 'string',
-'contract_address' => 'string',
-'data' => 'string',
-'input' => 'map[string,object]',
-'signer' => 'string',
-'transcation_type' => 'string'    ];
+        'name' => 'string',
+'id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,12 +65,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'chain_id' => null,
-'contract_address' => null,
-'data' => null,
-'input' => null,
-'signer' => null,
-'transcation_type' => null    ];
+        'name' => null,
+'id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,12 +95,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'chain_id' => 'chain_id',
-'contract_address' => 'contract_address',
-'data' => 'data',
-'input' => 'input',
-'signer' => 'signer',
-'transcation_type' => 'transcation_type'    ];
+        'name' => 'name',
+'id' => 'id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,12 +104,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'chain_id' => 'setChainId',
-'contract_address' => 'setContractAddress',
-'data' => 'setData',
-'input' => 'setInput',
-'signer' => 'setSigner',
-'transcation_type' => 'setTranscationType'    ];
+        'name' => 'setName',
+'id' => 'setId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,12 +113,8 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'chain_id' => 'getChainId',
-'contract_address' => 'getContractAddress',
-'data' => 'getData',
-'input' => 'getInput',
-'signer' => 'getSigner',
-'transcation_type' => 'getTranscationType'    ];
+        'name' => 'getName',
+'id' => 'getId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -177,24 +157,7 @@ class ParseAbiDataRequest implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const TRANSCATION_TYPE_COMMON = 'common';
-const TRANSCATION_TYPE_ETH_SIGN_TYPED_DATA_V4 = 'eth_signTypedData_v4';
-const TRANSCATION_TYPE_PERSONAL_SIGN = 'personal_sign';
-const TRANSCATION_TYPE_ETH_SIGN = 'eth_sign';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTranscationTypeAllowableValues()
-    {
-        return [
-            self::TRANSCATION_TYPE_COMMON,
-self::TRANSCATION_TYPE_ETH_SIGN_TYPED_DATA_V4,
-self::TRANSCATION_TYPE_PERSONAL_SIGN,
-self::TRANSCATION_TYPE_ETH_SIGN,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -211,12 +174,8 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['chain_id'] = isset($data['chain_id']) ? $data['chain_id'] : null;
-        $this->container['contract_address'] = isset($data['contract_address']) ? $data['contract_address'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['input'] = isset($data['input']) ? $data['input'] : null;
-        $this->container['signer'] = isset($data['signer']) ? $data['signer'] : null;
-        $this->container['transcation_type'] = isset($data['transcation_type']) ? $data['transcation_type'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -227,20 +186,6 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['chain_id'] === null) {
-            $invalidProperties[] = "'chain_id' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($this->container['transcation_type']) && !in_array($this->container['transcation_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transcation_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -258,154 +203,49 @@ self::TRANSCATION_TYPE_ETH_SIGN,        ];
 
 
     /**
-     * Gets chain_id
+     * Gets name
      *
      * @return string
      */
-    public function getChainId()
+    public function getName()
     {
-        return $this->container['chain_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets chain_id
+     * Sets name
      *
-     * @param string $chain_id Chain id, (ETH: 1, Cronos:25, BSC: 56, Heco: 128, Polygon: 137, Fantom:250, KCC: 321, Arbitrum: 42161, Avalanche: 43114)
+     * @param string $name chain name
      *
      * @return $this
      */
-    public function setChainId($chain_id)
+    public function setName($name)
     {
-        $this->container['chain_id'] = $chain_id;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets contract_address
+     * Gets id
      *
      * @return string
      */
-    public function getContractAddress()
+    public function getId()
     {
-        return $this->container['contract_address'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets contract_address
+     * Sets id
      *
-     * @param string $contract_address Carrying the signer and contract address will help to decode more information.
+     * @param string $id chain id
      *
      * @return $this
      */
-    public function setContractAddress($contract_address)
+    public function setId($id)
     {
-        $this->container['contract_address'] = $contract_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return string
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param string $data Transaction input
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets input
-     *
-     * @return map[string,object]
-     */
-    public function getInput()
-    {
-        return $this->container['input'];
-    }
-
-    /**
-     * Sets input
-     *
-     * @param map[string,object] $input input info
-     *
-     * @return $this
-     */
-    public function setInput($input)
-    {
-        $this->container['input'] = $input;
-
-        return $this;
-    }
-
-    /**
-     * Gets signer
-     *
-     * @return string
-     */
-    public function getSigner()
-    {
-        return $this->container['signer'];
-    }
-
-    /**
-     * Sets signer
-     *
-     * @param string $signer Carrying the signer and contract address will help to decode more information.
-     *
-     * @return $this
-     */
-    public function setSigner($signer)
-    {
-        $this->container['signer'] = $signer;
-
-        return $this;
-    }
-
-    /**
-     * Gets transcation_type
-     *
-     * @return string
-     */
-    public function getTranscationType()
-    {
-        return $this->container['transcation_type'];
-    }
-
-    /**
-     * Sets transcation_type
-     *
-     * @param string $transcation_type Transaction type
-     *
-     * @return $this
-     */
-    public function setTranscationType($transcation_type)
-    {
-        $allowedValues = $this->getTranscationTypeAllowableValues();
-        if (!is_null($transcation_type) && !in_array($transcation_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transcation_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['transcation_type'] = $transcation_type;
+        $this->container['id'] = $id;
 
         return $this;
     }

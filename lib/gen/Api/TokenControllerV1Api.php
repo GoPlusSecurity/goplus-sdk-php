@@ -96,7 +96,7 @@ class TokenControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3
+     * @return \Swagger\Client\Model\ResponseWrapperListJSONObject877c2b4f74b04546B8a06d6e416a60b5
      */
     public function getChainsListUsingGET($authorization = null, $name = null)
     {
@@ -114,11 +114,11 @@ class TokenControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperListJSONObject877c2b4f74b04546B8a06d6e416a60b5, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChainsListUsingGETWithHttpInfo($authorization = null, $name = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject877c2b4f74b04546B8a06d6e416a60b5';
         $request = $this->getChainsListUsingGETRequest($authorization, $name);
 
         try {
@@ -170,7 +170,7 @@ class TokenControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3',
+                        '\Swagger\Client\Model\ResponseWrapperListJSONObject877c2b4f74b04546B8a06d6e416a60b5',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class TokenControllerV1Api
      */
     public function getChainsListUsingGETAsyncWithHttpInfo($authorization = null, $name = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject9524a1c652c545bfB6c6898bfc3e93f3';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListJSONObject877c2b4f74b04546B8a06d6e416a60b5';
         $request = $this->getChainsListUsingGETRequest($authorization, $name);
 
         return $this->client
@@ -358,7 +358,7 @@ class TokenControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2
+     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurity_
      */
     public function tokenSecurityUsingGET1($chain_id, $contract_addresses, $authorization = null)
     {
@@ -377,11 +377,11 @@ class TokenControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperTokenSecurity_, HTTP status code, HTTP response headers (array of strings)
      */
     public function tokenSecurityUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperTokenSecurity_';
         $request = $this->tokenSecurityUsingGET1Request($chain_id, $contract_addresses, $authorization);
 
         try {
@@ -433,7 +433,7 @@ class TokenControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2',
+                        '\Swagger\Client\Model\ResponseWrapperTokenSecurity_',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -479,7 +479,7 @@ class TokenControllerV1Api
      */
     public function tokenSecurityUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperTaTokenSecurityResponse205696bcFb354bc5Ab26Ddc7cd495fe2';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperTokenSecurity_';
         $request = $this->tokenSecurityUsingGET1Request($chain_id, $contract_addresses, $authorization);
 
         return $this->client

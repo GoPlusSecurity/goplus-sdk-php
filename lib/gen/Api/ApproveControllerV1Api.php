@@ -97,7 +97,7 @@ class ApproveControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255
+     * @return \Swagger\Client\Model\ResponseWrapperAddressContract_
      */
     public function addressContractUsingGET1($address, $authorization = null, $chain_id = null)
     {
@@ -116,11 +116,11 @@ class ApproveControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperAddressContract_, HTTP status code, HTTP response headers (array of strings)
      */
     public function addressContractUsingGET1WithHttpInfo($address, $authorization = null, $chain_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperAddressContract_';
         $request = $this->addressContractUsingGET1Request($address, $authorization, $chain_id);
 
         try {
@@ -172,7 +172,7 @@ class ApproveControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255',
+                        '\Swagger\Client\Model\ResponseWrapperAddressContract_',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class ApproveControllerV1Api
      */
     public function addressContractUsingGET1AsyncWithHttpInfo($address, $authorization = null, $chain_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperObject545a2ceaB58741b4Aae7F3d73df91255';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperAddressContract_';
         $request = $this->addressContractUsingGET1Request($address, $authorization, $chain_id);
 
         return $this->client
