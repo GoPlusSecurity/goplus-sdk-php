@@ -1,0 +1,44 @@
+{
+    "name": "goplus/php-sdk",
+    "description": "GoPlus API SDK for PHP",
+    "keywords": [
+        "goplus",
+        "sdk",
+        "api"
+    ],
+    "homepage": "https://github.com/GoPlusSecurity/goplus-sdk-php",
+    "type": "project",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "GoPlus",
+            "email": "service@gopluslabs.io",
+            "homepage": "https://gopluslabs.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "~2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Goplus\\": "src/goplus",
+            "Swagger\\Client\\": "src/lib/client"
+        },
+        "files": [
+          "src/goplus/functions.php"
+        ]
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1",
+        "test": "./vendor/bin/phpunit"
+    }
+}
