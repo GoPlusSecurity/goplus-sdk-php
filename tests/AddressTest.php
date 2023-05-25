@@ -9,6 +9,8 @@ declare(strict_types=1);
  */
 namespace Tests;
 
+include_once './vendor/autoload.php';
+
 use Goplus\Api\Address;
 use Goplus\ErrorCode;
 use PHPUnit\Framework\TestCase;
