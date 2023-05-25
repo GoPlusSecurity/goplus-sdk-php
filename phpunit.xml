@@ -15,8 +15,11 @@
         </testsuite>
     </testsuites>
     <filter>
-        <whitelist>
-            <directory suffix=".php">src/</directory>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/goplus</directory>
         </whitelist>
+        <exclude>
+            <directory suffix=".php">src/lib</directory>
+        </exclude>
     </filter>
 </phpunit>
