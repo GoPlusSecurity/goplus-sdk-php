@@ -21,7 +21,7 @@ class Chain extends Base
      * @param mixed $name
      * @throws \Swagger\Client\ApiException
      */
-    public function getChainList($name = '')
+    public function getChainList($name="")
     {
         return $this->client->getChainsListUsingGET($this->accessToken, $name);
     }

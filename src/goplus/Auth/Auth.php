@@ -7,9 +7,10 @@
  */
 namespace Goplus\Auth;
 
-use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Client;
 use Swagger\Client\Api\TokenControllerApi;
 use Swagger\Client\Model\GetAccessTokenRequest;
+
 
 final class Auth
 {
@@ -17,13 +18,14 @@ final class Auth
 
     private $secret;
 
-    private $client;
+    private $guzzleOptions = [];
 
-    public function __construct($key, $secret, ClientInterface $client = null)
+    public function __construct($key, $secret, $guzzleOptions=[])
     {
         $this->key = $key;
         $this->secret = $secret;
-        $this->client = new TokenControllerApi($client);
+        $this->guzzleOptions = $guzzleOptions;
+        $this->client = new TokenControllerApi($this->getGuzzleClient());
     }
 
     public function getKey()
@@ -49,5 +51,15 @@ final class Auth
         ]);
 
         return $this->client->getAccessTokenUsingPOST($body);
+    }
+
+    public function getGuzzleClient()
+    {
+        return new Client($this->guzzleOptions);
+    }
+
+    public function setClient($client)
+    {
+        $this->client = $client;
     }
 }
