@@ -7,7 +7,7 @@ declare(strict_types=1);
  * @link  https://www.gopluslabs.io
  * @license https://github.com/GoPlusSecurity/goplus-sdk-php/blob/main/LICENSE
  */
-namespace Goplus\Tests;
+namespace Tests;
 
 use Goplus\Api\Decode;
 use Goplus\ErrorCode;

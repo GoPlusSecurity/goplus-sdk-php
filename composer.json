@@ -37,6 +37,11 @@
           "src/goplus/functions.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "scripts": {
         "cs-fix": "php-cs-fixer fix $1",
         "test": "./vendor/bin/phpunit"
