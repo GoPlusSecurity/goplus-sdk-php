@@ -1,6 +1,4 @@
 <?php
-
-declare(strict_types=1);
 /**
  * This file is part of GoPlus.
  *
@@ -11,37 +9,37 @@ namespace Goplus;
 
 class ErrorCode
 {
-    public const SUCCESS = 1;
+    const SUCCESS = 1;
 
-    public const DATA_PENDING_SYNC = 2;
+    const DATA_PENDING_SYNC = 2;
 
-    public const ADDRESS_FORMAT_ERROR = 2004;
+    const ADDRESS_FORMAT_ERROR = 2004;
 
-    public const CHAIN_NOT_SUPPORTED = 2018;
+    const CHAIN_NOT_SUPPORTED = 2018;
 
-    public const NON_CONTRACT_ADDRESS = 2020;
+    const NON_CONTRACT_ADDRESS = 2020;
 
-    public const CONTRACT_INFO_NOT_FOUND = 2021;
+    const CONTRACT_INFO_NOT_FOUND = 2021;
 
-    public const DAPP_NOT_FOUND = 2026;
+    const DAPP_NOT_FOUND = 2026;
 
-    public const ABI_NOT_FOUND = 2027;
+    const ABI_NOT_FOUND = 2027;
 
-    public const ABI_FUNCTION_UNSUPPOERT = 2028;
+    const ABI_FUNCTION_UNSUPPOERT = 2028;
 
-    public const APP_KEY_NOT_EXIST = 4010;
+    const APP_KEY_NOT_EXIST = 4010;
 
-    public const SIGNATURE_EXPIRATION = 4011;
+    const SIGNATURE_EXPIRATION = 4011;
 
-    public const SIGNATURE_VERIFICATION_FAILURE = 4012;
+    const SIGNATURE_VERIFICATION_FAILURE = 4012;
 
-    public const FREQUENCY_OVER_LIMIT = 4029;
+    const FREQUENCY_OVER_LIMIT = 4029;
 
-    public const INVALID_TOKEN = 4022;
+    const INVALID_TOKEN = 4022;
 
-    public const TOKEN_NOT_FOUND = 4023;
+    const TOKEN_NOT_FOUND = 4023;
 
-    public const SERVER_ERROR = 5000;
+    const SERVER_ERROR = 5000;
 
-    public const PARAM_ERROR = 5006;
+    const PARAM_ERROR = 5006;
 }

@@ -70,7 +70,7 @@ return (new PhpCsFixer\Config())
         ],
         'class_attributes_separation' => true,
         'combine_consecutive_unsets' => true,
-        'declare_strict_types' => true,
+        'declare_strict_types' => false,
         'linebreak_after_opening_tag' => true,
         'lowercase_static_reference' => true,
         'no_useless_else' => true,
@@ -83,6 +83,12 @@ return (new PhpCsFixer\Config())
         'single_quote' => true,
         'standardize_not_equals' => true,
         'multiline_comment_opening_closing' => true,
+        'visibility_required' => [
+            'elements' => [
+                'method',
+                'property',
+            ]
+        ]
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
