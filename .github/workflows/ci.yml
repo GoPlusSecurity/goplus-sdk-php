@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  phpunit:
+    strategy:
+      matrix:
+        php_version: [5.6, 7.0, 7.1, 7.2, 7.3, 7.4]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php_version }}
+          coverage: xdebug
+      - name: Install dependencies
+        run: composer install
+      - name: PHPUnit check
+        run: ./vendor/bin/phpunit --coverage-text
