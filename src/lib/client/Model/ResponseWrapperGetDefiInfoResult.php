@@ -1,6 +1,6 @@
 <?php
 /**
- * Contracts
+ * ResponseWrapperGetDefiInfoResult
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * Contracts Class Doc Comment
+ * ResponseWrapperGetDefiInfoResult Class Doc Comment
  *
  * @category Class
+ * @description Response result
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Contracts implements ModelInterface, ArrayAccess
+class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class Contracts implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Contracts';
+    protected static $swaggerModelName = 'ResponseWrapperGetDefiInfo_result';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,14 +57,15 @@ class Contracts implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'contract_address' => 'string',
-'creator_address' => 'string',
-'deployment_time' => 'int',
+        'owner' => '\Swagger\Client\Model\ResponseWrapperGetDefiInfoResultOwner',
+'privilege_withdraw' => 'int',
+'withdraw_missing' => 'int',
 'is_open_source' => 'int',
-'malicious_behavior' => 'object[]',
-'malicious_contract' => 'int',
-'malicious_creator' => 'int',
-'malicious_creator_behavior' => 'object[]'    ];
+'blacklist' => 'int',
+'contract_name' => 'string',
+'selfdestruct' => 'string',
+'is_proxy' => 'int',
+'approval_abuse' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -71,14 +73,15 @@ class Contracts implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'contract_address' => null,
-'creator_address' => null,
-'deployment_time' => 'int64',
+        'owner' => null,
+'privilege_withdraw' => 'int32',
+'withdraw_missing' => 'int32',
 'is_open_source' => 'int32',
-'malicious_behavior' => null,
-'malicious_contract' => 'int32',
-'malicious_creator' => 'int32',
-'malicious_creator_behavior' => null    ];
+'blacklist' => 'int32',
+'contract_name' => null,
+'selfdestruct' => null,
+'is_proxy' => 'int32',
+'approval_abuse' => 'int32'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -107,14 +110,15 @@ class Contracts implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'contract_address' => 'contract_address',
-'creator_address' => 'creator_address',
-'deployment_time' => 'deployment_time',
+        'owner' => 'owner',
+'privilege_withdraw' => 'privilege_withdraw',
+'withdraw_missing' => 'withdraw_missing',
 'is_open_source' => 'is_open_source',
-'malicious_behavior' => 'malicious_behavior',
-'malicious_contract' => 'malicious_contract',
-'malicious_creator' => 'malicious_creator',
-'malicious_creator_behavior' => 'malicious_creator_behavior'    ];
+'blacklist' => 'blacklist',
+'contract_name' => 'contract_name',
+'selfdestruct' => 'selfdestruct',
+'is_proxy' => 'is_proxy',
+'approval_abuse' => 'approval_abuse'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -122,14 +126,15 @@ class Contracts implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'contract_address' => 'setContractAddress',
-'creator_address' => 'setCreatorAddress',
-'deployment_time' => 'setDeploymentTime',
+        'owner' => 'setOwner',
+'privilege_withdraw' => 'setPrivilegeWithdraw',
+'withdraw_missing' => 'setWithdrawMissing',
 'is_open_source' => 'setIsOpenSource',
-'malicious_behavior' => 'setMaliciousBehavior',
-'malicious_contract' => 'setMaliciousContract',
-'malicious_creator' => 'setMaliciousCreator',
-'malicious_creator_behavior' => 'setMaliciousCreatorBehavior'    ];
+'blacklist' => 'setBlacklist',
+'contract_name' => 'setContractName',
+'selfdestruct' => 'setSelfdestruct',
+'is_proxy' => 'setIsProxy',
+'approval_abuse' => 'setApprovalAbuse'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -137,14 +142,15 @@ class Contracts implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'contract_address' => 'getContractAddress',
-'creator_address' => 'getCreatorAddress',
-'deployment_time' => 'getDeploymentTime',
+        'owner' => 'getOwner',
+'privilege_withdraw' => 'getPrivilegeWithdraw',
+'withdraw_missing' => 'getWithdrawMissing',
 'is_open_source' => 'getIsOpenSource',
-'malicious_behavior' => 'getMaliciousBehavior',
-'malicious_contract' => 'getMaliciousContract',
-'malicious_creator' => 'getMaliciousCreator',
-'malicious_creator_behavior' => 'getMaliciousCreatorBehavior'    ];
+'blacklist' => 'getBlacklist',
+'contract_name' => 'getContractName',
+'selfdestruct' => 'getSelfdestruct',
+'is_proxy' => 'getIsProxy',
+'approval_abuse' => 'getApprovalAbuse'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -204,14 +210,15 @@ class Contracts implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['contract_address'] = isset($data['contract_address']) ? $data['contract_address'] : null;
-        $this->container['creator_address'] = isset($data['creator_address']) ? $data['creator_address'] : null;
-        $this->container['deployment_time'] = isset($data['deployment_time']) ? $data['deployment_time'] : null;
+        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['privilege_withdraw'] = isset($data['privilege_withdraw']) ? $data['privilege_withdraw'] : null;
+        $this->container['withdraw_missing'] = isset($data['withdraw_missing']) ? $data['withdraw_missing'] : null;
         $this->container['is_open_source'] = isset($data['is_open_source']) ? $data['is_open_source'] : null;
-        $this->container['malicious_behavior'] = isset($data['malicious_behavior']) ? $data['malicious_behavior'] : null;
-        $this->container['malicious_contract'] = isset($data['malicious_contract']) ? $data['malicious_contract'] : null;
-        $this->container['malicious_creator'] = isset($data['malicious_creator']) ? $data['malicious_creator'] : null;
-        $this->container['malicious_creator_behavior'] = isset($data['malicious_creator_behavior']) ? $data['malicious_creator_behavior'] : null;
+        $this->container['blacklist'] = isset($data['blacklist']) ? $data['blacklist'] : null;
+        $this->container['contract_name'] = isset($data['contract_name']) ? $data['contract_name'] : null;
+        $this->container['selfdestruct'] = isset($data['selfdestruct']) ? $data['selfdestruct'] : null;
+        $this->container['is_proxy'] = isset($data['is_proxy']) ? $data['is_proxy'] : null;
+        $this->container['approval_abuse'] = isset($data['approval_abuse']) ? $data['approval_abuse'] : null;
     }
 
     /**
@@ -239,73 +246,73 @@ class Contracts implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets contract_address
+     * Gets owner
      *
-     * @return string
+     * @return \Swagger\Client\Model\ResponseWrapperGetDefiInfoResultOwner
      */
-    public function getContractAddress()
+    public function getOwner()
     {
-        return $this->container['contract_address'];
+        return $this->container['owner'];
     }
 
     /**
-     * Sets contract_address
+     * Sets owner
      *
-     * @param string $contract_address It describes the dAap's contract address.
+     * @param \Swagger\Client\Model\ResponseWrapperGetDefiInfoResultOwner $owner owner
      *
      * @return $this
      */
-    public function setContractAddress($contract_address)
+    public function setOwner($owner)
     {
-        $this->container['contract_address'] = $contract_address;
+        $this->container['owner'] = $owner;
 
         return $this;
     }
 
     /**
-     * Gets creator_address
-     *
-     * @return string
-     */
-    public function getCreatorAddress()
-    {
-        return $this->container['creator_address'];
-    }
-
-    /**
-     * Sets creator_address
-     *
-     * @param string $creator_address It describes the creator address of the contract.
-     *
-     * @return $this
-     */
-    public function setCreatorAddress($creator_address)
-    {
-        $this->container['creator_address'] = $creator_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets deployment_time
+     * Gets privilege_withdraw
      *
      * @return int
      */
-    public function getDeploymentTime()
+    public function getPrivilegeWithdraw()
     {
-        return $this->container['deployment_time'];
+        return $this->container['privilege_withdraw'];
     }
 
     /**
-     * Sets deployment_time
+     * Sets privilege_withdraw
      *
-     * @param int $deployment_time It describes the deployed time of the contract.The value is presented as a timestamp. Example: \"deployed_time\": 1626578345
+     * @param int $privilege_withdraw It descirbes whether the contract owner can withdraw all the assets in the contract, without uses' permission. \"1\" means true; \"0\" means false;  \"-1\" means unknown.
      *
      * @return $this
      */
-    public function setDeploymentTime($deployment_time)
+    public function setPrivilegeWithdraw($privilege_withdraw)
     {
-        $this->container['deployment_time'] = $deployment_time;
+        $this->container['privilege_withdraw'] = $privilege_withdraw;
+
+        return $this;
+    }
+
+    /**
+     * Gets withdraw_missing
+     *
+     * @return int
+     */
+    public function getWithdrawMissing()
+    {
+        return $this->container['withdraw_missing'];
+    }
+
+    /**
+     * Sets withdraw_missing
+     *
+     * @param int $withdraw_missing It describes whether the contract lacks withdrawal method. If it is missing, users will be unable to withdraw the assets they have putted in. \"1\" means true; \"0\" means false;  \"-1\" means unknown.
+     *
+     * @return $this
+     */
+    public function setWithdrawMissing($withdraw_missing)
+    {
+        $this->container['withdraw_missing'] = $withdraw_missing;
 
         return $this;
     }
@@ -323,7 +330,7 @@ class Contracts implements ModelInterface, ArrayAccess
     /**
      * Sets is_open_source
      *
-     * @param int $is_open_source It describes whether this contract is open source. \"1\" means true; \"0\" means false.
+     * @param int $is_open_source It describes whether this contract is open source.  \"1\" means true;  \"0\" means false.
      *
      * @return $this
      */
@@ -335,97 +342,121 @@ class Contracts implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets malicious_behavior
-     *
-     * @return object[]
-     */
-    public function getMaliciousBehavior()
-    {
-        return $this->container['malicious_behavior'];
-    }
-
-    /**
-     * Sets malicious_behavior
-     *
-     * @param object[] $malicious_behavior It describes specific malicious behaviors of the contract.
-     *
-     * @return $this
-     */
-    public function setMaliciousBehavior($malicious_behavior)
-    {
-        $this->container['malicious_behavior'] = $malicious_behavior;
-
-        return $this;
-    }
-
-    /**
-     * Gets malicious_contract
+     * Gets blacklist
      *
      * @return int
      */
-    public function getMaliciousContract()
+    public function getBlacklist()
     {
-        return $this->container['malicious_contract'];
+        return $this->container['blacklist'];
     }
 
     /**
-     * Sets malicious_contract
+     * Sets blacklist
      *
-     * @param int $malicious_contract It describes whether the address is a suspected malicious contract. \"1\" means true; \"0\" means that we have not found malicious behavior of this contract.(Notice:\"malicious_contract\" return \"0\" does not mean the address is completely safe. Maybe we just haven't found its malicious behavior.)
+     * @param int $blacklist It describes whether the contract has blacklist function that would block user from withdrawing their assets. \"1\" means true; \"0\" means false;  \"-1\" means unknown.
      *
      * @return $this
      */
-    public function setMaliciousContract($malicious_contract)
+    public function setBlacklist($blacklist)
     {
-        $this->container['malicious_contract'] = $malicious_contract;
+        $this->container['blacklist'] = $blacklist;
 
         return $this;
     }
 
     /**
-     * Gets malicious_creator
+     * Gets contract_name
+     *
+     * @return string
+     */
+    public function getContractName()
+    {
+        return $this->container['contract_name'];
+    }
+
+    /**
+     * Sets contract_name
+     *
+     * @param string $contract_name Name of the contract.
+     *
+     * @return $this
+     */
+    public function setContractName($contract_name)
+    {
+        $this->container['contract_name'] = $contract_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets selfdestruct
+     *
+     * @return string
+     */
+    public function getSelfdestruct()
+    {
+        return $this->container['selfdestruct'];
+    }
+
+    /**
+     * Sets selfdestruct
+     *
+     * @param string $selfdestruct It describes whether this contract can self destruct. \"1\" means true;  \"0\" means false; “-1” means unknown.
+     *
+     * @return $this
+     */
+    public function setSelfdestruct($selfdestruct)
+    {
+        $this->container['selfdestruct'] = $selfdestruct;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_proxy
      *
      * @return int
      */
-    public function getMaliciousCreator()
+    public function getIsProxy()
     {
-        return $this->container['malicious_creator'];
+        return $this->container['is_proxy'];
     }
 
     /**
-     * Sets malicious_creator
+     * Sets is_proxy
      *
-     * @param int $malicious_creator It describes whether the creator is a suspected malicious address. \"1\" means true; \"0\" means that we have not found malicious behavior of this address.(Notice:\"malicious_creator\" return \"0\" does not mean the address is completely safe. Maybe we just haven't found its malicious behavior.)
+     * @param int $is_proxy It describes whether this contract has a proxy contract.  \"1\" means true;  \"0\" means false; “-1” means unknown.
      *
      * @return $this
      */
-    public function setMaliciousCreator($malicious_creator)
+    public function setIsProxy($is_proxy)
     {
-        $this->container['malicious_creator'] = $malicious_creator;
+        $this->container['is_proxy'] = $is_proxy;
 
         return $this;
     }
 
     /**
-     * Gets malicious_creator_behavior
+     * Gets approval_abuse
      *
-     * @return object[]
+     * @return int
      */
-    public function getMaliciousCreatorBehavior()
+    public function getApprovalAbuse()
     {
-        return $this->container['malicious_creator_behavior'];
+        return $this->container['approval_abuse'];
     }
 
     /**
-     * Sets malicious_creator_behavior
+     * Sets approval_abuse
      *
-     * @param object[] $malicious_creator_behavior It describes specific malicious behaviors of the contract creator.
+     * @param int $approval_abuse It describes whether the owner can spend the allowance that obtained by the contract. If so, this function could potentially be abused to steal user assets. \"1\" means true;  \"0\" means false; “-1” means unknown.
      *
      * @return $this
      */
-    public function setMaliciousCreatorBehavior($malicious_creator_behavior)
+    public function setApprovalAbuse($approval_abuse)
     {
-        $this->container['malicious_creator_behavior'] = $malicious_creator_behavior;
+        $this->container['approval_abuse'] = $approval_abuse;
 
         return $this;
     }
