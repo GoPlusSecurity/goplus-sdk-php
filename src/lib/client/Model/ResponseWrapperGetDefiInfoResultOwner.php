@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperMapStringString_
+ * ResponseWrapperGetDefiInfoResultOwner
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperMapStringString_ Class Doc Comment
+ * ResponseWrapperGetDefiInfoResultOwner Class Doc Comment
  *
  * @category Class
+ * @description When there is no owner function, or the ownership is unreadable or private, it would return empty. \&quot;owner\&quot;: {  }
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
+class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«Map«string,string»»';
+    protected static $swaggerModelName = 'ResponseWrapperGetDefiInfo_result_owner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +57,9 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-'message' => 'string',
-'result' => 'map[string,string]'    ];
+        'owner_name' => 'string',
+'owner_address' => 'string',
+'owner_type' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +67,9 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-'message' => null,
-'result' => null    ];
+        'owner_name' => null,
+'owner_address' => null,
+'owner_type' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +98,9 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message',
-'result' => 'result'    ];
+        'owner_name' => 'owner_name',
+'owner_address' => 'owner_address',
+'owner_type' => 'owner_type'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +108,9 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage',
-'result' => 'setResult'    ];
+        'owner_name' => 'setOwnerName',
+'owner_address' => 'setOwnerAddress',
+'owner_type' => 'setOwnerType'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +118,9 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage',
-'result' => 'getResult'    ];
+        'owner_name' => 'getOwnerName',
+'owner_address' => 'getOwnerAddress',
+'owner_type' => 'getOwnerType'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +180,9 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
+        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
     }
 
     /**
@@ -209,73 +210,73 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code Code 1：Success
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
+     * Gets owner_name
      *
      * @return string
      */
-    public function getMessage()
+    public function getOwnerName()
     {
-        return $this->container['message'];
+        return $this->container['owner_name'];
     }
 
     /**
-     * Sets message
+     * Sets owner_name
      *
-     * @param string $message Response message
+     * @param string $owner_name the function name of ownership.  If there is no return, means unknown.
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setOwnerName($owner_name)
     {
-        $this->container['message'] = $message;
+        $this->container['owner_name'] = $owner_name;
 
         return $this;
     }
 
     /**
-     * Gets result
+     * Gets owner_address
      *
-     * @return map[string,string]
+     * @return string
      */
-    public function getResult()
+    public function getOwnerAddress()
     {
-        return $this->container['result'];
+        return $this->container['owner_address'];
     }
 
     /**
-     * Sets result
+     * Sets owner_address
      *
-     * @param map[string,string] $result Response result
+     * @param string $owner_address owner address of the contract.  No return means unknown.
      *
      * @return $this
      */
-    public function setResult($result)
+    public function setOwnerAddress($owner_address)
     {
-        $this->container['result'] = $result;
+        $this->container['owner_address'] = $owner_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_type
+     *
+     * @return string
+     */
+    public function getOwnerType()
+    {
+        return $this->container['owner_type'];
+    }
+
+    /**
+     * Sets owner_type
+     *
+     * @param string $owner_type blackhole\" : the owner is a blackhole address. \"contract\" : the owner is a contract. \"eoa\" : the owner is a common address (eoa). \"multi-address\": the owner is an array/list. null: the address is not detected. No return means unknown.
+     *
+     * @return $this
+     */
+    public function setOwnerType($owner_type)
+    {
+        $this->container['owner_type'] = $owner_type;
 
         return $this;
     }

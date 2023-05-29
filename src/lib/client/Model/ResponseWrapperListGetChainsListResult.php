@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperMapStringString_
+ * ResponseWrapperListGetChainsListResult
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperMapStringString_ Class Doc Comment
+ * ResponseWrapperListGetChainsListResult Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
+class ResponseWrapperListGetChainsListResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«Map«string,string»»';
+    protected static $swaggerModelName = 'ResponseWrapperListGetChainsList_result';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,8 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-'message' => 'string',
-'result' => 'map[string,string]'    ];
+        'name' => 'string',
+'id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,9 +65,8 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-'message' => null,
-'result' => null    ];
+        'name' => null,
+'id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,9 +95,8 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'message' => 'message',
-'result' => 'result'    ];
+        'name' => 'name',
+'id' => 'id'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -107,9 +104,8 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'message' => 'setMessage',
-'result' => 'setResult'    ];
+        'name' => 'setName',
+'id' => 'setId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -117,9 +113,8 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'message' => 'getMessage',
-'result' => 'getResult'    ];
+        'name' => 'getName',
+'id' => 'getId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -179,9 +174,8 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -209,73 +203,49 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code Code 1：Success
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
+     * Gets name
      *
      * @return string
      */
-    public function getMessage()
+    public function getName()
     {
-        return $this->container['message'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets message
+     * Sets name
      *
-     * @param string $message Response message
+     * @param string $name chain name
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setName($name)
     {
-        $this->container['message'] = $message;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets result
+     * Gets id
      *
-     * @return map[string,string]
+     * @return string
      */
-    public function getResult()
+    public function getId()
     {
-        return $this->container['result'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets result
+     * Sets id
      *
-     * @param map[string,string] $result Response result
+     * @param string $id chain id
      *
      * @return $this
      */
-    public function setResult($result)
+    public function setId($id)
     {
-        $this->container['result'] = $result;
+        $this->container['id'] = $id;
 
         return $this;
     }
