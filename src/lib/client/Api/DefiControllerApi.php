@@ -1,6 +1,6 @@
 <?php
 /**
- * NftControllerApi
+ * DefiControllerApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * NftControllerApi Class Doc Comment
+ * DefiControllerApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class NftControllerApi
+class DefiControllerApi
 {
     /**
      * @var ClientInterface
@@ -87,43 +87,41 @@ class NftControllerApi
     }
 
     /**
-     * Operation getNftInfoUsingGET1
+     * Operation getDefiInfoUsingGET
      *
-     * Get NFT's security and risk data.
+     * Rug-pull Detection API Beta
      *
-     * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
-     * @param  string $contract_addresses NFT contract address (required)
+     * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $token_id tokenId (optional)
+     * @param  string $defi_protocol_address Defi protocol address (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperGetNftInfo_
+     * @return \Swagger\Client\Model\ResponseWrapperGetDefiInfo_
      */
-    public function getNftInfoUsingGET1($chain_id, $contract_addresses, $authorization = null, $token_id = null)
+    public function getDefiInfoUsingGET($chain_id, $authorization = null, $defi_protocol_address = null)
     {
-        list($response) = $this->getNftInfoUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization, $token_id);
+        list($response) = $this->getDefiInfoUsingGETWithHttpInfo($chain_id, $authorization, $defi_protocol_address);
         return $response;
     }
 
     /**
-     * Operation getNftInfoUsingGET1WithHttpInfo
+     * Operation getDefiInfoUsingGETWithHttpInfo
      *
-     * Get NFT's security and risk data.
+     * Rug-pull Detection API Beta
      *
-     * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
-     * @param  string $contract_addresses NFT contract address (required)
+     * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $token_id tokenId (optional)
+     * @param  string $defi_protocol_address Defi protocol address (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperGetNftInfo_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperGetDefiInfo_, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNftInfoUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = null)
+    public function getDefiInfoUsingGETWithHttpInfo($chain_id, $authorization = null, $defi_protocol_address = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo_';
-        $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_';
+        $request = $this->getDefiInfoUsingGETRequest($chain_id, $authorization, $defi_protocol_address);
 
         try {
             $options = $this->createHttpClientOption();
@@ -174,7 +172,7 @@ class NftControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperGetNftInfo_',
+                        '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,21 +183,20 @@ class NftControllerApi
     }
 
     /**
-     * Operation getNftInfoUsingGET1Async
+     * Operation getDefiInfoUsingGETAsync
      *
-     * Get NFT's security and risk data.
+     * Rug-pull Detection API Beta
      *
-     * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
-     * @param  string $contract_addresses NFT contract address (required)
+     * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $token_id tokenId (optional)
+     * @param  string $defi_protocol_address Defi protocol address (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getNftInfoUsingGET1Async($chain_id, $contract_addresses, $authorization = null, $token_id = null)
+    public function getDefiInfoUsingGETAsync($chain_id, $authorization = null, $defi_protocol_address = null)
     {
-        return $this->getNftInfoUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization, $token_id)
+        return $this->getDefiInfoUsingGETAsyncWithHttpInfo($chain_id, $authorization, $defi_protocol_address)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -208,22 +205,21 @@ class NftControllerApi
     }
 
     /**
-     * Operation getNftInfoUsingGET1AsyncWithHttpInfo
+     * Operation getDefiInfoUsingGETAsyncWithHttpInfo
      *
-     * Get NFT's security and risk data.
+     * Rug-pull Detection API Beta
      *
-     * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
-     * @param  string $contract_addresses NFT contract address (required)
+     * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $token_id tokenId (optional)
+     * @param  string $defi_protocol_address Defi protocol address (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getNftInfoUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = null)
+    public function getDefiInfoUsingGETAsyncWithHttpInfo($chain_id, $authorization = null, $defi_protocol_address = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo_';
-        $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_';
+        $request = $this->getDefiInfoUsingGETRequest($chain_id, $authorization, $defi_protocol_address);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -263,32 +259,25 @@ class NftControllerApi
     }
 
     /**
-     * Create request for operation 'getNftInfoUsingGET1'
+     * Create request for operation 'getDefiInfoUsingGET'
      *
-     * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
-     * @param  string $contract_addresses NFT contract address (required)
+     * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $token_id tokenId (optional)
+     * @param  string $defi_protocol_address Defi protocol address (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization = null, $token_id = null)
+    protected function getDefiInfoUsingGETRequest($chain_id, $authorization = null, $defi_protocol_address = null)
     {
         // verify the required parameter 'chain_id' is set
         if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $chain_id when calling getNftInfoUsingGET1'
-            );
-        }
-        // verify the required parameter 'contract_addresses' is set
-        if ($contract_addresses === null || (is_array($contract_addresses) && count($contract_addresses) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $contract_addresses when calling getNftInfoUsingGET1'
+                'Missing the required parameter $chain_id when calling getDefiInfoUsingGET'
             );
         }
 
-        $resourcePath = '/api/v1/nft_security/{chain_id}';
+        $resourcePath = '/api/v1/rugpull_detecting/{chain_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -296,12 +285,8 @@ class NftControllerApi
         $multipart = false;
 
         // query params
-        if ($contract_addresses !== null) {
-            $queryParams['contract_addresses'] = ObjectSerializer::toQueryValue($contract_addresses, null);
-        }
-        // query params
-        if ($token_id !== null) {
-            $queryParams['token_id'] = ObjectSerializer::toQueryValue($token_id, null);
+        if ($defi_protocol_address !== null) {
+            $queryParams['Defi protocol address'] = ObjectSerializer::toQueryValue($defi_protocol_address, null);
         }
         // header params
         if ($authorization !== null) {
