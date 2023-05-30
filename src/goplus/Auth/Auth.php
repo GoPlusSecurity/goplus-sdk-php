@@ -11,7 +11,6 @@ use GuzzleHttp\Client;
 use Swagger\Client\Api\TokenControllerApi;
 use Swagger\Client\Model\GetAccessTokenRequest;
 
-
 final class Auth
 {
     private $key;
@@ -20,7 +19,7 @@ final class Auth
 
     private $guzzleOptions = [];
 
-    public function __construct($key, $secret, $guzzleOptions=[])
+    public function __construct($key, $secret, $guzzleOptions = [])
     {
         $this->key = $key;
         $this->secret = $secret;

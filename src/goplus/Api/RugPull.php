@@ -7,22 +7,23 @@
  */
 namespace Goplus\Api;
 
-use Swagger\Client\Api\TokenControllerV1Api;
+use Swagger\Client\Api\DefiControllerApi;
 
-class Chain extends Base
+class RugPull extends Base
 {
     public function __construct($accessToken = null, $guzzleOptions = [])
     {
         parent::__construct($accessToken, $guzzleOptions);
-        $this->client = new TokenControllerV1Api($this->getGuzzleClient());
+        $this->client = new DefiControllerApi($this->getGuzzleClient());
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $chainId
+     * @param mixed $address
      * @throws \Swagger\Client\ApiException
      */
-    public function getChainList($name = '')
+    public function rugPullSecurity($chainId, $address)
     {
-        return $this->client->getChainsListUsingGET($this->accessToken, $name);
+        return $this->client->getDefiInfoUsingGET($address, $chainId, $this->accessToken);
     }
 }
