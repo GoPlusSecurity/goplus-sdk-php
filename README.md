@@ -38,6 +38,9 @@ $data = (new Token())->tokenSecurity("1", "0xa0b86991c6218b36c1d19d4a2e9eb0ce360
 $accessToken = $auth->getResult()->getAccessToken();
 $data = (new Token($accessToken))->tokenSecurity("1", ["0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", ...]);
 
+// set timeout
+$data = (new Token($accessToken, ['timeout' => 10]))->tokenSecurity("1", ["0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", ...]);
+
 ```
 
 ### Address Security
