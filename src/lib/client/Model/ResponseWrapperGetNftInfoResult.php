@@ -82,6 +82,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
 'nft_description' => 'string',
 'self_destruct' => '\Swagger\Client\Model\ResponseWrapperGetNftInfoResultSelfDestruct',
 'metadata_frozen' => 'int',
+'token_owner' => 'string',
 'nft_verified' => 'int',
 'same_nfts' => '\Swagger\Client\Model\ResponseWrapperGetNftInfoResultSameNfts[]',
 'nft_items' => 'int',
@@ -124,6 +125,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
 'nft_description' => null,
 'self_destruct' => null,
 'metadata_frozen' => 'int32',
+'token_owner' => null,
 'nft_verified' => 'int32',
 'same_nfts' => null,
 'nft_items' => 'int64',
@@ -187,6 +189,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
 'nft_description' => 'nft_description',
 'self_destruct' => 'self_destruct',
 'metadata_frozen' => 'metadata_frozen',
+'token_owner' => 'token_owner',
 'nft_verified' => 'nft_verified',
 'same_nfts' => 'same_nfts',
 'nft_items' => 'nft_items',
@@ -229,6 +232,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
 'nft_description' => 'setNftDescription',
 'self_destruct' => 'setSelfDestruct',
 'metadata_frozen' => 'setMetadataFrozen',
+'token_owner' => 'setTokenOwner',
 'nft_verified' => 'setNftVerified',
 'same_nfts' => 'setSameNfts',
 'nft_items' => 'setNftItems',
@@ -271,6 +275,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
 'nft_description' => 'getNftDescription',
 'self_destruct' => 'getSelfDestruct',
 'metadata_frozen' => 'getMetadataFrozen',
+'token_owner' => 'getTokenOwner',
 'nft_verified' => 'getNftVerified',
 'same_nfts' => 'getSameNfts',
 'nft_items' => 'getNftItems',
@@ -365,6 +370,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
         $this->container['nft_description'] = isset($data['nft_description']) ? $data['nft_description'] : null;
         $this->container['self_destruct'] = isset($data['self_destruct']) ? $data['self_destruct'] : null;
         $this->container['metadata_frozen'] = isset($data['metadata_frozen']) ? $data['metadata_frozen'] : null;
+        $this->container['token_owner'] = isset($data['token_owner']) ? $data['token_owner'] : null;
         $this->container['nft_verified'] = isset($data['nft_verified']) ? $data['nft_verified'] : null;
         $this->container['same_nfts'] = isset($data['same_nfts']) ? $data['same_nfts'] : null;
         $this->container['nft_items'] = isset($data['nft_items']) ? $data['nft_items'] : null;
@@ -997,6 +1003,30 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     public function setMetadataFrozen($metadata_frozen)
     {
         $this->container['metadata_frozen'] = $metadata_frozen;
+
+        return $this;
+    }
+
+    /**
+     * Gets token_owner
+     *
+     * @return string
+     */
+    public function getTokenOwner()
+    {
+        return $this->container['token_owner'];
+    }
+
+    /**
+     * Sets token_owner
+     *
+     * @param string $token_owner token_owner
+     *
+     * @return $this
+     */
+    public function setTokenOwner($token_owner)
+    {
+        $this->container['token_owner'] = $token_owner;
 
         return $this;
     }
