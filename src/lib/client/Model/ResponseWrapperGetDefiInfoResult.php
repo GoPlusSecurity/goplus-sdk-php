@@ -63,7 +63,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
 'is_open_source' => 'int',
 'blacklist' => 'int',
 'contract_name' => 'string',
-'selfdestruct' => 'string',
+'selfdestruct' => 'int',
 'is_proxy' => 'int',
 'approval_abuse' => 'int'    ];
 
@@ -79,7 +79,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
 'is_open_source' => 'int32',
 'blacklist' => 'int32',
 'contract_name' => null,
-'selfdestruct' => null,
+'selfdestruct' => 'int32',
 'is_proxy' => 'int32',
 'approval_abuse' => 'int32'    ];
 
@@ -392,7 +392,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
     /**
      * Gets selfdestruct
      *
-     * @return string
+     * @return int
      */
     public function getSelfdestruct()
     {
@@ -402,7 +402,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets selfdestruct
      *
-     * @param string $selfdestruct It describes whether this contract can self destruct. \"1\" means true;  \"0\" means false; “-1” means unknown.
+     * @param int $selfdestruct It describes whether this contract can self destruct. \"1\" means true;  \"0\" means false; “-1” means unknown.
      *
      * @return $this
      */
