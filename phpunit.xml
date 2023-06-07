@@ -9,17 +9,23 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
 >
+
     <testsuites>
         <testsuite name="Tests">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+
+    <coverage includeUncoveredFiles="true"
+              processUncoveredFiles="true"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <include>
             <directory suffix=".php">src/goplus</directory>
-        </whitelist>
+        </include>
         <exclude>
             <directory suffix=".php">src/lib</directory>
         </exclude>
-    </filter>
+    </coverage>
+
 </phpunit>
