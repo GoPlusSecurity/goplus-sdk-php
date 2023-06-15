@@ -96,7 +96,7 @@ class DappControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse
      */
     public function getDappInfoUsingGET($authorization = null, $url = null)
     {
@@ -114,11 +114,11 @@ class DappControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDappInfoUsingGETWithHttpInfo($authorization = null, $url = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse';
         $request = $this->getDappInfoUsingGETRequest($authorization, $url);
 
         try {
@@ -170,7 +170,7 @@ class DappControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class DappControllerApi
      */
     public function getDappInfoUsingGETAsyncWithHttpInfo($authorization = null, $url = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse';
         $request = $this->getDappInfoUsingGETRequest($authorization, $url);
 
         return $this->client

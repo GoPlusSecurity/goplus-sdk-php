@@ -91,17 +91,17 @@ class DefiControllerApi
      *
      * Rug-pull Detection API Beta
      *
-     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
+     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperGetDefiInfo_
+     * @return \Swagger\Client\Model\GetDefiInfoResponse
      */
-    public function getDefiInfoUsingGET($contract_addresses, $chain_id, $authorization = null)
+    public function getDefiInfoUsingGET($chain_id, $contract_addresses, $authorization = null)
     {
-        list($response) = $this->getDefiInfoUsingGETWithHttpInfo($contract_addresses, $chain_id, $authorization);
+        list($response) = $this->getDefiInfoUsingGETWithHttpInfo($chain_id, $contract_addresses, $authorization);
         return $response;
     }
 
@@ -110,18 +110,18 @@ class DefiControllerApi
      *
      * Rug-pull Detection API Beta
      *
-     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
+     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperGetDefiInfo_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\GetDefiInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDefiInfoUsingGETWithHttpInfo($contract_addresses, $chain_id, $authorization = null)
+    public function getDefiInfoUsingGETWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_';
-        $request = $this->getDefiInfoUsingGETRequest($contract_addresses, $chain_id, $authorization);
+        $returnType = '\Swagger\Client\Model\GetDefiInfoResponse';
+        $request = $this->getDefiInfoUsingGETRequest($chain_id, $contract_addresses, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -172,7 +172,7 @@ class DefiControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_',
+                        '\Swagger\Client\Model\GetDefiInfoResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,16 +187,16 @@ class DefiControllerApi
      *
      * Rug-pull Detection API Beta
      *
-     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
+     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDefiInfoUsingGETAsync($contract_addresses, $chain_id, $authorization = null)
+    public function getDefiInfoUsingGETAsync($chain_id, $contract_addresses, $authorization = null)
     {
-        return $this->getDefiInfoUsingGETAsyncWithHttpInfo($contract_addresses, $chain_id, $authorization)
+        return $this->getDefiInfoUsingGETAsyncWithHttpInfo($chain_id, $contract_addresses, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -209,17 +209,17 @@ class DefiControllerApi
      *
      * Rug-pull Detection API Beta
      *
-     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
+     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDefiInfoUsingGETAsyncWithHttpInfo($contract_addresses, $chain_id, $authorization = null)
+    public function getDefiInfoUsingGETAsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_';
-        $request = $this->getDefiInfoUsingGETRequest($contract_addresses, $chain_id, $authorization);
+        $returnType = '\Swagger\Client\Model\GetDefiInfoResponse';
+        $request = $this->getDefiInfoUsingGETRequest($chain_id, $contract_addresses, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -261,25 +261,25 @@ class DefiControllerApi
     /**
      * Create request for operation 'getDefiInfoUsingGET'
      *
-     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56) (required)
+     * @param  string $contract_addresses Defi protocol address (required)
      * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getDefiInfoUsingGETRequest($contract_addresses, $chain_id, $authorization = null)
+    protected function getDefiInfoUsingGETRequest($chain_id, $contract_addresses, $authorization = null)
     {
-        // verify the required parameter 'contract_addresses' is set
-        if ($contract_addresses === null || (is_array($contract_addresses) && count($contract_addresses) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $contract_addresses when calling getDefiInfoUsingGET'
-            );
-        }
         // verify the required parameter 'chain_id' is set
         if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $chain_id when calling getDefiInfoUsingGET'
+            );
+        }
+        // verify the required parameter 'contract_addresses' is set
+        if ($contract_addresses === null || (is_array($contract_addresses) && count($contract_addresses) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $contract_addresses when calling getDefiInfoUsingGET'
             );
         }
 

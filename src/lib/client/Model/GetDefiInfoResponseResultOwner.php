@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperParseAbiDataResponse_
+ * GetDefiInfoResponseResultOwner
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperParseAbiDataResponse_ Class Doc Comment
+ * GetDefiInfoResponseResultOwner Class Doc Comment
  *
  * @category Class
+ * @description When there is no owner function, or the ownership is unreadable or private, it would return empty. \&quot;owner\&quot;: {  }
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAccess
+class GetDefiInfoResponseResultOwner implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«ParseAbiDataResponse»';
+    protected static $swaggerModelName = 'GetDefiInfoResponse_result_owner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +57,9 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-        'message' => 'string',
-        'result' => '\Swagger\Client\Model\ParseAbiDataResponse'
+        'owner_name' => 'string',
+        'owner_address' => 'string',
+        'owner_type' => 'string'
     ];
 
     /**
@@ -67,9 +68,9 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-        'message' => null,
-        'result' => null
+        'owner_name' => null,
+        'owner_address' => null,
+        'owner_type' => null
     ];
 
     /**
@@ -99,9 +100,9 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'message' => 'message',
-        'result' => 'result'
+        'owner_name' => 'owner_name',
+        'owner_address' => 'owner_address',
+        'owner_type' => 'owner_type'
     ];
 
     /**
@@ -110,9 +111,9 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'result' => 'setResult'
+        'owner_name' => 'setOwnerName',
+        'owner_address' => 'setOwnerAddress',
+        'owner_type' => 'setOwnerType'
     ];
 
     /**
@@ -121,9 +122,9 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'result' => 'getResult'
+        'owner_name' => 'getOwnerName',
+        'owner_address' => 'getOwnerAddress',
+        'owner_type' => 'getOwnerType'
     ];
 
     /**
@@ -184,9 +185,9 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
+        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
     }
 
     /**
@@ -214,73 +215,73 @@ class ResponseWrapperParseAbiDataResponse_ implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code Code 1：Success
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
+     * Gets owner_name
      *
      * @return string
      */
-    public function getMessage()
+    public function getOwnerName()
     {
-        return $this->container['message'];
+        return $this->container['owner_name'];
     }
 
     /**
-     * Sets message
+     * Sets owner_name
      *
-     * @param string $message Response message
+     * @param string $owner_name the function name of ownership.  If there is no return, means unknown.
      *
      * @return $this
      */
-    public function setMessage($message)
+    public function setOwnerName($owner_name)
     {
-        $this->container['message'] = $message;
+        $this->container['owner_name'] = $owner_name;
 
         return $this;
     }
 
     /**
-     * Gets result
+     * Gets owner_address
      *
-     * @return \Swagger\Client\Model\ParseAbiDataResponse
+     * @return string
      */
-    public function getResult()
+    public function getOwnerAddress()
     {
-        return $this->container['result'];
+        return $this->container['owner_address'];
     }
 
     /**
-     * Sets result
+     * Sets owner_address
      *
-     * @param \Swagger\Client\Model\ParseAbiDataResponse $result result
+     * @param string $owner_address owner address of the contract.  No return means unknown.
      *
      * @return $this
      */
-    public function setResult($result)
+    public function setOwnerAddress($owner_address)
     {
-        $this->container['result'] = $result;
+        $this->container['owner_address'] = $owner_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_type
+     *
+     * @return string
+     */
+    public function getOwnerType()
+    {
+        return $this->container['owner_type'];
+    }
+
+    /**
+     * Sets owner_type
+     *
+     * @param string $owner_type blackhole\" : the owner is a blackhole address. \"contract\" : the owner is a contract. \"eoa\" : the owner is a common address (eoa). \"multi-address\": the owner is an array/list. null: the address is not detected. No return means unknown.
+     *
+     * @return $this
+     */
+    public function setOwnerType($owner_type)
+    {
+        $this->container['owner_type'] = $owner_type;
 
         return $this;
     }

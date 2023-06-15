@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperDappContractSecurityResponse_
+ * ResponseWrapperListApproveNFTListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperDappContractSecurityResponse_ Class Doc Comment
+ * ResponseWrapperListApproveNFTListResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperDappContractSecurityResponse_ implements ModelInterface, ArrayAccess
+class ResponseWrapperListApproveNFTListResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperDappContractSecurityResponse_ implements ModelInterface, Ar
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«DappContractSecurityResponse»';
+    protected static $swaggerModelName = 'ResponseWrapperListApproveNFTListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperDappContractSecurityResponse_ implements ModelInterface, Ar
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\DappContractSecurityResponse'
+        'result' => '\Swagger\Client\Model\ApproveNFTListResponse[]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperDappContractSecurityResponse_ implements ModelInterface, Ar
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\DappContractSecurityResponse
+     * @return \Swagger\Client\Model\ApproveNFTListResponse[]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperDappContractSecurityResponse_ implements ModelInterface, Ar
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\DappContractSecurityResponse $result result
+     * @param \Swagger\Client\Model\ApproveNFTListResponse[] $result Response result
      *
      * @return $this
      */

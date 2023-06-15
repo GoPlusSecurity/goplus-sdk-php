@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperGetDefiInfoResult
+ * GetDefiInfoResponseResult
  *
  * PHP version 5
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperGetDefiInfoResult Class Doc Comment
+ * GetDefiInfoResponseResult Class Doc Comment
  *
  * @category Class
  * @description Response result
@@ -40,7 +40,7 @@ use \Swagger\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
+class GetDefiInfoResponseResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapperGetDefiInfo_result';
+    protected static $swaggerModelName = 'GetDefiInfoResponse_result';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'owner' => '\Swagger\Client\Model\ResponseWrapperGetDefiInfoResultOwner',
+        'owner' => '\Swagger\Client\Model\GetDefiInfoResponseResultOwner',
         'privilege_withdraw' => 'int',
         'withdraw_missing' => 'int',
         'is_open_source' => 'int',
@@ -253,7 +253,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
     /**
      * Gets owner
      *
-     * @return \Swagger\Client\Model\ResponseWrapperGetDefiInfoResultOwner
+     * @return \Swagger\Client\Model\GetDefiInfoResponseResultOwner
      */
     public function getOwner()
     {
@@ -263,7 +263,7 @@ class ResponseWrapperGetDefiInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets owner
      *
-     * @param \Swagger\Client\Model\ResponseWrapperGetDefiInfoResultOwner $owner owner
+     * @param \Swagger\Client\Model\GetDefiInfoResponseResultOwner $owner owner
      *
      * @return $this
      */

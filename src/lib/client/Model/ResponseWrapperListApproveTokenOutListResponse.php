@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperAddressContract_
+ * ResponseWrapperListApproveTokenOutListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperAddressContract_ Class Doc Comment
+ * ResponseWrapperListApproveTokenOutListResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperAddressContract_ implements ModelInterface, ArrayAccess
+class ResponseWrapperListApproveTokenOutListResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperAddressContract_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«AddressContract»';
+    protected static $swaggerModelName = 'ResponseWrapperListApproveTokenOutListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperAddressContract_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ResponseWrapperAddressContractResult'
+        'result' => '\Swagger\Client\Model\ApproveTokenOutListResponse[]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperAddressContract_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ResponseWrapperAddressContractResult
+     * @return \Swagger\Client\Model\ApproveTokenOutListResponse[]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperAddressContract_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ResponseWrapperAddressContractResult $result result
+     * @param \Swagger\Client\Model\ApproveTokenOutListResponse[] $result Response result
      *
      * @return $this
      */

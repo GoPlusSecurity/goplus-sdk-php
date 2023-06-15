@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperGetNftInfo_
+ * ResponseWrapperContractApproveResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperGetNftInfo_ Class Doc Comment
+ * ResponseWrapperContractApproveResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperGetNftInfo_ implements ModelInterface, ArrayAccess
+class ResponseWrapperContractApproveResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperGetNftInfo_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«GetNftInfo»';
+    protected static $swaggerModelName = 'ResponseWrapperContractApproveResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperGetNftInfo_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ResponseWrapperGetNftInfoResult'
+        'result' => '\Swagger\Client\Model\ContractApproveResponse'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperGetNftInfo_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ResponseWrapperGetNftInfoResult
+     * @return \Swagger\Client\Model\ContractApproveResponse
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperGetNftInfo_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ResponseWrapperGetNftInfoResult $result result
+     * @param \Swagger\Client\Model\ContractApproveResponse $result result
      *
      * @return $this
      */

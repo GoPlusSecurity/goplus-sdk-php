@@ -97,7 +97,7 @@ class ApproveControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperAddressContract_
+     * @return \Swagger\Client\Model\ResponseWrapperAddressContract
      */
     public function addressContractUsingGET1($address, $authorization = null, $chain_id = null)
     {
@@ -116,11 +116,11 @@ class ApproveControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperAddressContract_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperAddressContract, HTTP status code, HTTP response headers (array of strings)
      */
     public function addressContractUsingGET1WithHttpInfo($address, $authorization = null, $chain_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperAddressContract_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperAddressContract';
         $request = $this->addressContractUsingGET1Request($address, $authorization, $chain_id);
 
         try {
@@ -172,7 +172,7 @@ class ApproveControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperAddressContract_',
+                        '\Swagger\Client\Model\ResponseWrapperAddressContract',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class ApproveControllerV1Api
      */
     public function addressContractUsingGET1AsyncWithHttpInfo($address, $authorization = null, $chain_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperAddressContract_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperAddressContract';
         $request = $this->addressContractUsingGET1Request($address, $authorization, $chain_id);
 
         return $this->client
@@ -377,7 +377,7 @@ class ApproveControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperContractApproveResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperContractApproveResponse
      */
     public function approvalContractUsingGET($chain_id, $contract_addresses, $authorization = null)
     {
@@ -396,11 +396,11 @@ class ApproveControllerV1Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperContractApproveResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperContractApproveResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function approvalContractUsingGETWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperContractApproveResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperContractApproveResponse';
         $request = $this->approvalContractUsingGETRequest($chain_id, $contract_addresses, $authorization);
 
         try {
@@ -452,7 +452,7 @@ class ApproveControllerV1Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperContractApproveResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperContractApproveResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class ApproveControllerV1Api
      */
     public function approvalContractUsingGETAsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperContractApproveResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperContractApproveResponse';
         $request = $this->approvalContractUsingGETRequest($chain_id, $contract_addresses, $authorization);
 
         return $this->client

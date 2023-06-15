@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperJSONObject_
+ * ResponseWrapperListJSONObject
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperJSONObject_ Class Doc Comment
+ * ResponseWrapperListJSONObject Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperJSONObject_ implements ModelInterface, ArrayAccess
+class ResponseWrapperListJSONObject implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperJSONObject_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«JSONObject»';
+    protected static $swaggerModelName = 'ResponseWrapperListJSONObject';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperJSONObject_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => 'map[string,object]'
+        'result' => '\Swagger\Client\Model\JSONObject[]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperJSONObject_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return map[string,object]
+     * @return \Swagger\Client\Model\JSONObject[]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperJSONObject_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param map[string,object] $result Response result
+     * @param \Swagger\Client\Model\JSONObject[] $result Response result
      *
      * @return $this
      */

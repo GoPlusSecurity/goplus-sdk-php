@@ -95,7 +95,7 @@ class TokenControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse
      */
     public function getAccessTokenUsingPOST($body = null)
     {
@@ -112,11 +112,11 @@ class TokenControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccessTokenUsingPOSTWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse';
         $request = $this->getAccessTokenUsingPOSTRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class TokenControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class TokenControllerApi
      */
     public function getAccessTokenUsingPOSTAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse';
         $request = $this->getAccessTokenUsingPOSTRequest($body);
 
         return $this->client
