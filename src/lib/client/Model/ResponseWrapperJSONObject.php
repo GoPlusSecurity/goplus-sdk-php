@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperGetDefiInfo_
+ * ResponseWrapperJSONObject
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperGetDefiInfo_ Class Doc Comment
+ * ResponseWrapperJSONObject Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperGetDefiInfo_ implements ModelInterface, ArrayAccess
+class ResponseWrapperJSONObject implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperGetDefiInfo_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«GetDefiInfo»';
+    protected static $swaggerModelName = 'ResponseWrapperJSONObject';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperGetDefiInfo_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ResponseWrapperGetDefiInfoResult'
+        'result' => 'map[string,object]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperGetDefiInfo_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ResponseWrapperGetDefiInfoResult
+     * @return map[string,object]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperGetDefiInfo_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ResponseWrapperGetDefiInfoResult $result result
+     * @param map[string,object] $result Response result
      *
      * @return $this
      */

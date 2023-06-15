@@ -1,6 +1,6 @@
 <?php
 /**
- * DappControllerApi
+ * GoplusTokenApiApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * DappControllerApi Class Doc Comment
+ * GoplusTokenApiApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DappControllerApi
+class GoplusTokenApiApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,37 @@ class DappControllerApi
     }
 
     /**
-     * Operation getDappInfoUsingGET
+     * Operation getAccessTokenUsingPOST
      *
-     * Check risk of dapp through URL
+     * get token
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $url Url or domain (optional)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse
      */
-    public function getDappInfoUsingGET($authorization = null, $url = null)
+    public function getAccessTokenUsingPOST($body = null)
     {
-        list($response) = $this->getDappInfoUsingGETWithHttpInfo($authorization, $url);
+        list($response) = $this->getAccessTokenUsingPOSTWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation getDappInfoUsingGETWithHttpInfo
+     * Operation getAccessTokenUsingPOSTWithHttpInfo
      *
-     * Check risk of dapp through URL
+     * get token
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $url Url or domain (optional)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDappInfoUsingGETWithHttpInfo($authorization = null, $url = null)
+    public function getAccessTokenUsingPOSTWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_';
-        $request = $this->getDappInfoUsingGETRequest($authorization, $url);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse';
+        $request = $this->getAccessTokenUsingPOSTRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +168,7 @@ class DappControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,19 +179,18 @@ class DappControllerApi
     }
 
     /**
-     * Operation getDappInfoUsingGETAsync
+     * Operation getAccessTokenUsingPOSTAsync
      *
-     * Check risk of dapp through URL
+     * get token
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $url Url or domain (optional)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDappInfoUsingGETAsync($authorization = null, $url = null)
+    public function getAccessTokenUsingPOSTAsync($body = null)
     {
-        return $this->getDappInfoUsingGETAsyncWithHttpInfo($authorization, $url)
+        return $this->getAccessTokenUsingPOSTAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,20 +199,19 @@ class DappControllerApi
     }
 
     /**
-     * Operation getDappInfoUsingGETAsyncWithHttpInfo
+     * Operation getAccessTokenUsingPOSTAsyncWithHttpInfo
      *
-     * Check risk of dapp through URL
+     * get token
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $url Url or domain (optional)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDappInfoUsingGETAsyncWithHttpInfo($authorization = null, $url = null)
+    public function getAccessTokenUsingPOSTAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperDappContractSecurityResponse_';
-        $request = $this->getDappInfoUsingGETRequest($authorization, $url);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetAccessTokenResponse';
+        $request = $this->getAccessTokenUsingPOSTRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,36 +251,30 @@ class DappControllerApi
     }
 
     /**
-     * Create request for operation 'getDappInfoUsingGET'
+     * Create request for operation 'getAccessTokenUsingPOST'
      *
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
-     * @param  string $url Url or domain (optional)
+     * @param  \Swagger\Client\Model\GetAccessTokenRequest $body request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getDappInfoUsingGETRequest($authorization = null, $url = null)
+    protected function getAccessTokenUsingPOSTRequest($body = null)
     {
 
-        $resourcePath = '/api/v1/dapp_security';
+        $resourcePath = '/api/v1/token';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($url !== null) {
-            $queryParams['url'] = ObjectSerializer::toQueryValue($url, null);
-        }
-        // header params
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
-        }
 
 
         // body params
         $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -293,7 +283,7 @@ class DappControllerApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['*/*'],
-                []
+                ['application/json']
             );
         }
 
@@ -340,7 +330,7 @@ class DappControllerApi
 
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
-            'GET',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
