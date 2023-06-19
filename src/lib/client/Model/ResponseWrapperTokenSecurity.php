@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperMapStringString_
+ * ResponseWrapperTokenSecurity
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperMapStringString_ Class Doc Comment
+ * ResponseWrapperTokenSecurity Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
+class ResponseWrapperTokenSecurity implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«Map«string,string»»';
+    protected static $swaggerModelName = 'ResponseWrapperTokenSecurity';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => 'map[string,string]'
+        'result' => 'map[string,\Swagger\Client\Model\ResponseWrapperTokenSecurityResult]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return map[string,string]
+     * @return map[string,\Swagger\Client\Model\ResponseWrapperTokenSecurityResult]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperMapStringString_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param map[string,string] $result Response result
+     * @param map[string,\Swagger\Client\Model\ResponseWrapperTokenSecurityResult] $result Response result
      *
      * @return $this
      */

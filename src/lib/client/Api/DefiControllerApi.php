@@ -97,7 +97,7 @@ class DefiControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperGetDefiInfo_
+     * @return \Swagger\Client\Model\GetDefiInfoResponse
      */
     public function getDefiInfoUsingGET($contract_addresses, $chain_id, $authorization = null)
     {
@@ -116,11 +116,11 @@ class DefiControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperGetDefiInfo_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\GetDefiInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDefiInfoUsingGETWithHttpInfo($contract_addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_';
+        $returnType = '\Swagger\Client\Model\GetDefiInfoResponse';
         $request = $this->getDefiInfoUsingGETRequest($contract_addresses, $chain_id, $authorization);
 
         try {
@@ -172,7 +172,7 @@ class DefiControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_',
+                        '\Swagger\Client\Model\GetDefiInfoResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class DefiControllerApi
      */
     public function getDefiInfoUsingGETAsyncWithHttpInfo($contract_addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetDefiInfo_';
+        $returnType = '\Swagger\Client\Model\GetDefiInfoResponse';
         $request = $this->getDefiInfoUsingGETRequest($contract_addresses, $chain_id, $authorization);
 
         return $this->client

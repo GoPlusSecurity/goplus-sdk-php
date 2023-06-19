@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperContractApproveResponse_
+ * ResponseWrapperListApproveNFT1155ListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperContractApproveResponse_ Class Doc Comment
+ * ResponseWrapperListApproveNFT1155ListResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperContractApproveResponse_ implements ModelInterface, ArrayAccess
+class ResponseWrapperListApproveNFT1155ListResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperContractApproveResponse_ implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«ContractApproveResponse»';
+    protected static $swaggerModelName = 'ResponseWrapperListApproveNFT1155ListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperContractApproveResponse_ implements ModelInterface, ArrayAc
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ContractApproveResponse'
+        'result' => '\Swagger\Client\Model\ApproveNFT1155ListResponse[]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperContractApproveResponse_ implements ModelInterface, ArrayAc
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ContractApproveResponse
+     * @return \Swagger\Client\Model\ApproveNFT1155ListResponse[]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperContractApproveResponse_ implements ModelInterface, ArrayAc
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ContractApproveResponse $result result
+     * @param \Swagger\Client\Model\ApproveNFT1155ListResponse[] $result Response result
      *
      * @return $this
      */

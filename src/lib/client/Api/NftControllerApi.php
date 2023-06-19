@@ -98,7 +98,7 @@ class NftControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperGetNftInfo_
+     * @return \Swagger\Client\Model\ResponseWrapperGetNftInfo
      */
     public function getNftInfoUsingGET1($chain_id, $contract_addresses, $authorization = null, $token_id = null)
     {
@@ -118,11 +118,11 @@ class NftControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperGetNftInfo_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperGetNftInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNftInfoUsingGET1WithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo';
         $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
 
         try {
@@ -174,7 +174,7 @@ class NftControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperGetNftInfo_',
+                        '\Swagger\Client\Model\ResponseWrapperGetNftInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class NftControllerApi
      */
     public function getNftInfoUsingGET1AsyncWithHttpInfo($chain_id, $contract_addresses, $authorization = null, $token_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperGetNftInfo';
         $request = $this->getNftInfoUsingGET1Request($chain_id, $contract_addresses, $authorization, $token_id);
 
         return $this->client

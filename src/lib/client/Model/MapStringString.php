@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperListGetChainsList_
+ * MapStringString
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperListGetChainsList_ Class Doc Comment
+ * MapStringString Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
+class MapStringString implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«List«GetChainsList»»';
+    protected static $swaggerModelName = 'MapStringString';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'int',
-        'message' => 'string',
-        'result' => '\Swagger\Client\Model\ResponseWrapperListGetChainsListResult[]'
     ];
 
     /**
@@ -67,9 +64,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => 'int32',
-        'message' => null,
-        'result' => null
     ];
 
     /**
@@ -99,9 +93,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'message' => 'message',
-        'result' => 'result'
     ];
 
     /**
@@ -110,9 +101,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'message' => 'setMessage',
-        'result' => 'setResult'
     ];
 
     /**
@@ -121,9 +109,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'message' => 'getMessage',
-        'result' => 'getResult'
     ];
 
     /**
@@ -184,9 +169,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -196,7 +178,7 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         return $invalidProperties;
     }
@@ -212,78 +194,6 @@ class ResponseWrapperListGetChainsList_ implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code Code 1：Success
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string $message Response message
-     *
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets result
-     *
-     * @return \Swagger\Client\Model\ResponseWrapperListGetChainsListResult[]
-     */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-     * Sets result
-     *
-     * @param \Swagger\Client\Model\ResponseWrapperListGetChainsListResult[] $result Response result
-     *
-     * @return $this
-     */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

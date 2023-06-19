@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperGetAccessTokenResponse_
+ * GetDefiInfoResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperGetAccessTokenResponse_ Class Doc Comment
+ * GetDefiInfoResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAccess
+class GetDefiInfoResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«GetAccessTokenResponse»';
+    protected static $swaggerModelName = 'GetDefiInfoResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,9 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'result' => '\Swagger\Client\Model\GetAccessTokenResponse',
         'code' => 'int',
-        'message' => 'string'
+        'message' => 'string',
+        'result' => '\Swagger\Client\Model\GetDefiInfoResponseResult'
     ];
 
     /**
@@ -67,9 +67,9 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'result' => null,
         'code' => 'int32',
-        'message' => null
+        'message' => null,
+        'result' => null
     ];
 
     /**
@@ -99,9 +99,9 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'result' => 'result',
         'code' => 'code',
-        'message' => 'message'
+        'message' => 'message',
+        'result' => 'result'
     ];
 
     /**
@@ -110,9 +110,9 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'result' => 'setResult',
         'code' => 'setCode',
-        'message' => 'setMessage'
+        'message' => 'setMessage',
+        'result' => 'setResult'
     ];
 
     /**
@@ -121,9 +121,9 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'result' => 'getResult',
         'code' => 'getCode',
-        'message' => 'getMessage'
+        'message' => 'getMessage',
+        'result' => 'getResult'
     ];
 
     /**
@@ -184,9 +184,9 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
      */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -212,30 +212,6 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets result
-     *
-     * @return \Swagger\Client\Model\GetAccessTokenResponse
-     */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-     * Sets result
-     *
-     * @param \Swagger\Client\Model\GetAccessTokenResponse $result result
-     *
-     * @return $this
-     */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
-
-        return $this;
-    }
 
     /**
      * Gets code
@@ -281,6 +257,30 @@ class ResponseWrapperGetAccessTokenResponse_ implements ModelInterface, ArrayAcc
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets result
+     *
+     * @return \Swagger\Client\Model\GetDefiInfoResponseResult
+     */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+     * Sets result
+     *
+     * @param \Swagger\Client\Model\GetDefiInfoResponseResult $result result
+     *
+     * @return $this
+     */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
 
         return $this;
     }

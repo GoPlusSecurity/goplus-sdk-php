@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperListApproveNFT1155ListResponse_
+ * ResponseWrapperParseAbiDataResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperListApproveNFT1155ListResponse_ Class Doc Comment
+ * ResponseWrapperParseAbiDataResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperListApproveNFT1155ListResponse_ implements ModelInterface, ArrayAccess
+class ResponseWrapperParseAbiDataResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperListApproveNFT1155ListResponse_ implements ModelInterface, 
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«List«ApproveNFT1155ListResponse»»';
+    protected static $swaggerModelName = 'ResponseWrapperParseAbiDataResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperListApproveNFT1155ListResponse_ implements ModelInterface, 
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ApproveNFT1155ListResponse[]'
+        'result' => '\Swagger\Client\Model\ParseAbiDataResponse'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperListApproveNFT1155ListResponse_ implements ModelInterface, 
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ApproveNFT1155ListResponse[]
+     * @return \Swagger\Client\Model\ParseAbiDataResponse
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperListApproveNFT1155ListResponse_ implements ModelInterface, 
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ApproveNFT1155ListResponse[] $result Response result
+     * @param \Swagger\Client\Model\ParseAbiDataResponse $result result
      *
      * @return $this
      */

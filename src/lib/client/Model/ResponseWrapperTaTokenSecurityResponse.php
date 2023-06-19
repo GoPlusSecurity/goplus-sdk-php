@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperGetDefiInfoResultOwner
+ * ResponseWrapperTaTokenSecurityResponse
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperGetDefiInfoResultOwner Class Doc Comment
+ * ResponseWrapperTaTokenSecurityResponse Class Doc Comment
  *
  * @category Class
- * @description When there is no owner function, or the ownership is unreadable or private, it would return empty. \&quot;owner\&quot;: {  }
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAccess
+class ResponseWrapperTaTokenSecurityResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapperGetDefiInfo_result_owner';
+    protected static $swaggerModelName = 'ResponseWrapperTaTokenSecurityResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +56,9 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'owner_name' => 'string',
-        'owner_address' => 'string',
-        'owner_type' => 'string'
+        'code' => 'int',
+        'message' => 'string',
+        'result' => '\Swagger\Client\Model\TaTokenSecurityResponse'
     ];
 
     /**
@@ -68,9 +67,9 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'owner_name' => null,
-        'owner_address' => null,
-        'owner_type' => null
+        'code' => 'int32',
+        'message' => null,
+        'result' => null
     ];
 
     /**
@@ -100,9 +99,9 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'owner_name' => 'owner_name',
-        'owner_address' => 'owner_address',
-        'owner_type' => 'owner_type'
+        'code' => 'code',
+        'message' => 'message',
+        'result' => 'result'
     ];
 
     /**
@@ -111,9 +110,9 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'owner_name' => 'setOwnerName',
-        'owner_address' => 'setOwnerAddress',
-        'owner_type' => 'setOwnerType'
+        'code' => 'setCode',
+        'message' => 'setMessage',
+        'result' => 'setResult'
     ];
 
     /**
@@ -122,9 +121,9 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'owner_name' => 'getOwnerName',
-        'owner_address' => 'getOwnerAddress',
-        'owner_type' => 'getOwnerType'
+        'code' => 'getCode',
+        'message' => 'getMessage',
+        'result' => 'getResult'
     ];
 
     /**
@@ -185,9 +184,9 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
-        $this->container['owner_name'] = isset($data['owner_name']) ? $data['owner_name'] : null;
-        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
-        $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -215,73 +214,73 @@ class ResponseWrapperGetDefiInfoResultOwner implements ModelInterface, ArrayAcce
 
 
     /**
-     * Gets owner_name
+     * Gets code
      *
-     * @return string
+     * @return int
      */
-    public function getOwnerName()
+    public function getCode()
     {
-        return $this->container['owner_name'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets owner_name
+     * Sets code
      *
-     * @param string $owner_name the function name of ownership.  If there is no return, means unknown.
+     * @param int $code Code 1：Success
      *
      * @return $this
      */
-    public function setOwnerName($owner_name)
+    public function setCode($code)
     {
-        $this->container['owner_name'] = $owner_name;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets owner_address
+     * Gets message
      *
      * @return string
      */
-    public function getOwnerAddress()
+    public function getMessage()
     {
-        return $this->container['owner_address'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets owner_address
+     * Sets message
      *
-     * @param string $owner_address owner address of the contract.  No return means unknown.
+     * @param string $message Response message
      *
      * @return $this
      */
-    public function setOwnerAddress($owner_address)
+    public function setMessage($message)
     {
-        $this->container['owner_address'] = $owner_address;
+        $this->container['message'] = $message;
 
         return $this;
     }
 
     /**
-     * Gets owner_type
+     * Gets result
      *
-     * @return string
+     * @return \Swagger\Client\Model\TaTokenSecurityResponse
      */
-    public function getOwnerType()
+    public function getResult()
     {
-        return $this->container['owner_type'];
+        return $this->container['result'];
     }
 
     /**
-     * Sets owner_type
+     * Sets result
      *
-     * @param string $owner_type blackhole\" : the owner is a blackhole address. \"contract\" : the owner is a contract. \"eoa\" : the owner is a common address (eoa). \"multi-address\": the owner is an array/list. null: the address is not detected. No return means unknown.
+     * @param \Swagger\Client\Model\TaTokenSecurityResponse $result result
      *
      * @return $this
      */
-    public function setOwnerType($owner_type)
+    public function setResult($result)
     {
-        $this->container['owner_type'] = $owner_type;
+        $this->container['result'] = $result;
 
         return $this;
     }

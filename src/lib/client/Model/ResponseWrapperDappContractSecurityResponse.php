@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperListApproveNFTListResponse_
+ * ResponseWrapperDappContractSecurityResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperListApproveNFTListResponse_ Class Doc Comment
+ * ResponseWrapperDappContractSecurityResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperListApproveNFTListResponse_ implements ModelInterface, ArrayAccess
+class ResponseWrapperDappContractSecurityResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperListApproveNFTListResponse_ implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«List«ApproveNFTListResponse»»';
+    protected static $swaggerModelName = 'ResponseWrapperDappContractSecurityResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperListApproveNFTListResponse_ implements ModelInterface, Arra
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ApproveNFTListResponse[]'
+        'result' => '\Swagger\Client\Model\DappContractSecurityResponse'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperListApproveNFTListResponse_ implements ModelInterface, Arra
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ApproveNFTListResponse[]
+     * @return \Swagger\Client\Model\DappContractSecurityResponse
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperListApproveNFTListResponse_ implements ModelInterface, Arra
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ApproveNFTListResponse[] $result Response result
+     * @param \Swagger\Client\Model\DappContractSecurityResponse $result result
      *
      * @return $this
      */
