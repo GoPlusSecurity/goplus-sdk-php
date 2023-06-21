@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperObject_
+ * ResponseWrapperAddressContract
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperObject_ Class Doc Comment
+ * ResponseWrapperAddressContract Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperObject_ implements ModelInterface, ArrayAccess
+class ResponseWrapperAddressContract implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperObject_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«object»';
+    protected static $swaggerModelName = 'ResponseWrapperAddressContract';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperObject_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => 'object'
+        'result' => '\Swagger\Client\Model\ResponseWrapperAddressContractResult'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperObject_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return object
+     * @return \Swagger\Client\Model\ResponseWrapperAddressContractResult
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperObject_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param object $result Response result
+     * @param \Swagger\Client\Model\ResponseWrapperAddressContractResult $result result
      *
      * @return $this
      */

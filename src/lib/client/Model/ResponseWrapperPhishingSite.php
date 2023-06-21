@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperTokenSecurity_
+ * ResponseWrapperPhishingSite
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperTokenSecurity_ Class Doc Comment
+ * ResponseWrapperPhishingSite Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperTokenSecurity_ implements ModelInterface, ArrayAccess
+class ResponseWrapperPhishingSite implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperTokenSecurity_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«TokenSecurity»';
+    protected static $swaggerModelName = 'ResponseWrapperPhishingSite';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperTokenSecurity_ implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => 'map[string,\Swagger\Client\Model\ResponseWrapperTokenSecurityResult]'
+        'result' => '\Swagger\Client\Model\ResponseWrapperPhishingSiteResult'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperTokenSecurity_ implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return map[string,\Swagger\Client\Model\ResponseWrapperTokenSecurityResult]
+     * @return \Swagger\Client\Model\ResponseWrapperPhishingSiteResult
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperTokenSecurity_ implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param map[string,\Swagger\Client\Model\ResponseWrapperTokenSecurityResult] $result Response result
+     * @param \Swagger\Client\Model\ResponseWrapperPhishingSiteResult $result result
      *
      * @return $this
      */

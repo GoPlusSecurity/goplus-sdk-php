@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperPhishingSite_
+ * ResponseWrapperGetAccessTokenResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperPhishingSite_ Class Doc Comment
+ * ResponseWrapperGetAccessTokenResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
+class ResponseWrapperGetAccessTokenResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«PhishingSite»';
+    protected static $swaggerModelName = 'ResponseWrapperGetAccessTokenResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,9 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'result' => '\Swagger\Client\Model\GetAccessTokenResponse',
         'code' => 'int',
-        'message' => 'string',
-        'result' => '\Swagger\Client\Model\ResponseWrapperPhishingSiteResult'
+        'message' => 'string'
     ];
 
     /**
@@ -67,9 +67,9 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'result' => null,
         'code' => 'int32',
-        'message' => null,
-        'result' => null
+        'message' => null
     ];
 
     /**
@@ -99,9 +99,9 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'result' => 'result',
         'code' => 'code',
-        'message' => 'message',
-        'result' => 'result'
+        'message' => 'message'
     ];
 
     /**
@@ -110,9 +110,9 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'result' => 'setResult',
         'code' => 'setCode',
-        'message' => 'setMessage',
-        'result' => 'setResult'
+        'message' => 'setMessage'
     ];
 
     /**
@@ -121,9 +121,9 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'result' => 'getResult',
         'code' => 'getCode',
-        'message' => 'getMessage',
-        'result' => 'getResult'
+        'message' => 'getMessage'
     ];
 
     /**
@@ -184,9 +184,9 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
     }
 
     /**
@@ -212,6 +212,30 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets result
+     *
+     * @return \Swagger\Client\Model\GetAccessTokenResponse
+     */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+     * Sets result
+     *
+     * @param \Swagger\Client\Model\GetAccessTokenResponse $result result
+     *
+     * @return $this
+     */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
+
+        return $this;
+    }
 
     /**
      * Gets code
@@ -257,30 +281,6 @@ class ResponseWrapperPhishingSite_ implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets result
-     *
-     * @return \Swagger\Client\Model\ResponseWrapperPhishingSiteResult
-     */
-    public function getResult()
-    {
-        return $this->container['result'];
-    }
-
-    /**
-     * Sets result
-     *
-     * @param \Swagger\Client\Model\ResponseWrapperPhishingSiteResult $result result
-     *
-     * @return $this
-     */
-    public function setResult($result)
-    {
-        $this->container['result'] = $result;
 
         return $this;
     }

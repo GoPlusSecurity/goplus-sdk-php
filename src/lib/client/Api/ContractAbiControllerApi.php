@@ -96,7 +96,7 @@ class ContractAbiControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperParseAbiDataResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperParseAbiDataResponse
      */
     public function getAbiDataInfoUsingPOST($body, $authorization = null)
     {
@@ -114,11 +114,11 @@ class ContractAbiControllerApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperParseAbiDataResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperParseAbiDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAbiDataInfoUsingPOSTWithHttpInfo($body, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperParseAbiDataResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperParseAbiDataResponse';
         $request = $this->getAbiDataInfoUsingPOSTRequest($body, $authorization);
 
         try {
@@ -170,7 +170,7 @@ class ContractAbiControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperParseAbiDataResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperParseAbiDataResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class ContractAbiControllerApi
      */
     public function getAbiDataInfoUsingPOSTAsyncWithHttpInfo($body, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperParseAbiDataResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperParseAbiDataResponse';
         $request = $this->getAbiDataInfoUsingPOSTRequest($body, $authorization);
 
         return $this->client

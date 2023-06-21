@@ -97,7 +97,7 @@ class ApproveControllerV2Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse
      */
     public function addressNFT1155ApproveListUsingGET1($addresses, $chain_id, $authorization = null)
     {
@@ -116,11 +116,11 @@ class ApproveControllerV2Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function addressNFT1155ApproveListUsingGET1WithHttpInfo($addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse';
         $request = $this->addressNFT1155ApproveListUsingGET1Request($addresses, $chain_id, $authorization);
 
         try {
@@ -172,7 +172,7 @@ class ApproveControllerV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -218,7 +218,7 @@ class ApproveControllerV2Api
      */
     public function addressNFT1155ApproveListUsingGET1AsyncWithHttpInfo($addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFT1155ListResponse';
         $request = $this->addressNFT1155ApproveListUsingGET1Request($addresses, $chain_id, $authorization);
 
         return $this->client
@@ -383,7 +383,7 @@ class ApproveControllerV2Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse
      */
     public function addressNFT721ApproveListUsingGET1($addresses, $chain_id, $authorization = null)
     {
@@ -402,11 +402,11 @@ class ApproveControllerV2Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function addressNFT721ApproveListUsingGET1WithHttpInfo($addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse';
         $request = $this->addressNFT721ApproveListUsingGET1Request($addresses, $chain_id, $authorization);
 
         try {
@@ -458,7 +458,7 @@ class ApproveControllerV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class ApproveControllerV2Api
      */
     public function addressNFT721ApproveListUsingGET1AsyncWithHttpInfo($addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveNFTListResponse';
         $request = $this->addressNFT721ApproveListUsingGET1Request($addresses, $chain_id, $authorization);
 
         return $this->client
@@ -669,7 +669,7 @@ class ApproveControllerV2Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse_
+     * @return \Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse
      */
     public function addressTokenApproveListUsingGET1($addresses, $chain_id, $authorization = null)
     {
@@ -688,11 +688,11 @@ class ApproveControllerV2Api
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse_, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function addressTokenApproveListUsingGET1WithHttpInfo($addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse';
         $request = $this->addressTokenApproveListUsingGET1Request($addresses, $chain_id, $authorization);
 
         try {
@@ -744,7 +744,7 @@ class ApproveControllerV2Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse_',
+                        '\Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -790,7 +790,7 @@ class ApproveControllerV2Api
      */
     public function addressTokenApproveListUsingGET1AsyncWithHttpInfo($addresses, $chain_id, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse_';
+        $returnType = '\Swagger\Client\Model\ResponseWrapperListApproveTokenOutListResponse';
         $request = $this->addressTokenApproveListUsingGET1Request($addresses, $chain_id, $authorization);
 
         return $this->client

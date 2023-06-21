@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperListApproveTokenOutListResponse_
+ * ResponseWrapperobject
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperListApproveTokenOutListResponse_ Class Doc Comment
+ * ResponseWrapperobject Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperListApproveTokenOutListResponse_ implements ModelInterface, ArrayAccess
+class ResponseWrapperobject implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperListApproveTokenOutListResponse_ implements ModelInterface,
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«List«ApproveTokenOutListResponse»»';
+    protected static $swaggerModelName = 'ResponseWrapperobject';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperListApproveTokenOutListResponse_ implements ModelInterface,
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\ApproveTokenOutListResponse[]'
+        'result' => 'object'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperListApproveTokenOutListResponse_ implements ModelInterface,
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\ApproveTokenOutListResponse[]
+     * @return object
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperListApproveTokenOutListResponse_ implements ModelInterface,
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\ApproveTokenOutListResponse[] $result Response result
+     * @param object $result Response result
      *
      * @return $this
      */

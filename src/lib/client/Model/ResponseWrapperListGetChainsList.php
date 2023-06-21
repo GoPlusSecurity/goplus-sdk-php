@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperTaTokenSecurityResponse_
+ * ResponseWrapperListGetChainsList
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperTaTokenSecurityResponse_ Class Doc Comment
+ * ResponseWrapperListGetChainsList Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperTaTokenSecurityResponse_ implements ModelInterface, ArrayAccess
+class ResponseWrapperListGetChainsList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperTaTokenSecurityResponse_ implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapper«TaTokenSecurityResponse»';
+    protected static $swaggerModelName = 'ResponseWrapperListGetChainsList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class ResponseWrapperTaTokenSecurityResponse_ implements ModelInterface, ArrayAc
     protected static $swaggerTypes = [
         'code' => 'int',
         'message' => 'string',
-        'result' => '\Swagger\Client\Model\TaTokenSecurityResponse'
+        'result' => '\Swagger\Client\Model\ResponseWrapperListGetChainsListResult[]'
     ];
 
     /**
@@ -264,7 +264,7 @@ class ResponseWrapperTaTokenSecurityResponse_ implements ModelInterface, ArrayAc
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\TaTokenSecurityResponse
+     * @return \Swagger\Client\Model\ResponseWrapperListGetChainsListResult[]
      */
     public function getResult()
     {
@@ -274,7 +274,7 @@ class ResponseWrapperTaTokenSecurityResponse_ implements ModelInterface, ArrayAc
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\TaTokenSecurityResponse $result result
+     * @param \Swagger\Client\Model\ResponseWrapperListGetChainsListResult[] $result Response result
      *
      * @return $this
      */
