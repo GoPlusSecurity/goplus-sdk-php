@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperTokenSecurityLpHolders
+ * ResponseWrapperTokenSecurityLockedDetail
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperTokenSecurityLpHolders Class Doc Comment
+ * ResponseWrapperTokenSecurityLockedDetail Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAccess
+class ResponseWrapperTokenSecurityLockedDetail implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapperTokenSecurity_lp_holders';
+    protected static $swaggerModelName = 'ResponseWrapperTokenSecurity_locked_detail';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,13 +56,9 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_locked' => 'int',
-        'is_contract' => 'int',
-        'address' => 'string',
-        'balance' => 'string',
-        'locked_detail' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]',
-        'tag' => 'string',
-        'percent' => 'string'
+        'amount' => 'string',
+        'opt_time' => 'string',
+        'end_time' => 'string'
     ];
 
     /**
@@ -71,13 +67,9 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'is_locked' => 'int32',
-        'is_contract' => 'int32',
-        'address' => null,
-        'balance' => null,
-        'locked_detail' => null,
-        'tag' => null,
-        'percent' => null
+        'amount' => null,
+        'opt_time' => null,
+        'end_time' => null
     ];
 
     /**
@@ -107,13 +99,9 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_locked' => 'is_locked',
-        'is_contract' => 'is_contract',
-        'address' => 'address',
-        'balance' => 'balance',
-        'locked_detail' => 'locked_detail',
-        'tag' => 'tag',
-        'percent' => 'percent'
+        'amount' => 'amount',
+        'opt_time' => 'opt_time',
+        'end_time' => 'end_time'
     ];
 
     /**
@@ -122,13 +110,9 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'is_locked' => 'setIsLocked',
-        'is_contract' => 'setIsContract',
-        'address' => 'setAddress',
-        'balance' => 'setBalance',
-        'locked_detail' => 'setLockedDetail',
-        'tag' => 'setTag',
-        'percent' => 'setPercent'
+        'amount' => 'setAmount',
+        'opt_time' => 'setOptTime',
+        'end_time' => 'setEndTime'
     ];
 
     /**
@@ -137,13 +121,9 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'is_locked' => 'getIsLocked',
-        'is_contract' => 'getIsContract',
-        'address' => 'getAddress',
-        'balance' => 'getBalance',
-        'locked_detail' => 'getLockedDetail',
-        'tag' => 'getTag',
-        'percent' => 'getPercent'
+        'amount' => 'getAmount',
+        'opt_time' => 'getOptTime',
+        'end_time' => 'getEndTime'
     ];
 
     /**
@@ -204,13 +184,9 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_locked'] = isset($data['is_locked']) ? $data['is_locked'] : null;
-        $this->container['is_contract'] = isset($data['is_contract']) ? $data['is_contract'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
-        $this->container['locked_detail'] = isset($data['locked_detail']) ? $data['locked_detail'] : null;
-        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
-        $this->container['percent'] = isset($data['percent']) ? $data['percent'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['opt_time'] = isset($data['opt_time']) ? $data['opt_time'] : null;
+        $this->container['end_time'] = isset($data['end_time']) ? $data['end_time'] : null;
     }
 
     /**
@@ -238,169 +214,73 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
 
 
     /**
-     * Gets is_locked
-     *
-     * @return int
-     */
-    public function getIsLocked()
-    {
-        return $this->container['is_locked'];
-    }
-
-    /**
-     * Sets is_locked
-     *
-     * @param int $is_locked It describes whether the tokens owned by the holder are locked \"1\" means true; \"0\" means false;  (3) “tag” describes the address's public tag. Example:Burn (Notice:About \"locked\": We only support the token lock addresses or black hole addresses that we have included. )
-     *
-     * @return $this
-     */
-    public function setIsLocked($is_locked)
-    {
-        $this->container['is_locked'] = $is_locked;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_contract
-     *
-     * @return int
-     */
-    public function getIsContract()
-    {
-        return $this->container['is_contract'];
-    }
-
-    /**
-     * Sets is_contract
-     *
-     * @param int $is_contract It describes whether the holder is a contract \"1\" means true; \"0\" means false.
-     *
-     * @return $this
-     */
-    public function setIsContract($is_contract)
-    {
-        $this->container['is_contract'] = $is_contract;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
+     * Gets amount
      *
      * @return string
      */
-    public function getAddress()
+    public function getAmount()
     {
-        return $this->container['address'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets address
+     * Sets amount
      *
-     * @param string $address It describes the holder address;
+     * @param string $amount \"amount\" describes the number of token locked
      *
      * @return $this
      */
-    public function setAddress($address)
+    public function setAmount($amount)
     {
-        $this->container['address'] = $address;
+        $this->container['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * Gets balance
+     * Gets opt_time
      *
      * @return string
      */
-    public function getBalance()
+    public function getOptTime()
     {
-        return $this->container['balance'];
+        return $this->container['opt_time'];
     }
 
     /**
-     * Sets balance
+     * Sets opt_time
      *
-     * @param string $balance It describes the balance of the holder.
+     * @param string $opt_time \"opt_time\" describes when the token was locked
      *
      * @return $this
      */
-    public function setBalance($balance)
+    public function setOptTime($opt_time)
     {
-        $this->container['balance'] = $balance;
+        $this->container['opt_time'] = $opt_time;
 
         return $this;
     }
 
     /**
-     * Gets locked_detail
-     *
-     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]
-     */
-    public function getLockedDetail()
-    {
-        return $this->container['locked_detail'];
-    }
-
-    /**
-     * Sets locked_detail
-     *
-     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[] $locked_detail It is an array, decribes lock position info of this holder, only shows when \"locked\": 1. This Array may contain multiple objects for multiple locking info. (Notice:When \"locked\":0, or lock address is a black hole address,  \"locked_detail\" will be no return.)
-     *
-     * @return $this
-     */
-    public function setLockedDetail($locked_detail)
-    {
-        $this->container['locked_detail'] = $locked_detail;
-
-        return $this;
-    }
-
-    /**
-     * Gets tag
+     * Gets end_time
      *
      * @return string
      */
-    public function getTag()
+    public function getEndTime()
     {
-        return $this->container['tag'];
+        return $this->container['end_time'];
     }
 
     /**
-     * Sets tag
+     * Sets end_time
      *
-     * @param string $tag It describes the address's public tag. Example:Burn Address/Deployer;
+     * @param string $end_time \"end_time\" describes when the token will be unlocked
      *
      * @return $this
      */
-    public function setTag($tag)
+    public function setEndTime($end_time)
     {
-        $this->container['tag'] = $tag;
-
-        return $this;
-    }
-
-    /**
-     * Gets percent
-     *
-     * @return string
-     */
-    public function getPercent()
-    {
-        return $this->container['percent'];
-    }
-
-    /**
-     * Sets percent
-     *
-     * @param string $percent It  describes the percentage of tokens held by this holder (Notice:About \"percent\": 1 means 100% here.)
-     *
-     * @return $this
-     */
-    public function setPercent($percent)
-    {
-        $this->container['percent'] = $percent;
+        $this->container['end_time'] = $end_time;
 
         return $this;
     }
