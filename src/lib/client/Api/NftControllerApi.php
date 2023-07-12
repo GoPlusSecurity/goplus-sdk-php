@@ -93,7 +93,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -113,7 +113,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -191,7 +191,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional)
      *
      * @throws \InvalidArgumentException
@@ -267,7 +267,7 @@ class NftControllerApi
      *
      * @param  string $chain_id Chain id, (eth: 1, bsc: 56, Polygon: 137, Avalanche: 43114) (required)
      * @param  string $contract_addresses NFT contract address (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      * @param  string $token_id tokenId (optional)
      *
      * @throws \InvalidArgumentException

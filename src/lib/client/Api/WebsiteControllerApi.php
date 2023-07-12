@@ -92,7 +92,7 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,7 +110,7 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -186,7 +186,7 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -207,7 +207,7 @@ class WebsiteControllerApi
      * Check if the the url is a phishing site
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -258,7 +258,7 @@ class WebsiteControllerApi
      * Create request for operation 'phishingSiteUsingGET'
      *
      * @param  string $url Url (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

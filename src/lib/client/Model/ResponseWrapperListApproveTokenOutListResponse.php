@@ -226,7 +226,7 @@ class ResponseWrapperListApproveTokenOutListResponse implements ModelInterface, 
     /**
      * Sets code
      *
-     * @param int $code Code 1：Success
+     * @param int $code Code 1: Success
      *
      * @return $this
      */

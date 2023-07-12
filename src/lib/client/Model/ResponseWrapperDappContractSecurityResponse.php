@@ -226,7 +226,7 @@ class ResponseWrapperDappContractSecurityResponse implements ModelInterface, Arr
     /**
      * Sets code
      *
-     * @param int $code Code 1：Success
+     * @param int $code Code 1: Success
      *
      * @return $this
      */

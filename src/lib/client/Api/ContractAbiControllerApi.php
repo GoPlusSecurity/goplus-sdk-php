@@ -92,7 +92,7 @@ class ContractAbiControllerApi
      * Get abi decode info
      *
      * @param  \Swagger\Client\Model\ParseAbiDataRequest $body abiDataRequest (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,7 +110,7 @@ class ContractAbiControllerApi
      * Get abi decode info
      *
      * @param  \Swagger\Client\Model\ParseAbiDataRequest $body abiDataRequest (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -186,7 +186,7 @@ class ContractAbiControllerApi
      * Get abi decode info
      *
      * @param  \Swagger\Client\Model\ParseAbiDataRequest $body abiDataRequest (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -207,7 +207,7 @@ class ContractAbiControllerApi
      * Get abi decode info
      *
      * @param  \Swagger\Client\Model\ParseAbiDataRequest $body abiDataRequest (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -258,7 +258,7 @@ class ContractAbiControllerApi
      * Create request for operation 'getAbiDataInfoUsingPOST'
      *
      * @param  \Swagger\Client\Model\ParseAbiDataRequest $body abiDataRequest (required)
-     * @param  string $authorization Authorization (test：Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
