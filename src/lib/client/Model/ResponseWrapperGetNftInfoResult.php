@@ -593,7 +593,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets discord_url
      *
-     * @param string $discord_url It describes the discord url of the NFT. Return “null” means there is no discord url or didn't find the discord url.
+     * @param string $discord_url It describes the discord url of the NFT. Return \"null\" means there is no discord url or didn't find the discord url.
      *
      * @return $this
      */
@@ -809,7 +809,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets creator_address
      *
-     * @param string $creator_address It describes the creator address of the NFT. Example: \"creator_address\": \"0x1ee0af784b96bb55ece98c9b15675726b0da1b6b\"; Return “null” means that we didn't find the creator address.
+     * @param string $creator_address It describes the creator address of the NFT. Example: \"creator_address\": \"0x1ee0af784b96bb55ece98c9b15675726b0da1b6b\"; Return \"null\" means that we didn't find the creator address.
      *
      * @return $this
      */
@@ -833,7 +833,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets medium_url
      *
-     * @param string $medium_url It describes the medium url of the NFT. Return “null” means there is no medium url or didn't find the medium url.
+     * @param string $medium_url It describes the medium url of the NFT. Return \"null\" means there is no medium url or didn't find the medium url.
      *
      * @return $this
      */
@@ -905,7 +905,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets twitter_url
      *
-     * @param string $twitter_url It describes the twitter url of the NFT. Return “null” means there is no twitter url or didn't find the twitter url.
+     * @param string $twitter_url It describes the twitter url of the NFT. Return \"null\" means there is no twitter url or didn't find the twitter url.
      *
      * @return $this
      */
@@ -953,7 +953,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets nft_description
      *
-     * @param string $nft_description It describes the introduction of the NFT. Return “null” means there is no description of the NFT.
+     * @param string $nft_description It describes the introduction of the NFT. Return \"null\" means there is no description of the NFT.
      *
      * @return $this
      */
@@ -1169,7 +1169,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets website_url
      *
-     * @param string $website_url It describes the website url of the NFT. Return “null” means there is no website url or didn't find the website url.
+     * @param string $website_url It describes the website url of the NFT. Return \"null\" means there is no website url or didn't find the website url.
      *
      * @return $this
      */
@@ -1193,7 +1193,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets github_url
      *
-     * @param string $github_url It describes the github url of the NFT. Return “null” means there is no github url or didn't find the github url.
+     * @param string $github_url It describes the github url of the NFT. Return \"null\" means there is no github url or didn't find the github url.
      *
      * @return $this
      */
@@ -1217,7 +1217,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets telegram_url
      *
-     * @param string $telegram_url It describes the telegram url of the NFT. Return “null” means there is no telegram url or didn't find the telegram url.
+     * @param string $telegram_url It describes the telegram url of the NFT. Return \"null\" means there is no telegram url or didn't find the telegram url.
      *
      * @return $this
      */
@@ -1265,7 +1265,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets create_block_number
      *
-     * @param int $create_block_number It describes the number of blocks created for the NFT. Return “null” means that we didn't find the number of blocks created for the NFT.
+     * @param int $create_block_number It describes the number of blocks created for the NFT. Return \"null\" means that we didn't find the number of blocks created for the NFT.
      *
      * @return $this
      */

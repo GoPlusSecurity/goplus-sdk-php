@@ -407,7 +407,7 @@ class GetDefiInfoResponseResult implements ModelInterface, ArrayAccess
     /**
      * Sets selfdestruct
      *
-     * @param int $selfdestruct It describes whether this contract can self destruct. \"1\" means true;  \"0\" means false; “-1” means unknown.
+     * @param int $selfdestruct It describes whether this contract can self destruct. \"1\" means true;  \"0\" means false; \"-1\" means unknown.
      *
      * @return $this
      */
@@ -431,7 +431,7 @@ class GetDefiInfoResponseResult implements ModelInterface, ArrayAccess
     /**
      * Sets is_proxy
      *
-     * @param int $is_proxy It describes whether this contract has a proxy contract.  \"1\" means true;  \"0\" means false; “-1” means unknown.
+     * @param int $is_proxy It describes whether this contract has a proxy contract.  \"1\" means true;  \"0\" means false; \"-1\" means unknown.
      *
      * @return $this
      */
@@ -455,7 +455,7 @@ class GetDefiInfoResponseResult implements ModelInterface, ArrayAccess
     /**
      * Sets approval_abuse
      *
-     * @param int $approval_abuse It describes whether the owner can spend the allowance that obtained by the contract. If so, this function could potentially be abused to steal user assets. \"1\" means true;  \"0\" means false; “-1” means unknown.
+     * @param int $approval_abuse It describes whether the owner can spend the allowance that obtained by the contract. If so, this function could potentially be abused to steal user assets. \"1\" means true;  \"0\" means false; \"-1\" means unknown.
      *
      * @return $this
      */

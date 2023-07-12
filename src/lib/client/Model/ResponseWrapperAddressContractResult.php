@@ -521,7 +521,7 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
     /**
      * Sets data_source
      *
-     * @param string $data_source It describes the data source for this address information. For example：GoPlus/SlowMist
+     * @param string $data_source It describes the data source for this address information. For example: GoPlus/SlowMist
      *
      * @return $this
      */

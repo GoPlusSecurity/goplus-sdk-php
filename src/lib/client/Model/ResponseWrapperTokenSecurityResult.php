@@ -461,7 +461,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     /**
      * Sets note
      *
-     * @param string $note It describes whether the contract has other things investors need to know.  Example:  \"note”: “Contract owner is a multisign contract.”(Notice:(1) If we haven't found any other thing which is valuable yet, there will be no return.  (2) Type: string.)
+     * @param string $note It describes whether the contract has other things investors need to know.  Example:  \"note\": \"Contract owner is a multisign contract.\"(Notice:(1) If we haven't found any other thing which is valuable yet, there will be no return.  (2) Type: string.)
      *
      * @return $this
      */
@@ -557,7 +557,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     /**
      * Sets other_potential_risks
      *
-     * @param string $other_potential_risks It describes whether the contract has other potential risks. Example: “other_potential_risks”: “Owner can set different transaction taxes for each user, which can trigger serious losses.”(Notice:(1) If we haven't found any other potential risk yet, there will be no return.  (2) Type: string.)
+     * @param string $other_potential_risks It describes whether the contract has other potential risks. Example: \"other_potential_risks\": \"Owner can set different transaction taxes for each user, which can trigger serious losses.\"(Notice:(1) If we haven't found any other potential risk yet, there will be no return.  (2) Type: string.)
      *
      * @return $this
      */
@@ -629,7 +629,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     /**
      * Sets hidden_owner
      *
-     * @param string $hidden_owner It describes whether the contract has hidden owners. For contract with a hidden owner, developer can still manipulate the contract even if the ownership has been abandoned. “1” means true; \"0\" means false; No return means unknown.(Notice:(1) When \"is_open_source\": \"0\", there will be no return.  (2) Sometimes, when \"is_proxy\": \"1\", there will be no return.  (3) Hidden owner is often used by developers to hide ownership and is often accompanied by malicious functionality. When the hidden owner exists, it is assumed that ownership has not been abandoned.)
+     * @param string $hidden_owner It describes whether the contract has hidden owners. For contract with a hidden owner, developer can still manipulate the contract even if the ownership has been abandoned. \"1\" means true; \"0\" means false; No return means unknown.(Notice:(1) When \"is_open_source\": \"0\", there will be no return.  (2) Sometimes, when \"is_proxy\": \"1\", there will be no return.  (3) Hidden owner is often used by developers to hide ownership and is often accompanied by malicious functionality. When the hidden owner exists, it is assumed that ownership has not been abandoned.)
      *
      * @return $this
      */
@@ -1397,7 +1397,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     /**
      * Sets cannot_buy
      *
-     * @param string $cannot_buy It deiscribes whether the Token can be bought. \"1\" means true;  \"0\" means false;  No return means unknown.(Notice:(1) Generally, \"cannot_buy\": \"1\" would be found in Reward Tokens. Such Tokens are issued as rewards for some on-chain applications and cannot be bought directly by users. (2) Sometimes token's anti-bot mechanism would affect our sandbox system, causing the display of \"buy_tax\": \"1\". (3) When “cannot_buy”: \"1\", our sandbox system might be bloked, causing the display of \"buy_tax\": \"1\" and \"sell_tax\": \"1\")
+     * @param string $cannot_buy It deiscribes whether the Token can be bought. \"1\" means true;  \"0\" means false;  No return means unknown.(Notice:(1) Generally, \"cannot_buy\": \"1\" would be found in Reward Tokens. Such Tokens are issued as rewards for some on-chain applications and cannot be bought directly by users. (2) Sometimes token's anti-bot mechanism would affect our sandbox system, causing the display of \"buy_tax\": \"1\". (3) When \"cannot_buy\": \"1\", our sandbox system might be bloked, causing the display of \"buy_tax\": \"1\" and \"sell_tax\": \"1\")
      *
      * @return $this
      */
