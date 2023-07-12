@@ -1121,7 +1121,7 @@ class ResponseWrapperGetNftInfoResult implements ModelInterface, ArrayAccess
     /**
      * Sets oversupply_minting
      *
-     * @param int $oversupply_minting It describes whether this NFT owner can bypass the maximum amount of minting specified in the contract, and continue to mint NFTs beyond this limit.  \"1\" means true;  \"0\" means false;  \"Null\" means unknown.(Notice:Oversupply minting refers to the existence of a special mint method in the NFT contract — the owner can bypass the maximum amount of minting specified in the contract, and continue to mint NFTs beyond this limit.)
+     * @param int $oversupply_minting It describes whether this NFT owner can bypass the maximum amount of minting specified in the contract, and continue to mint NFTs beyond this limit.  \"1\" means true;  \"0\" means false;  \"Null\" means unknown.(Notice:Oversupply minting refers to the existence of a special mint method in the NFT contract - the owner can bypass the maximum amount of minting specified in the contract, and continue to mint NFTs beyond this limit.)
      *
      * @return $this
      */
