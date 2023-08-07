@@ -89,7 +89,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1
      *
-     * Check risk of all erc1155 approvals under one EOA.
+     * Returns the ERC-1155 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -108,7 +108,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1WithHttpInfo
      *
-     * Check risk of all erc1155 approvals under one EOA.
+     * Returns the ERC-1155 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -185,7 +185,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1Async
      *
-     * Check risk of all erc1155 approvals under one EOA.
+     * Returns the ERC-1155 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -207,7 +207,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT1155ApproveListUsingGET1AsyncWithHttpInfo
      *
-     * Check risk of all erc1155 approvals under one EOA.
+     * Returns the ERC-1155 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -375,7 +375,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1
      *
-     * Check risk of all erc721 approvals under one EOA.
+     * Returns the ERC-721 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -394,7 +394,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1WithHttpInfo
      *
-     * Check risk of all erc721 approvals under one EOA.
+     * Returns the ERC-721 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -471,7 +471,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1Async
      *
-     * Check risk of all erc721 approvals under one EOA.
+     * Returns the ERC-721 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -493,7 +493,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressNFT721ApproveListUsingGET1AsyncWithHttpInfo
      *
-     * Check risk of all erc721 approvals under one EOA.
+     * Returns the ERC-721 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -661,7 +661,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1
      *
-     * Check risk of all erc20 approvals under one EOA.
+     * Returns the ERC-20 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -680,7 +680,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1WithHttpInfo
      *
-     * Check risk of all erc20 approvals under one EOA.
+     * Returns the ERC-20 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -757,7 +757,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1Async
      *
-     * Check risk of all erc20 approvals under one EOA.
+     * Returns the ERC-20 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
@@ -779,7 +779,7 @@ class ApproveControllerV2Api
     /**
      * Operation addressTokenApproveListUsingGET1AsyncWithHttpInfo
      *
-     * Check risk of all erc20 approvals under one EOA.
+     * Returns the ERC-20 approvals of an EOA address and associated risk items.
      *
      * @param  string $addresses contract address (required)
      * @param  string $chain_id chain id (required)
