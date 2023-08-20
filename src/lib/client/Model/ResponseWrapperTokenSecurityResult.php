@@ -71,6 +71,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'holder_count' => 'string',
         'trust_list' => 'string',
         'is_honeypot' => 'string',
+        'honeypot_with_same_creator' => 'string',
         'holders' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLpHolders[]',
         'dex' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityDex[]',
         'is_open_source' => 'string',
@@ -121,6 +122,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'holder_count' => null,
         'trust_list' => null,
         'is_honeypot' => null,
+        'honeypot_with_same_creator' => null,
         'holders' => null,
         'dex' => null,
         'is_open_source' => null,
@@ -192,6 +194,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'holder_count' => 'holder_count',
         'trust_list' => 'trust_list',
         'is_honeypot' => 'is_honeypot',
+        'honeypot_with_same_creator' => 'honeypot_with_same_creator',
         'holders' => 'holders',
         'dex' => 'dex',
         'is_open_source' => 'is_open_source',
@@ -242,6 +245,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'holder_count' => 'setHolderCount',
         'trust_list' => 'setTrustList',
         'is_honeypot' => 'setIsHoneypot',
+        'honeypot_with_same_creator' => 'setHoneypotWithSameCreator',
         'holders' => 'setHolders',
         'dex' => 'setDex',
         'is_open_source' => 'setIsOpenSource',
@@ -292,6 +296,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'holder_count' => 'getHolderCount',
         'trust_list' => 'getTrustList',
         'is_honeypot' => 'getIsHoneypot',
+        'honeypot_with_same_creator' => 'getHoneypotWithSameCreator',
         'holders' => 'getHolders',
         'dex' => 'getDex',
         'is_open_source' => 'getIsOpenSource',
@@ -394,6 +399,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         $this->container['holder_count'] = isset($data['holder_count']) ? $data['holder_count'] : null;
         $this->container['trust_list'] = isset($data['trust_list']) ? $data['trust_list'] : null;
         $this->container['is_honeypot'] = isset($data['is_honeypot']) ? $data['is_honeypot'] : null;
+        $this->container['honeypot_with_same_creator'] = isset($data['honeypot_with_same_creator']) ? $data['honeypot_with_same_creator'] : null;
         $this->container['holders'] = isset($data['holders']) ? $data['holders'] : null;
         $this->container['dex'] = isset($data['dex']) ? $data['dex'] : null;
         $this->container['is_open_source'] = isset($data['is_open_source']) ? $data['is_open_source'] : null;
@@ -780,6 +786,30 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     public function setIsHoneypot($is_honeypot)
     {
         $this->container['is_honeypot'] = $is_honeypot;
+
+        return $this;
+    }
+
+    /**
+     * Gets honeypot_with_same_creator
+     *
+     * @return string
+     */
+    public function getHoneypotWithSameCreator()
+    {
+        return $this->container['honeypot_with_same_creator'];
+    }
+
+    /**
+     * Sets honeypot_with_same_creator
+     *
+     * @param string $honeypot_with_same_creator It describes the number of honeypot tokens created by this creator.
+     *
+     * @return $this
+     */
+    public function setHoneypotWithSameCreator($honeypot_with_same_creator)
+    {
+        $this->container['honeypot_with_same_creator'] = $honeypot_with_same_creator;
 
         return $this;
     }
