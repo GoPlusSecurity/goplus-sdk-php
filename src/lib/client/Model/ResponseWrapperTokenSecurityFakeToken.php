@@ -1,6 +1,6 @@
 <?php
 /**
- * GetAccessTokenRequest
+ * ResponseWrapperTokenSecurityFakeToken
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * GetAccessTokenRequest Class Doc Comment
+ * ResponseWrapperTokenSecurityFakeToken Class Doc Comment
  *
  * @category Class
+ * @description It indicates whether the token is a counterfeit of a mainstream asset. (If there is no evidence indicating that it is a counterfeit asset, there will be no return.)
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetAccessTokenRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperTokenSecurityFakeToken implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetAccessTokenRequest';
+    protected static $swaggerModelName = 'ResponseWrapperTokenSecurity_fake_token';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +57,8 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_key' => 'string',
-        'sign' => 'string',
-        'time' => 'int'
+        'true_token_address' => 'string',
+        'value' => 'int'
     ];
 
     /**
@@ -67,9 +67,8 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_key' => null,
-        'sign' => null,
-        'time' => 'int64'
+        'true_token_address' => null,
+        'value' => 'int32'
     ];
 
     /**
@@ -99,9 +98,8 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_key' => 'app_key',
-        'sign' => 'sign',
-        'time' => 'time'
+        'true_token_address' => 'true_token_address',
+        'value' => 'value'
     ];
 
     /**
@@ -110,9 +108,8 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_key' => 'setAppKey',
-        'sign' => 'setSign',
-        'time' => 'setTime'
+        'true_token_address' => 'setTrueTokenAddress',
+        'value' => 'setValue'
     ];
 
     /**
@@ -121,9 +118,8 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_key' => 'getAppKey',
-        'sign' => 'getSign',
-        'time' => 'getTime'
+        'true_token_address' => 'getTrueTokenAddress',
+        'value' => 'getValue'
     ];
 
     /**
@@ -184,9 +180,8 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['app_key'] = isset($data['app_key']) ? $data['app_key'] : null;
-        $this->container['sign'] = isset($data['sign']) ? $data['sign'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['true_token_address'] = isset($data['true_token_address']) ? $data['true_token_address'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -198,15 +193,6 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['app_key'] === null) {
-            $invalidProperties[] = "'app_key' can't be null";
-        }
-        if ($this->container['sign'] === null) {
-            $invalidProperties[] = "'sign' can't be null";
-        }
-        if ($this->container['time'] === null) {
-            $invalidProperties[] = "'time' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -223,73 +209,49 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets app_key
+     * Gets true_token_address
      *
      * @return string
      */
-    public function getAppKey()
+    public function getTrueTokenAddress()
     {
-        return $this->container['app_key'];
+        return $this->container['true_token_address'];
     }
 
     /**
-     * Sets app_key
+     * Sets true_token_address
      *
-     * @param string $app_key app_key
+     * @param string $true_token_address If the value is set to 1, and true_token_address is the address of the authentic mainstream asset that the token is imitating on this public chain. If there are multiple mainstream assets with the same name, they will be separated by commas.
      *
      * @return $this
      */
-    public function setAppKey($app_key)
+    public function setTrueTokenAddress($true_token_address)
     {
-        $this->container['app_key'] = $app_key;
+        $this->container['true_token_address'] = $true_token_address;
 
         return $this;
     }
 
     /**
-     * Gets sign
-     *
-     * @return string
-     */
-    public function getSign()
-    {
-        return $this->container['sign'];
-    }
-
-    /**
-     * Sets sign
-     *
-     * @param string $sign Sign Method Concatenate app_key, time, app_secret in turn, and do sha1() . Example app_key = mBOMg20QW11BbtyH4Zh0 time = 1647847498 app_secret = V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh sign = sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)        = 7293d385b9225b3c3f232b76ba97255d0e21063e
-     *
-     * @return $this
-     */
-    public function setSign($sign)
-    {
-        $this->container['sign'] = $sign;
-
-        return $this;
-    }
-
-    /**
-     * Gets time
+     * Gets value
      *
      * @return int
      */
-    public function getTime()
+    public function getValue()
     {
-        return $this->container['time'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets time
+     * Sets value
      *
-     * @param int $time Quest timestamp (Second), should be within +-1000s around current timestamp
+     * @param int $value If the value is set to 1, and true_token_address is the address of the authentic mainstream asset that the token is imitating on this public chain. If there are multiple mainstream assets with the same name, they will be separated by commas.
      *
      * @return $this
      */
-    public function setTime($time)
+    public function setValue($value)
     {
-        $this->container['time'] = $time;
+        $this->container['value'] = $value;
 
         return $this;
     }
