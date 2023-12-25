@@ -72,11 +72,12 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'trust_list' => 'string',
         'is_honeypot' => 'string',
         'honeypot_with_same_creator' => 'string',
-        'holders' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLpHolders[]',
+        'holders' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityHolders[]',
         'dex' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityDex[]',
         'is_open_source' => 'string',
         'sell_tax' => 'string',
         'token_name' => 'string',
+        'fake_token' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityFakeToken',
         'creator_address' => 'string',
         'creator_percent' => 'string',
         'is_proxy' => 'string',
@@ -128,6 +129,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'is_open_source' => null,
         'sell_tax' => null,
         'token_name' => null,
+        'fake_token' => null,
         'creator_address' => null,
         'creator_percent' => null,
         'is_proxy' => null,
@@ -200,6 +202,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'is_open_source' => 'is_open_source',
         'sell_tax' => 'sell_tax',
         'token_name' => 'token_name',
+        'fake_token' => 'fake_token',
         'creator_address' => 'creator_address',
         'creator_percent' => 'creator_percent',
         'is_proxy' => 'is_proxy',
@@ -251,6 +254,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'is_open_source' => 'setIsOpenSource',
         'sell_tax' => 'setSellTax',
         'token_name' => 'setTokenName',
+        'fake_token' => 'setFakeToken',
         'creator_address' => 'setCreatorAddress',
         'creator_percent' => 'setCreatorPercent',
         'is_proxy' => 'setIsProxy',
@@ -302,6 +306,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         'is_open_source' => 'getIsOpenSource',
         'sell_tax' => 'getSellTax',
         'token_name' => 'getTokenName',
+        'fake_token' => 'getFakeToken',
         'creator_address' => 'getCreatorAddress',
         'creator_percent' => 'getCreatorPercent',
         'is_proxy' => 'getIsProxy',
@@ -405,6 +410,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         $this->container['is_open_source'] = isset($data['is_open_source']) ? $data['is_open_source'] : null;
         $this->container['sell_tax'] = isset($data['sell_tax']) ? $data['sell_tax'] : null;
         $this->container['token_name'] = isset($data['token_name']) ? $data['token_name'] : null;
+        $this->container['fake_token'] = isset($data['fake_token']) ? $data['fake_token'] : null;
         $this->container['creator_address'] = isset($data['creator_address']) ? $data['creator_address'] : null;
         $this->container['creator_percent'] = isset($data['creator_percent']) ? $data['creator_percent'] : null;
         $this->container['is_proxy'] = isset($data['is_proxy']) ? $data['is_proxy'] : null;
@@ -817,7 +823,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     /**
      * Gets holders
      *
-     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityLpHolders[]
+     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityHolders[]
      */
     public function getHolders()
     {
@@ -827,7 +833,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     /**
      * Sets holders
      *
-     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityLpHolders[] $holders Top10 holders info
+     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityHolders[] $holders Top10 holders info
      *
      * @return $this
      */
@@ -930,6 +936,30 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
     public function setTokenName($token_name)
     {
         $this->container['token_name'] = $token_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets fake_token
+     *
+     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityFakeToken
+     */
+    public function getFakeToken()
+    {
+        return $this->container['fake_token'];
+    }
+
+    /**
+     * Sets fake_token
+     *
+     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityFakeToken $fake_token fake_token
+     *
+     * @return $this
+     */
+    public function setFakeToken($fake_token)
+    {
+        $this->container['fake_token'] = $fake_token;
 
         return $this;
     }

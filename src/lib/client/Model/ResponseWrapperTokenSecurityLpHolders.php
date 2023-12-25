@@ -60,6 +60,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         'is_contract' => 'int',
         'address' => 'string',
         'balance' => 'string',
+        'nft_list' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityNFTList[]',
         'locked_detail' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]',
         'tag' => 'string',
         'percent' => 'string'
@@ -75,6 +76,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         'is_contract' => 'int32',
         'address' => null,
         'balance' => null,
+        'nft_list' => null,
         'locked_detail' => null,
         'tag' => null,
         'percent' => null
@@ -111,6 +113,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         'is_contract' => 'is_contract',
         'address' => 'address',
         'balance' => 'balance',
+        'nft_list' => 'NFT_list',
         'locked_detail' => 'locked_detail',
         'tag' => 'tag',
         'percent' => 'percent'
@@ -126,6 +129,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         'is_contract' => 'setIsContract',
         'address' => 'setAddress',
         'balance' => 'setBalance',
+        'nft_list' => 'setNftList',
         'locked_detail' => 'setLockedDetail',
         'tag' => 'setTag',
         'percent' => 'setPercent'
@@ -141,6 +145,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         'is_contract' => 'getIsContract',
         'address' => 'getAddress',
         'balance' => 'getBalance',
+        'nft_list' => 'getNftList',
         'locked_detail' => 'getLockedDetail',
         'tag' => 'getTag',
         'percent' => 'getPercent'
@@ -208,6 +213,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         $this->container['is_contract'] = isset($data['is_contract']) ? $data['is_contract'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
+        $this->container['nft_list'] = isset($data['nft_list']) ? $data['nft_list'] : null;
         $this->container['locked_detail'] = isset($data['locked_detail']) ? $data['locked_detail'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['percent'] = isset($data['percent']) ? $data['percent'] : null;
@@ -329,6 +335,30 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
     public function setBalance($balance)
     {
         $this->container['balance'] = $balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets nft_list
+     *
+     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityNFTList[]
+     */
+    public function getNftList()
+    {
+        return $this->container['nft_list'];
+    }
+
+    /**
+     * Sets nft_list
+     *
+     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityNFTList[] $nft_list It is an array, decribes nft list
+     *
+     * @return $this
+     */
+    public function setNftList($nft_list)
+    {
+        $this->container['nft_list'] = $nft_list;
 
         return $this;
     }

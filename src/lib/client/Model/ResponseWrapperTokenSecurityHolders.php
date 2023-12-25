@@ -1,6 +1,6 @@
 <?php
 /**
- * GetAccessTokenRequest
+ * ResponseWrapperTokenSecurityHolders
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * GetAccessTokenRequest Class Doc Comment
+ * ResponseWrapperTokenSecurityHolders Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetAccessTokenRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperTokenSecurityHolders implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetAccessTokenRequest';
+    protected static $swaggerModelName = 'ResponseWrapperTokenSecurity_holders';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,13 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_key' => 'string',
-        'sign' => 'string',
-        'time' => 'int'
+        'is_locked' => 'int',
+        'is_contract' => 'int',
+        'address' => 'string',
+        'balance' => 'string',
+        'locked_detail' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]',
+        'tag' => 'string',
+        'percent' => 'string'
     ];
 
     /**
@@ -67,9 +71,13 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_key' => null,
-        'sign' => null,
-        'time' => 'int64'
+        'is_locked' => 'int32',
+        'is_contract' => 'int32',
+        'address' => null,
+        'balance' => null,
+        'locked_detail' => null,
+        'tag' => null,
+        'percent' => null
     ];
 
     /**
@@ -99,9 +107,13 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_key' => 'app_key',
-        'sign' => 'sign',
-        'time' => 'time'
+        'is_locked' => 'is_locked',
+        'is_contract' => 'is_contract',
+        'address' => 'address',
+        'balance' => 'balance',
+        'locked_detail' => 'locked_detail',
+        'tag' => 'tag',
+        'percent' => 'percent'
     ];
 
     /**
@@ -110,9 +122,13 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_key' => 'setAppKey',
-        'sign' => 'setSign',
-        'time' => 'setTime'
+        'is_locked' => 'setIsLocked',
+        'is_contract' => 'setIsContract',
+        'address' => 'setAddress',
+        'balance' => 'setBalance',
+        'locked_detail' => 'setLockedDetail',
+        'tag' => 'setTag',
+        'percent' => 'setPercent'
     ];
 
     /**
@@ -121,9 +137,13 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_key' => 'getAppKey',
-        'sign' => 'getSign',
-        'time' => 'getTime'
+        'is_locked' => 'getIsLocked',
+        'is_contract' => 'getIsContract',
+        'address' => 'getAddress',
+        'balance' => 'getBalance',
+        'locked_detail' => 'getLockedDetail',
+        'tag' => 'getTag',
+        'percent' => 'getPercent'
     ];
 
     /**
@@ -184,9 +204,13 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['app_key'] = isset($data['app_key']) ? $data['app_key'] : null;
-        $this->container['sign'] = isset($data['sign']) ? $data['sign'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['is_locked'] = isset($data['is_locked']) ? $data['is_locked'] : null;
+        $this->container['is_contract'] = isset($data['is_contract']) ? $data['is_contract'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
+        $this->container['locked_detail'] = isset($data['locked_detail']) ? $data['locked_detail'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['percent'] = isset($data['percent']) ? $data['percent'] : null;
     }
 
     /**
@@ -198,15 +222,6 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['app_key'] === null) {
-            $invalidProperties[] = "'app_key' can't be null";
-        }
-        if ($this->container['sign'] === null) {
-            $invalidProperties[] = "'sign' can't be null";
-        }
-        if ($this->container['time'] === null) {
-            $invalidProperties[] = "'time' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -223,73 +238,169 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets app_key
-     *
-     * @return string
-     */
-    public function getAppKey()
-    {
-        return $this->container['app_key'];
-    }
-
-    /**
-     * Sets app_key
-     *
-     * @param string $app_key app_key
-     *
-     * @return $this
-     */
-    public function setAppKey($app_key)
-    {
-        $this->container['app_key'] = $app_key;
-
-        return $this;
-    }
-
-    /**
-     * Gets sign
-     *
-     * @return string
-     */
-    public function getSign()
-    {
-        return $this->container['sign'];
-    }
-
-    /**
-     * Sets sign
-     *
-     * @param string $sign Sign Method Concatenate app_key, time, app_secret in turn, and do sha1() . Example app_key = mBOMg20QW11BbtyH4Zh0 time = 1647847498 app_secret = V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh sign = sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)        = 7293d385b9225b3c3f232b76ba97255d0e21063e
-     *
-     * @return $this
-     */
-    public function setSign($sign)
-    {
-        $this->container['sign'] = $sign;
-
-        return $this;
-    }
-
-    /**
-     * Gets time
+     * Gets is_locked
      *
      * @return int
      */
-    public function getTime()
+    public function getIsLocked()
     {
-        return $this->container['time'];
+        return $this->container['is_locked'];
     }
 
     /**
-     * Sets time
+     * Sets is_locked
      *
-     * @param int $time Quest timestamp (Second), should be within +-1000s around current timestamp
+     * @param int $is_locked It describes whether the tokens owned by the holder are locked \"1\" means true; \"0\" means false;  (3) \"tag\" describes the address's public tag. Example:Burn (Notice:About \"locked\": We only support the token lock addresses or black hole addresses that we have included. )
      *
      * @return $this
      */
-    public function setTime($time)
+    public function setIsLocked($is_locked)
     {
-        $this->container['time'] = $time;
+        $this->container['is_locked'] = $is_locked;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_contract
+     *
+     * @return int
+     */
+    public function getIsContract()
+    {
+        return $this->container['is_contract'];
+    }
+
+    /**
+     * Sets is_contract
+     *
+     * @param int $is_contract It describes whether the holder is a contract \"1\" means true; \"0\" means false.
+     *
+     * @return $this
+     */
+    public function setIsContract($is_contract)
+    {
+        $this->container['is_contract'] = $is_contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param string $address It describes the holder address;
+     *
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets balance
+     *
+     * @return string
+     */
+    public function getBalance()
+    {
+        return $this->container['balance'];
+    }
+
+    /**
+     * Sets balance
+     *
+     * @param string $balance It describes the balance of the holder.
+     *
+     * @return $this
+     */
+    public function setBalance($balance)
+    {
+        $this->container['balance'] = $balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked_detail
+     *
+     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]
+     */
+    public function getLockedDetail()
+    {
+        return $this->container['locked_detail'];
+    }
+
+    /**
+     * Sets locked_detail
+     *
+     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[] $locked_detail It is an array, decribes lock position info of this holder, only shows when \"locked\": 1. This Array may contain multiple objects for multiple locking info. (Notice:When \"locked\":0, or lock address is a black hole address,  \"locked_detail\" will be no return.)
+     *
+     * @return $this
+     */
+    public function setLockedDetail($locked_detail)
+    {
+        $this->container['locked_detail'] = $locked_detail;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag
+     *
+     * @return string
+     */
+    public function getTag()
+    {
+        return $this->container['tag'];
+    }
+
+    /**
+     * Sets tag
+     *
+     * @param string $tag It describes the address's public tag. Example:Burn Address/Deployer;
+     *
+     * @return $this
+     */
+    public function setTag($tag)
+    {
+        $this->container['tag'] = $tag;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent
+     *
+     * @return string
+     */
+    public function getPercent()
+    {
+        return $this->container['percent'];
+    }
+
+    /**
+     * Sets percent
+     *
+     * @param string $percent It  describes the percentage of tokens held by this holder (Notice:About \"percent\": 1 means 100% here.)
+     *
+     * @return $this
+     */
+    public function setPercent($percent)
+    {
+        $this->container['percent'] = $percent;
 
         return $this;
     }

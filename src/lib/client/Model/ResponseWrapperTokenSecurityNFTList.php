@@ -1,6 +1,6 @@
 <?php
 /**
- * GetAccessTokenRequest
+ * ResponseWrapperTokenSecurityNFTList
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * GetAccessTokenRequest Class Doc Comment
+ * ResponseWrapperTokenSecurityNFTList Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetAccessTokenRequest implements ModelInterface, ArrayAccess
+class ResponseWrapperTokenSecurityNFTList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetAccessTokenRequest';
+    protected static $swaggerModelName = 'ResponseWrapperTokenSecurity_NFT_list';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,9 +56,11 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_key' => 'string',
-        'sign' => 'string',
-        'time' => 'int'
+        'nft_percentage' => 'string',
+        'nft_id' => 'string',
+        'amount' => 'string',
+        'in_effect' => 'string',
+        'value' => 'string'
     ];
 
     /**
@@ -67,9 +69,11 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_key' => null,
-        'sign' => null,
-        'time' => 'int64'
+        'nft_percentage' => null,
+        'nft_id' => null,
+        'amount' => null,
+        'in_effect' => null,
+        'value' => null
     ];
 
     /**
@@ -99,9 +103,11 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_key' => 'app_key',
-        'sign' => 'sign',
-        'time' => 'time'
+        'nft_percentage' => 'NFT_percentage',
+        'nft_id' => 'NFT_id',
+        'amount' => 'amount',
+        'in_effect' => 'in_effect',
+        'value' => 'value'
     ];
 
     /**
@@ -110,9 +116,11 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_key' => 'setAppKey',
-        'sign' => 'setSign',
-        'time' => 'setTime'
+        'nft_percentage' => 'setNftPercentage',
+        'nft_id' => 'setNftId',
+        'amount' => 'setAmount',
+        'in_effect' => 'setInEffect',
+        'value' => 'setValue'
     ];
 
     /**
@@ -121,9 +129,11 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_key' => 'getAppKey',
-        'sign' => 'getSign',
-        'time' => 'getTime'
+        'nft_percentage' => 'getNftPercentage',
+        'nft_id' => 'getNftId',
+        'amount' => 'getAmount',
+        'in_effect' => 'getInEffect',
+        'value' => 'getValue'
     ];
 
     /**
@@ -184,9 +194,11 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['app_key'] = isset($data['app_key']) ? $data['app_key'] : null;
-        $this->container['sign'] = isset($data['sign']) ? $data['sign'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['nft_percentage'] = isset($data['nft_percentage']) ? $data['nft_percentage'] : null;
+        $this->container['nft_id'] = isset($data['nft_id']) ? $data['nft_id'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['in_effect'] = isset($data['in_effect']) ? $data['in_effect'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -198,15 +210,6 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['app_key'] === null) {
-            $invalidProperties[] = "'app_key' can't be null";
-        }
-        if ($this->container['sign'] === null) {
-            $invalidProperties[] = "'sign' can't be null";
-        }
-        if ($this->container['time'] === null) {
-            $invalidProperties[] = "'time' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -223,73 +226,121 @@ class GetAccessTokenRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets app_key
+     * Gets nft_percentage
      *
      * @return string
      */
-    public function getAppKey()
+    public function getNftPercentage()
     {
-        return $this->container['app_key'];
+        return $this->container['nft_percentage'];
     }
 
     /**
-     * Sets app_key
+     * Sets nft_percentage
      *
-     * @param string $app_key app_key
+     * @param string $nft_percentage \"NFT_percentage\" represents the proportion of that NFT in the total liquidity. When the LP holder is a lockup address, this information will also appear in the \"locked_detail\" section.
      *
      * @return $this
      */
-    public function setAppKey($app_key)
+    public function setNftPercentage($nft_percentage)
     {
-        $this->container['app_key'] = $app_key;
+        $this->container['nft_percentage'] = $nft_percentage;
 
         return $this;
     }
 
     /**
-     * Gets sign
+     * Gets nft_id
      *
      * @return string
      */
-    public function getSign()
+    public function getNftId()
     {
-        return $this->container['sign'];
+        return $this->container['nft_id'];
     }
 
     /**
-     * Sets sign
+     * Sets nft_id
      *
-     * @param string $sign Sign Method Concatenate app_key, time, app_secret in turn, and do sha1() . Example app_key = mBOMg20QW11BbtyH4Zh0 time = 1647847498 app_secret = V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh sign = sha1(mBOMg20QW11BbtyH4Zh01647847498V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh)        = 7293d385b9225b3c3f232b76ba97255d0e21063e
+     * @param string $nft_id \"NFT_id\" is the NFTID corresponding to that NFT.
      *
      * @return $this
      */
-    public function setSign($sign)
+    public function setNftId($nft_id)
     {
-        $this->container['sign'] = $sign;
+        $this->container['nft_id'] = $nft_id;
 
         return $this;
     }
 
     /**
-     * Gets time
+     * Gets amount
      *
-     * @return int
+     * @return string
      */
-    public function getTime()
+    public function getAmount()
     {
-        return $this->container['time'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets time
+     * Sets amount
      *
-     * @param int $time Quest timestamp (Second), should be within +-1000s around current timestamp
+     * @param string $amount \"amount\" is the liquidity quantity corresponding to the NFT.
      *
      * @return $this
      */
-    public function setTime($time)
+    public function setAmount($amount)
     {
-        $this->container['time'] = $time;
+        $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets in_effect
+     *
+     * @return string
+     */
+    public function getInEffect()
+    {
+        return $this->container['in_effect'];
+    }
+
+    /**
+     * Sets in_effect
+     *
+     * @param string $in_effect \"in_effect\" indicates whether the liquidity corresponding to that NFT is effective at the current price.
+     *
+     * @return $this
+     */
+    public function setInEffect($in_effect)
+    {
+        $this->container['in_effect'] = $in_effect;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     *
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     *
+     * @param string $value \"value\" is the total USD value corresponding to the NFT.
+     *
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }
