@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperPhishingSiteResult
+ * ResponseWrapperPhishingSiteResultNftRiskPrivilegedBurn
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperPhishingSiteResult Class Doc Comment
+ * ResponseWrapperPhishingSiteResultNftRiskPrivilegedBurn Class Doc Comment
  *
  * @category Class
- * @description Response result
+ * @description It describes whether the NFT owner can burn others NFT.(Notice:Privileged_burn means that the owner can burn others&#x27; NFTs directly through the method.)
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
+class ResponseWrapperPhishingSiteResultNftRiskPrivilegedBurn implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapperPhishingSite_result';
+    protected static $swaggerModelName = 'ResponseWrapperPhishingSite_result_nft_risk_privileged_burn';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'website_contract_security' => '\Swagger\Client\Model\ResponseWrapperPhishingSiteResultWebsiteContractSecurity[]',
-        'phishing_site' => 'int'
+        'owner_address' => 'string',
+        'value' => 'int',
+        'owner_type' => 'string'
     ];
 
     /**
@@ -67,8 +68,9 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'website_contract_security' => null,
-        'phishing_site' => 'int32'
+        'owner_address' => null,
+        'value' => 'int32',
+        'owner_type' => null
     ];
 
     /**
@@ -98,8 +100,9 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'website_contract_security' => 'website_contract_security',
-        'phishing_site' => 'phishing_site'
+        'owner_address' => 'owner_address',
+        'value' => 'value',
+        'owner_type' => 'owner_type'
     ];
 
     /**
@@ -108,8 +111,9 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'website_contract_security' => 'setWebsiteContractSecurity',
-        'phishing_site' => 'setPhishingSite'
+        'owner_address' => 'setOwnerAddress',
+        'value' => 'setValue',
+        'owner_type' => 'setOwnerType'
     ];
 
     /**
@@ -118,8 +122,9 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'website_contract_security' => 'getWebsiteContractSecurity',
-        'phishing_site' => 'getPhishingSite'
+        'owner_address' => 'getOwnerAddress',
+        'value' => 'getValue',
+        'owner_type' => 'getOwnerType'
     ];
 
     /**
@@ -180,8 +185,9 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['website_contract_security'] = isset($data['website_contract_security']) ? $data['website_contract_security'] : null;
-        $this->container['phishing_site'] = isset($data['phishing_site']) ? $data['phishing_site'] : null;
+        $this->container['owner_address'] = isset($data['owner_address']) ? $data['owner_address'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['owner_type'] = isset($data['owner_type']) ? $data['owner_type'] : null;
     }
 
     /**
@@ -209,49 +215,73 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets website_contract_security
+     * Gets owner_address
      *
-     * @return \Swagger\Client\Model\ResponseWrapperPhishingSiteResultWebsiteContractSecurity[]
+     * @return string
      */
-    public function getWebsiteContractSecurity()
+    public function getOwnerAddress()
     {
-        return $this->container['website_contract_security'];
+        return $this->container['owner_address'];
     }
 
     /**
-     * Sets website_contract_security
+     * Sets owner_address
      *
-     * @param \Swagger\Client\Model\ResponseWrapperPhishingSiteResultWebsiteContractSecurity[] $website_contract_security website_contract_security
+     * @param string $owner_address Owner_address describes the owner address.  null: the owner address cannot be fetched.
      *
      * @return $this
      */
-    public function setWebsiteContractSecurity($website_contract_security)
+    public function setOwnerAddress($owner_address)
     {
-        $this->container['website_contract_security'] = $website_contract_security;
+        $this->container['owner_address'] = $owner_address;
 
         return $this;
     }
 
     /**
-     * Gets phishing_site
+     * Gets value
      *
      * @return int
      */
-    public function getPhishingSite()
+    public function getValue()
     {
-        return $this->container['phishing_site'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets phishing_site
+     * Sets value
      *
-     * @param int $phishing_site It means whether the website is a phishing site. \"1\" means true; \"0\" means that we have not found malicious behavior of this website.
+     * @param int $value The \"value\" describes the status of the risk. null: the contract is not open source or there is a proxy, it is not possible to detect whether the risk exists. -1: the risk is detected but the ownership give up. If the detection of a code vulnerability, it can also be considered risk-free.  0: the risk is not detected.  1: the risk is detected, and the owner address is a common address (EOA), then it can be said that there is a clear risk.  2: The risk is detected, but the owner address is a contract address, the risk is not significant.  3: The risk is detected, but the owner address is not detectable / or an array.
      *
      * @return $this
      */
-    public function setPhishingSite($phishing_site)
+    public function setValue($value)
     {
-        $this->container['phishing_site'] = $phishing_site;
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner_type
+     *
+     * @return string
+     */
+    public function getOwnerType()
+    {
+        return $this->container['owner_type'];
+    }
+
+    /**
+     * Sets owner_type
+     *
+     * @param string $owner_type \"blackhole\" : the owner is a blackhole address. \"contract\" : the owner is a contract. \"eoa\" : the owner is a common address (eoa). \"multi-address\":the owner is an array/list. null: the address is not detected.
+     *
+     * @return $this
+     */
+    public function setOwnerType($owner_type)
+    {
+        $this->container['owner_type'] = $owner_type;
 
         return $this;
     }

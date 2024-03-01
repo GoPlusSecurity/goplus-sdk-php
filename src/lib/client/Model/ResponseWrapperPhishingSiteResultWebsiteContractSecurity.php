@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperPhishingSiteResult
+ * ResponseWrapperPhishingSiteResultWebsiteContractSecurity
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperPhishingSiteResult Class Doc Comment
+ * ResponseWrapperPhishingSiteResultWebsiteContractSecurity Class Doc Comment
  *
  * @category Class
- * @description Response result
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
+class ResponseWrapperPhishingSiteResultWebsiteContractSecurity implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapperPhishingSite_result';
+    protected static $swaggerModelName = 'ResponseWrapperPhishingSite_result_website_contract_security';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +56,12 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'website_contract_security' => '\Swagger\Client\Model\ResponseWrapperPhishingSiteResultWebsiteContractSecurity[]',
-        'phishing_site' => 'int'
+        'standard' => 'string',
+        'is_contract' => 'int',
+        'address_risk' => 'string[]',
+        'contract' => 'string',
+        'is_open_source' => 'int',
+        'nft_risk' => '\Swagger\Client\Model\ResponseWrapperPhishingSiteResultNftRisk'
     ];
 
     /**
@@ -67,8 +70,12 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'website_contract_security' => null,
-        'phishing_site' => 'int32'
+        'standard' => null,
+        'is_contract' => 'int32',
+        'address_risk' => null,
+        'contract' => null,
+        'is_open_source' => 'int32',
+        'nft_risk' => null
     ];
 
     /**
@@ -98,8 +105,12 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'website_contract_security' => 'website_contract_security',
-        'phishing_site' => 'phishing_site'
+        'standard' => 'standard',
+        'is_contract' => 'is_contract',
+        'address_risk' => 'address_risk',
+        'contract' => 'contract',
+        'is_open_source' => 'is_open_source',
+        'nft_risk' => 'nft_risk'
     ];
 
     /**
@@ -108,8 +119,12 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'website_contract_security' => 'setWebsiteContractSecurity',
-        'phishing_site' => 'setPhishingSite'
+        'standard' => 'setStandard',
+        'is_contract' => 'setIsContract',
+        'address_risk' => 'setAddressRisk',
+        'contract' => 'setContract',
+        'is_open_source' => 'setIsOpenSource',
+        'nft_risk' => 'setNftRisk'
     ];
 
     /**
@@ -118,8 +133,12 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'website_contract_security' => 'getWebsiteContractSecurity',
-        'phishing_site' => 'getPhishingSite'
+        'standard' => 'getStandard',
+        'is_contract' => 'getIsContract',
+        'address_risk' => 'getAddressRisk',
+        'contract' => 'getContract',
+        'is_open_source' => 'getIsOpenSource',
+        'nft_risk' => 'getNftRisk'
     ];
 
     /**
@@ -180,8 +199,12 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['website_contract_security'] = isset($data['website_contract_security']) ? $data['website_contract_security'] : null;
-        $this->container['phishing_site'] = isset($data['phishing_site']) ? $data['phishing_site'] : null;
+        $this->container['standard'] = isset($data['standard']) ? $data['standard'] : null;
+        $this->container['is_contract'] = isset($data['is_contract']) ? $data['is_contract'] : null;
+        $this->container['address_risk'] = isset($data['address_risk']) ? $data['address_risk'] : null;
+        $this->container['contract'] = isset($data['contract']) ? $data['contract'] : null;
+        $this->container['is_open_source'] = isset($data['is_open_source']) ? $data['is_open_source'] : null;
+        $this->container['nft_risk'] = isset($data['nft_risk']) ? $data['nft_risk'] : null;
     }
 
     /**
@@ -209,49 +232,145 @@ class ResponseWrapperPhishingSiteResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets website_contract_security
+     * Gets standard
      *
-     * @return \Swagger\Client\Model\ResponseWrapperPhishingSiteResultWebsiteContractSecurity[]
+     * @return string
      */
-    public function getWebsiteContractSecurity()
+    public function getStandard()
     {
-        return $this->container['website_contract_security'];
+        return $this->container['standard'];
     }
 
     /**
-     * Sets website_contract_security
+     * Sets standard
      *
-     * @param \Swagger\Client\Model\ResponseWrapperPhishingSiteResultWebsiteContractSecurity[] $website_contract_security website_contract_security
+     * @param string $standard contract type(erc20, erc721, erc1155)
      *
      * @return $this
      */
-    public function setWebsiteContractSecurity($website_contract_security)
+    public function setStandard($standard)
     {
-        $this->container['website_contract_security'] = $website_contract_security;
+        $this->container['standard'] = $standard;
 
         return $this;
     }
 
     /**
-     * Gets phishing_site
+     * Gets is_contract
      *
      * @return int
      */
-    public function getPhishingSite()
+    public function getIsContract()
     {
-        return $this->container['phishing_site'];
+        return $this->container['is_contract'];
     }
 
     /**
-     * Sets phishing_site
+     * Sets is_contract
      *
-     * @param int $phishing_site It means whether the website is a phishing site. \"1\" means true; \"0\" means that we have not found malicious behavior of this website.
+     * @param int $is_contract It describes whether the holder is a contract \"1\" means true; \"0\" means false.
      *
      * @return $this
      */
-    public function setPhishingSite($phishing_site)
+    public function setIsContract($is_contract)
     {
-        $this->container['phishing_site'] = $phishing_site;
+        $this->container['is_contract'] = $is_contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_risk
+     *
+     * @return string[]
+     */
+    public function getAddressRisk()
+    {
+        return $this->container['address_risk'];
+    }
+
+    /**
+     * Sets address_risk
+     *
+     * @param string[] $address_risk address risk
+     *
+     * @return $this
+     */
+    public function setAddressRisk($address_risk)
+    {
+        $this->container['address_risk'] = $address_risk;
+
+        return $this;
+    }
+
+    /**
+     * Gets contract
+     *
+     * @return string
+     */
+    public function getContract()
+    {
+        return $this->container['contract'];
+    }
+
+    /**
+     * Sets contract
+     *
+     * @param string $contract contract address
+     *
+     * @return $this
+     */
+    public function setContract($contract)
+    {
+        $this->container['contract'] = $contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_open_source
+     *
+     * @return int
+     */
+    public function getIsOpenSource()
+    {
+        return $this->container['is_open_source'];
+    }
+
+    /**
+     * Sets is_open_source
+     *
+     * @param int $is_open_source It describes whether this contract is open source.  \"1\" means true;  \"0\" means false.(Notice:Un-open-sourced contracts may hide various unknown mechanisms and are extremely risky. When the contract is not open source, we will not be able to detect other risk items.)
+     *
+     * @return $this
+     */
+    public function setIsOpenSource($is_open_source)
+    {
+        $this->container['is_open_source'] = $is_open_source;
+
+        return $this;
+    }
+
+    /**
+     * Gets nft_risk
+     *
+     * @return \Swagger\Client\Model\ResponseWrapperPhishingSiteResultNftRisk
+     */
+    public function getNftRisk()
+    {
+        return $this->container['nft_risk'];
+    }
+
+    /**
+     * Sets nft_risk
+     *
+     * @param \Swagger\Client\Model\ResponseWrapperPhishingSiteResultNftRisk $nft_risk nft_risk
+     *
+     * @return $this
+     */
+    public function setNftRisk($nft_risk)
+    {
+        $this->container['nft_risk'] = $nft_risk;
 
         return $this;
     }
