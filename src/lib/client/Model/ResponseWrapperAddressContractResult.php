@@ -60,18 +60,22 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
         'cybercrime' => 'string',
         'money_laundering' => 'string',
         'number_of_malicious_contracts_created' => 'string',
+        'gas_abuse' => 'string',
         'financial_crime' => 'string',
         'darkweb_transactions' => 'string',
+        'reinit' => 'string',
         'phishing_activities' => 'string',
         'contract_address' => 'string',
         'fake_kyc' => 'string',
         'blacklist_doubt' => 'string',
         'data_source' => 'string',
+        'fake_standard_interface' => 'string',
         'stealing_attack' => 'string',
         'blackmail_activities' => 'string',
         'sanctioned' => 'string',
         'malicious_mining_activities' => 'string',
         'mixer' => 'string',
+        'fake_token' => 'string',
         'honeypot_related_address' => 'string'
     ];
 
@@ -84,18 +88,22 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
         'cybercrime' => null,
         'money_laundering' => null,
         'number_of_malicious_contracts_created' => null,
+        'gas_abuse' => null,
         'financial_crime' => null,
         'darkweb_transactions' => null,
+        'reinit' => null,
         'phishing_activities' => null,
         'contract_address' => null,
         'fake_kyc' => null,
         'blacklist_doubt' => null,
         'data_source' => null,
+        'fake_standard_interface' => null,
         'stealing_attack' => null,
         'blackmail_activities' => null,
         'sanctioned' => null,
         'malicious_mining_activities' => null,
         'mixer' => null,
+        'fake_token' => null,
         'honeypot_related_address' => null
     ];
 
@@ -129,18 +137,22 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
         'cybercrime' => 'cybercrime',
         'money_laundering' => 'money_laundering',
         'number_of_malicious_contracts_created' => 'number_of_malicious_contracts_created',
+        'gas_abuse' => 'gas_abuse',
         'financial_crime' => 'financial_crime',
         'darkweb_transactions' => 'darkweb_transactions',
+        'reinit' => 'reinit',
         'phishing_activities' => 'phishing_activities',
         'contract_address' => 'contract_address',
         'fake_kyc' => 'fake_kyc',
         'blacklist_doubt' => 'blacklist_doubt',
         'data_source' => 'data_source',
+        'fake_standard_interface' => 'fake_standard_interface',
         'stealing_attack' => 'stealing_attack',
         'blackmail_activities' => 'blackmail_activities',
         'sanctioned' => 'sanctioned',
         'malicious_mining_activities' => 'malicious_mining_activities',
         'mixer' => 'mixer',
+        'fake_token' => 'fake_token',
         'honeypot_related_address' => 'honeypot_related_address'
     ];
 
@@ -153,18 +165,22 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
         'cybercrime' => 'setCybercrime',
         'money_laundering' => 'setMoneyLaundering',
         'number_of_malicious_contracts_created' => 'setNumberOfMaliciousContractsCreated',
+        'gas_abuse' => 'setGasAbuse',
         'financial_crime' => 'setFinancialCrime',
         'darkweb_transactions' => 'setDarkwebTransactions',
+        'reinit' => 'setReinit',
         'phishing_activities' => 'setPhishingActivities',
         'contract_address' => 'setContractAddress',
         'fake_kyc' => 'setFakeKyc',
         'blacklist_doubt' => 'setBlacklistDoubt',
         'data_source' => 'setDataSource',
+        'fake_standard_interface' => 'setFakeStandardInterface',
         'stealing_attack' => 'setStealingAttack',
         'blackmail_activities' => 'setBlackmailActivities',
         'sanctioned' => 'setSanctioned',
         'malicious_mining_activities' => 'setMaliciousMiningActivities',
         'mixer' => 'setMixer',
+        'fake_token' => 'setFakeToken',
         'honeypot_related_address' => 'setHoneypotRelatedAddress'
     ];
 
@@ -177,18 +193,22 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
         'cybercrime' => 'getCybercrime',
         'money_laundering' => 'getMoneyLaundering',
         'number_of_malicious_contracts_created' => 'getNumberOfMaliciousContractsCreated',
+        'gas_abuse' => 'getGasAbuse',
         'financial_crime' => 'getFinancialCrime',
         'darkweb_transactions' => 'getDarkwebTransactions',
+        'reinit' => 'getReinit',
         'phishing_activities' => 'getPhishingActivities',
         'contract_address' => 'getContractAddress',
         'fake_kyc' => 'getFakeKyc',
         'blacklist_doubt' => 'getBlacklistDoubt',
         'data_source' => 'getDataSource',
+        'fake_standard_interface' => 'getFakeStandardInterface',
         'stealing_attack' => 'getStealingAttack',
         'blackmail_activities' => 'getBlackmailActivities',
         'sanctioned' => 'getSanctioned',
         'malicious_mining_activities' => 'getMaliciousMiningActivities',
         'mixer' => 'getMixer',
+        'fake_token' => 'getFakeToken',
         'honeypot_related_address' => 'getHoneypotRelatedAddress'
     ];
 
@@ -253,18 +273,22 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
         $this->container['cybercrime'] = isset($data['cybercrime']) ? $data['cybercrime'] : null;
         $this->container['money_laundering'] = isset($data['money_laundering']) ? $data['money_laundering'] : null;
         $this->container['number_of_malicious_contracts_created'] = isset($data['number_of_malicious_contracts_created']) ? $data['number_of_malicious_contracts_created'] : null;
+        $this->container['gas_abuse'] = isset($data['gas_abuse']) ? $data['gas_abuse'] : null;
         $this->container['financial_crime'] = isset($data['financial_crime']) ? $data['financial_crime'] : null;
         $this->container['darkweb_transactions'] = isset($data['darkweb_transactions']) ? $data['darkweb_transactions'] : null;
+        $this->container['reinit'] = isset($data['reinit']) ? $data['reinit'] : null;
         $this->container['phishing_activities'] = isset($data['phishing_activities']) ? $data['phishing_activities'] : null;
         $this->container['contract_address'] = isset($data['contract_address']) ? $data['contract_address'] : null;
         $this->container['fake_kyc'] = isset($data['fake_kyc']) ? $data['fake_kyc'] : null;
         $this->container['blacklist_doubt'] = isset($data['blacklist_doubt']) ? $data['blacklist_doubt'] : null;
         $this->container['data_source'] = isset($data['data_source']) ? $data['data_source'] : null;
+        $this->container['fake_standard_interface'] = isset($data['fake_standard_interface']) ? $data['fake_standard_interface'] : null;
         $this->container['stealing_attack'] = isset($data['stealing_attack']) ? $data['stealing_attack'] : null;
         $this->container['blackmail_activities'] = isset($data['blackmail_activities']) ? $data['blackmail_activities'] : null;
         $this->container['sanctioned'] = isset($data['sanctioned']) ? $data['sanctioned'] : null;
         $this->container['malicious_mining_activities'] = isset($data['malicious_mining_activities']) ? $data['malicious_mining_activities'] : null;
         $this->container['mixer'] = isset($data['mixer']) ? $data['mixer'] : null;
+        $this->container['fake_token'] = isset($data['fake_token']) ? $data['fake_token'] : null;
         $this->container['honeypot_related_address'] = isset($data['honeypot_related_address']) ? $data['honeypot_related_address'] : null;
     }
 
@@ -365,6 +389,30 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
     }
 
     /**
+     * Gets gas_abuse
+     *
+     * @return string
+     */
+    public function getGasAbuse()
+    {
+        return $this->container['gas_abuse'];
+    }
+
+    /**
+     * Sets gas_abuse
+     *
+     * @param string $gas_abuse It describes whether this address is cheating other user's gas fee to mint other assets.(Notice:Any interaction with such addresses may result in loss of property.)
+     *
+     * @return $this
+     */
+    public function setGasAbuse($gas_abuse)
+    {
+        $this->container['gas_abuse'] = $gas_abuse;
+
+        return $this;
+    }
+
+    /**
      * Gets financial_crime
      *
      * @return string
@@ -408,6 +456,30 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
     public function setDarkwebTransactions($darkweb_transactions)
     {
         $this->container['darkweb_transactions'] = $darkweb_transactions;
+
+        return $this;
+    }
+
+    /**
+     * Gets reinit
+     *
+     * @return string
+     */
+    public function getReinit()
+    {
+        return $this->container['reinit'];
+    }
+
+    /**
+     * Sets reinit
+     *
+     * @param string $reinit It describes whether this address/contract has been deployed more than onces, and can be deployed again.(Notice:If a contract can be reinited, the developer can change the contract code whenever he wants.)
+     *
+     * @return $this
+     */
+    public function setReinit($reinit)
+    {
+        $this->container['reinit'] = $reinit;
 
         return $this;
     }
@@ -533,6 +605,30 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
     }
 
     /**
+     * Gets fake_standard_interface
+     *
+     * @return string
+     */
+    public function getFakeStandardInterface()
+    {
+        return $this->container['fake_standard_interface'];
+    }
+
+    /**
+     * Sets fake_standard_interface
+     *
+     * @param string $fake_standard_interface It describes whether this contract contains standard interfaces that do not conform the requirements of the standard protocol.(Notice:Fake Standard Interface is mostly seen in scam assets.)
+     *
+     * @return $this
+     */
+    public function setFakeStandardInterface($fake_standard_interface)
+    {
+        $this->container['fake_standard_interface'] = $fake_standard_interface;
+
+        return $this;
+    }
+
+    /**
      * Gets stealing_attack
      *
      * @return string
@@ -648,6 +744,30 @@ class ResponseWrapperAddressContractResult implements ModelInterface, ArrayAcces
     public function setMixer($mixer)
     {
         $this->container['mixer'] = $mixer;
+
+        return $this;
+    }
+
+    /**
+     * Gets fake_token
+     *
+     * @return string
+     */
+    public function getFakeToken()
+    {
+        return $this->container['fake_token'];
+    }
+
+    /**
+     * Sets fake_token
+     *
+     * @param string $fake_token It indicates whether the token is a counterfeit of a mainstream asset.
+     *
+     * @return $this
+     */
+    public function setFakeToken($fake_token)
+    {
+        $this->container['fake_token'] = $fake_token;
 
         return $this;
     }
