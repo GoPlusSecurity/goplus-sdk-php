@@ -1,6 +1,6 @@
 <?php
 /**
- * WebsiteControllerApi
+ * TokenSecurityAPIForSuiApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * WebsiteControllerApi Class Doc Comment
+ * TokenSecurityAPIForSuiApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class WebsiteControllerApi
+class TokenSecurityAPIForSuiApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,39 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGET
+     * Operation suiTokenSecurityUsingGET
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of sui tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperPhishingSite
+     * @return \Swagger\Client\Model\ResponseWrapperSuiTokenSecurity
      */
-    public function phishingSiteUsingGET($url, $authorization = null)
+    public function suiTokenSecurityUsingGET($contract_addresses, $authorization = null)
     {
-        list($response) = $this->phishingSiteUsingGETWithHttpInfo($url, $authorization);
+        list($response) = $this->suiTokenSecurityUsingGETWithHttpInfo($contract_addresses, $authorization);
         return $response;
     }
 
     /**
-     * Operation phishingSiteUsingGETWithHttpInfo
+     * Operation suiTokenSecurityUsingGETWithHttpInfo
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of sui tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperPhishingSite, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperSuiTokenSecurity, HTTP status code, HTTP response headers (array of strings)
      */
-    public function phishingSiteUsingGETWithHttpInfo($url, $authorization = null)
+    public function suiTokenSecurityUsingGETWithHttpInfo($contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite';
-        $request = $this->phishingSiteUsingGETRequest($url, $authorization);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperSuiTokenSecurity';
+        $request = $this->suiTokenSecurityUsingGETRequest($contract_addresses, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +170,7 @@ class WebsiteControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperPhishingSite',
+                        '\Swagger\Client\Model\ResponseWrapperSuiTokenSecurity',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,19 +181,19 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGETAsync
+     * Operation suiTokenSecurityUsingGETAsync
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of sui tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function phishingSiteUsingGETAsync($url, $authorization = null)
+    public function suiTokenSecurityUsingGETAsync($contract_addresses, $authorization = null)
     {
-        return $this->phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization)
+        return $this->suiTokenSecurityUsingGETAsyncWithHttpInfo($contract_addresses, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,20 +202,20 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGETAsyncWithHttpInfo
+     * Operation suiTokenSecurityUsingGETAsyncWithHttpInfo
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of sui tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization = null)
+    public function suiTokenSecurityUsingGETAsyncWithHttpInfo($contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite';
-        $request = $this->phishingSiteUsingGETRequest($url, $authorization);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperSuiTokenSecurity';
+        $request = $this->suiTokenSecurityUsingGETRequest($contract_addresses, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,24 +255,24 @@ class WebsiteControllerApi
     }
 
     /**
-     * Create request for operation 'phishingSiteUsingGET'
+     * Create request for operation 'suiTokenSecurityUsingGET'
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of sui tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function phishingSiteUsingGETRequest($url, $authorization = null)
+    protected function suiTokenSecurityUsingGETRequest($contract_addresses, $authorization = null)
     {
-        // verify the required parameter 'url' is set
-        if ($url === null || (is_array($url) && count($url) === 0)) {
+        // verify the required parameter 'contract_addresses' is set
+        if ($contract_addresses === null || (is_array($contract_addresses) && count($contract_addresses) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $url when calling phishingSiteUsingGET'
+                'Missing the required parameter $contract_addresses when calling suiTokenSecurityUsingGET'
             );
         }
 
-        $resourcePath = '/api/v1/phishing_site';
+        $resourcePath = '/api/v1/sui/token_security';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -280,8 +280,8 @@ class WebsiteControllerApi
         $multipart = false;
 
         // query params
-        if ($url !== null) {
-            $queryParams['url'] = ObjectSerializer::toQueryValue($url, null);
+        if ($contract_addresses !== null) {
+            $queryParams['contract_addresses'] = ObjectSerializer::toQueryValue($contract_addresses, null);
         }
         // header params
         if ($authorization !== null) {

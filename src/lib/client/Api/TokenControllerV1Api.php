@@ -91,7 +91,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -109,7 +109,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -185,7 +185,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class TokenControllerV1Api
      *
      * Get the list of chains supported by different functions.
      *
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -257,7 +257,7 @@ class TokenControllerV1Api
     /**
      * Create request for operation 'getChainsListUsingGET'
      *
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      * @param  string $name API name. (optional)
      *
      * @throws \InvalidArgumentException
@@ -352,9 +352,9 @@ class TokenControllerV1Api
      *
      * Get token's security and risk data.
      *
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; \&quot;25\&quot; means Cronos; \&quot;56\&quot; means BSC;  \&quot;66\&quot; means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59144\&quot; means Linea Mainnet; \&quot;8453\&quot; Base; \&quot;tron\&quot; means Tron; \&quot;534352\&quot; means Scroll; \&quot;204\&quot; means opBNB; (required)
+     * @param  string $chain_id The chain_id of the blockchain. To check the corresponding blockchain name for a given chain_id, please visit: https://docs.gopluslabs.io/reference/response-details-9 (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -371,9 +371,9 @@ class TokenControllerV1Api
      *
      * Get token's security and risk data.
      *
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; \&quot;25\&quot; means Cronos; \&quot;56\&quot; means BSC;  \&quot;66\&quot; means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59144\&quot; means Linea Mainnet; \&quot;8453\&quot; Base; \&quot;tron\&quot; means Tron; \&quot;534352\&quot; means Scroll; \&quot;204\&quot; means opBNB; (required)
+     * @param  string $chain_id The chain_id of the blockchain. To check the corresponding blockchain name for a given chain_id, please visit: https://docs.gopluslabs.io/reference/response-details-9 (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -448,9 +448,9 @@ class TokenControllerV1Api
      *
      * Get token's security and risk data.
      *
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; \&quot;25\&quot; means Cronos; \&quot;56\&quot; means BSC;  \&quot;66\&quot; means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59144\&quot; means Linea Mainnet; \&quot;8453\&quot; Base; \&quot;tron\&quot; means Tron; \&quot;534352\&quot; means Scroll; \&quot;204\&quot; means opBNB; (required)
+     * @param  string $chain_id The chain_id of the blockchain. To check the corresponding blockchain name for a given chain_id, please visit: https://docs.gopluslabs.io/reference/response-details-9 (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -470,9 +470,9 @@ class TokenControllerV1Api
      *
      * Get token's security and risk data.
      *
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; \&quot;25\&quot; means Cronos; \&quot;56\&quot; means BSC;  \&quot;66\&quot; means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59144\&quot; means Linea Mainnet; \&quot;8453\&quot; Base; \&quot;tron\&quot; means Tron; \&quot;534352\&quot; means Scroll; \&quot;204\&quot; means opBNB; (required)
+     * @param  string $chain_id The chain_id of the blockchain. To check the corresponding blockchain name for a given chain_id, please visit: https://docs.gopluslabs.io/reference/response-details-9 (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -522,9 +522,9 @@ class TokenControllerV1Api
     /**
      * Create request for operation 'tokenSecurityUsingGET1'
      *
-     * @param  string $chain_id The chain_id of the blockchain. \&quot;1\&quot; means Ethereum;  \&quot;10\&quot; means Optimism; \&quot;25\&quot; means Cronos; \&quot;56\&quot; means BSC;  \&quot;66\&quot; means OKC; \&quot;100\&quot; means Gnosis; \&quot;128\&quot; means HECO;  \&quot;137\&quot; means Polygon;  \&quot;250\&quot; means Fantom; \&quot;321\&quot; means KCC; \&quot;324\&quot; means zkSync Era; \&quot;10001\&quot; means ETHW; \&quot;201022\&quot; means FON; \&quot;42161\&quot; means Arbitrum;  \&quot;43114\&quot; means Avalanche; \&quot;59144\&quot; means Linea Mainnet; \&quot;8453\&quot; Base; \&quot;tron\&quot; means Tron; \&quot;534352\&quot; means Scroll; \&quot;204\&quot; means opBNB; (required)
+     * @param  string $chain_id The chain_id of the blockchain. To check the corresponding blockchain name for a given chain_id, please visit: https://docs.gopluslabs.io/reference/response-details-9 (required)
      * @param  string $contract_addresses The contract address of tokens. (required)
-     * @param  string $authorization Authorization (test: Bearer 81|9ihH8JzEuFu4MQ9DjWmH5WrNCPW...) (optional)
+     * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
