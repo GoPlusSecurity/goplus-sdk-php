@@ -1,6 +1,6 @@
 <?php
 /**
- * WebsiteControllerApi
+ * TransactionSimulationForSolanaApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * WebsiteControllerApi Class Doc Comment
+ * TransactionSimulationForSolanaApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class WebsiteControllerApi
+class TransactionSimulationForSolanaApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,39 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGET
+     * Operation prerunTxUsingPOST
      *
-     * Check if the the url is a phishing site
+     * Check for potential risks in the transaction
      *
-     * @param  string $url Url (required)
+     * @param  \Swagger\Client\Model\SolanaPrerunTxRequest $body request (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperPhishingSite
+     * @return \Swagger\Client\Model\ResponseWrapperSolanaPrerunTxResponse
      */
-    public function phishingSiteUsingGET($url, $authorization = null)
+    public function prerunTxUsingPOST($body, $authorization = null)
     {
-        list($response) = $this->phishingSiteUsingGETWithHttpInfo($url, $authorization);
+        list($response) = $this->prerunTxUsingPOSTWithHttpInfo($body, $authorization);
         return $response;
     }
 
     /**
-     * Operation phishingSiteUsingGETWithHttpInfo
+     * Operation prerunTxUsingPOSTWithHttpInfo
      *
-     * Check if the the url is a phishing site
+     * Check for potential risks in the transaction
      *
-     * @param  string $url Url (required)
+     * @param  \Swagger\Client\Model\SolanaPrerunTxRequest $body request (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperPhishingSite, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperSolanaPrerunTxResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function phishingSiteUsingGETWithHttpInfo($url, $authorization = null)
+    public function prerunTxUsingPOSTWithHttpInfo($body, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite';
-        $request = $this->phishingSiteUsingGETRequest($url, $authorization);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperSolanaPrerunTxResponse';
+        $request = $this->prerunTxUsingPOSTRequest($body, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +170,7 @@ class WebsiteControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperPhishingSite',
+                        '\Swagger\Client\Model\ResponseWrapperSolanaPrerunTxResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,19 +181,19 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGETAsync
+     * Operation prerunTxUsingPOSTAsync
      *
-     * Check if the the url is a phishing site
+     * Check for potential risks in the transaction
      *
-     * @param  string $url Url (required)
+     * @param  \Swagger\Client\Model\SolanaPrerunTxRequest $body request (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function phishingSiteUsingGETAsync($url, $authorization = null)
+    public function prerunTxUsingPOSTAsync($body, $authorization = null)
     {
-        return $this->phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization)
+        return $this->prerunTxUsingPOSTAsyncWithHttpInfo($body, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,20 +202,20 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGETAsyncWithHttpInfo
+     * Operation prerunTxUsingPOSTAsyncWithHttpInfo
      *
-     * Check if the the url is a phishing site
+     * Check for potential risks in the transaction
      *
-     * @param  string $url Url (required)
+     * @param  \Swagger\Client\Model\SolanaPrerunTxRequest $body request (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization = null)
+    public function prerunTxUsingPOSTAsyncWithHttpInfo($body, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite';
-        $request = $this->phishingSiteUsingGETRequest($url, $authorization);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperSolanaPrerunTxResponse';
+        $request = $this->prerunTxUsingPOSTRequest($body, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,34 +255,30 @@ class WebsiteControllerApi
     }
 
     /**
-     * Create request for operation 'phishingSiteUsingGET'
+     * Create request for operation 'prerunTxUsingPOST'
      *
-     * @param  string $url Url (required)
+     * @param  \Swagger\Client\Model\SolanaPrerunTxRequest $body request (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function phishingSiteUsingGETRequest($url, $authorization = null)
+    protected function prerunTxUsingPOSTRequest($body, $authorization = null)
     {
-        // verify the required parameter 'url' is set
-        if ($url === null || (is_array($url) && count($url) === 0)) {
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $url when calling phishingSiteUsingGET'
+                'Missing the required parameter $body when calling prerunTxUsingPOST'
             );
         }
 
-        $resourcePath = '/api/v1/phishing_site';
+        $resourcePath = '/pis/api/v1/solana/pre_execution';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($url !== null) {
-            $queryParams['url'] = ObjectSerializer::toQueryValue($url, null);
-        }
         // header params
         if ($authorization !== null) {
             $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
@@ -291,6 +287,9 @@ class WebsiteControllerApi
 
         // body params
         $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -299,7 +298,7 @@ class WebsiteControllerApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['*/*'],
-                []
+                ['application/json']
             );
         }
 
@@ -346,7 +345,7 @@ class WebsiteControllerApi
 
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
-            'GET',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

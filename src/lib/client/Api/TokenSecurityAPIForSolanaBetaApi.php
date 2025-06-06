@@ -1,6 +1,6 @@
 <?php
 /**
- * WebsiteControllerApi
+ * TokenSecurityAPIForSolanaBetaApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * WebsiteControllerApi Class Doc Comment
+ * TokenSecurityAPIForSolanaBetaApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class WebsiteControllerApi
+class TokenSecurityAPIForSolanaBetaApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,39 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGET
+     * Operation solanaTokenSecurityUsingGET
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of solana tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ResponseWrapperPhishingSite
+     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurity
      */
-    public function phishingSiteUsingGET($url, $authorization = null)
+    public function solanaTokenSecurityUsingGET($contract_addresses, $authorization = null)
     {
-        list($response) = $this->phishingSiteUsingGETWithHttpInfo($url, $authorization);
+        list($response) = $this->solanaTokenSecurityUsingGETWithHttpInfo($contract_addresses, $authorization);
         return $response;
     }
 
     /**
-     * Operation phishingSiteUsingGETWithHttpInfo
+     * Operation solanaTokenSecurityUsingGETWithHttpInfo
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of solana tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ResponseWrapperPhishingSite, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurity, HTTP status code, HTTP response headers (array of strings)
      */
-    public function phishingSiteUsingGETWithHttpInfo($url, $authorization = null)
+    public function solanaTokenSecurityUsingGETWithHttpInfo($contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite';
-        $request = $this->phishingSiteUsingGETRequest($url, $authorization);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurity';
+        $request = $this->solanaTokenSecurityUsingGETRequest($contract_addresses, $authorization);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,7 +170,7 @@ class WebsiteControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseWrapperPhishingSite',
+                        '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurity',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,19 +181,19 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGETAsync
+     * Operation solanaTokenSecurityUsingGETAsync
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of solana tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function phishingSiteUsingGETAsync($url, $authorization = null)
+    public function solanaTokenSecurityUsingGETAsync($contract_addresses, $authorization = null)
     {
-        return $this->phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization)
+        return $this->solanaTokenSecurityUsingGETAsyncWithHttpInfo($contract_addresses, $authorization)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,20 +202,20 @@ class WebsiteControllerApi
     }
 
     /**
-     * Operation phishingSiteUsingGETAsyncWithHttpInfo
+     * Operation solanaTokenSecurityUsingGETAsyncWithHttpInfo
      *
-     * Check if the the url is a phishing site
+     * Get token's security and risk data.
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of solana tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function phishingSiteUsingGETAsyncWithHttpInfo($url, $authorization = null)
+    public function solanaTokenSecurityUsingGETAsyncWithHttpInfo($contract_addresses, $authorization = null)
     {
-        $returnType = '\Swagger\Client\Model\ResponseWrapperPhishingSite';
-        $request = $this->phishingSiteUsingGETRequest($url, $authorization);
+        $returnType = '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurity';
+        $request = $this->solanaTokenSecurityUsingGETRequest($contract_addresses, $authorization);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,24 +255,24 @@ class WebsiteControllerApi
     }
 
     /**
-     * Create request for operation 'phishingSiteUsingGET'
+     * Create request for operation 'solanaTokenSecurityUsingGET'
      *
-     * @param  string $url Url (required)
+     * @param  string $contract_addresses The contract address of solana tokens. (required)
      * @param  string $authorization Authorization token in the format: Bearer &lt;token&gt; (e.g., Bearer eyJsZXZlbCI6NSwiYXBwTmFtZSI6ImF2cyIsImFwcEtleSI6IjFaW...) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function phishingSiteUsingGETRequest($url, $authorization = null)
+    protected function solanaTokenSecurityUsingGETRequest($contract_addresses, $authorization = null)
     {
-        // verify the required parameter 'url' is set
-        if ($url === null || (is_array($url) && count($url) === 0)) {
+        // verify the required parameter 'contract_addresses' is set
+        if ($contract_addresses === null || (is_array($contract_addresses) && count($contract_addresses) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $url when calling phishingSiteUsingGET'
+                'Missing the required parameter $contract_addresses when calling solanaTokenSecurityUsingGET'
             );
         }
 
-        $resourcePath = '/api/v1/phishing_site';
+        $resourcePath = '/api/v1/solana/token_security';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -280,8 +280,8 @@ class WebsiteControllerApi
         $multipart = false;
 
         // query params
-        if ($url !== null) {
-            $queryParams['url'] = ObjectSerializer::toQueryValue($url, null);
+        if ($contract_addresses !== null) {
+            $queryParams['contract_addresses'] = ObjectSerializer::toQueryValue($contract_addresses, null);
         }
         // header params
         if ($authorization !== null) {
