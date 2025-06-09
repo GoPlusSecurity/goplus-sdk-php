@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseWrapperSolanaTokenSecurityCreator
+ * ResponseWrapperSolanaTokenSecurityCreators
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ResponseWrapperSolanaTokenSecurityCreator Class Doc Comment
+ * ResponseWrapperSolanaTokenSecurityCreators Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ResponseWrapperSolanaTokenSecurityCreator implements ModelInterface, ArrayAccess
+class ResponseWrapperSolanaTokenSecurityCreators implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ResponseWrapperSolanaTokenSecurityCreator implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ResponseWrapperSolanaTokenSecurity_creator';
+    protected static $swaggerModelName = 'ResponseWrapperSolanaTokenSecurity_creators';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
