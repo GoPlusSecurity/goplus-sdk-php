@@ -58,7 +58,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
       */
     protected static $swaggerTypes = [
         'metadata' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityMetadata',
-        'creator' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityCreator[]',
+        'creators' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityCreators[]',
         'lp_holders' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLpHolders[]',
         'closable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityClosable',
         'transfer_hook' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityTransferHook[]',
@@ -84,7 +84,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
       */
     protected static $swaggerFormats = [
         'metadata' => null,
-        'creator' => null,
+        'creators' => null,
         'lp_holders' => null,
         'closable' => null,
         'transfer_hook' => null,
@@ -131,7 +131,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
      */
     protected static $attributeMap = [
         'metadata' => 'metadata',
-        'creator' => 'creator',
+        'creators' => 'creators',
         'lp_holders' => 'lp_holders',
         'closable' => 'closable',
         'transfer_hook' => 'transfer_hook',
@@ -157,7 +157,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
      */
     protected static $setters = [
         'metadata' => 'setMetadata',
-        'creator' => 'setCreator',
+        'creators' => 'setCreators',
         'lp_holders' => 'setLpHolders',
         'closable' => 'setClosable',
         'transfer_hook' => 'setTransferHook',
@@ -183,7 +183,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
      */
     protected static $getters = [
         'metadata' => 'getMetadata',
-        'creator' => 'getCreator',
+        'creators' => 'getCreators',
         'lp_holders' => 'getLpHolders',
         'closable' => 'getClosable',
         'transfer_hook' => 'getTransferHook',
@@ -261,7 +261,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
     public function __construct(array $data = null)
     {
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
-        $this->container['creator'] = isset($data['creator']) ? $data['creator'] : null;
+        $this->container['creators'] = isset($data['creators']) ? $data['creators'] : null;
         $this->container['lp_holders'] = isset($data['lp_holders']) ? $data['lp_holders'] : null;
         $this->container['closable'] = isset($data['closable']) ? $data['closable'] : null;
         $this->container['transfer_hook'] = isset($data['transfer_hook']) ? $data['transfer_hook'] : null;
@@ -329,25 +329,25 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
     }
 
     /**
-     * Gets creator
+     * Gets creators
      *
-     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityCreator[]
+     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityCreators[]
      */
-    public function getCreator()
+    public function getCreators()
     {
-        return $this->container['creator'];
+        return $this->container['creators'];
     }
 
     /**
-     * Sets creator
+     * Sets creators
      *
-     * @param \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityCreator[] $creator Contains information about the token creators.
+     * @param \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityCreators[] $creators Contains information about the token creators.
      *
      * @return $this
      */
-    public function setCreator($creator)
+    public function setCreators($creators)
     {
-        $this->container['creator'] = $creator;
+        $this->container['creators'] = $creators;
 
         return $this;
     }
