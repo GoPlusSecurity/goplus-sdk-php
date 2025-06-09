@@ -61,7 +61,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
         'address' => 'string',
         'balance' => 'string',
         'nft_list' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityNFTList[]',
-        'locked_detail' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]',
+        'locked_detail' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLockedDetail[]',
         'tag' => 'string',
         'percent' => 'string'
     ];
@@ -366,7 +366,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
     /**
      * Gets locked_detail
      *
-     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[]
+     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLockedDetail[]
      */
     public function getLockedDetail()
     {
@@ -376,7 +376,7 @@ class ResponseWrapperTokenSecurityLpHolders implements ModelInterface, ArrayAcce
     /**
      * Sets locked_detail
      *
-     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityLockedDetail[] $locked_detail It is an array, decribes lock position info of this holder, only shows when \"locked\": 1. This Array may contain multiple objects for multiple locking info. (Notice:When \"locked\":0, or lock address is a black hole address,  \"locked_detail\" will be no return.)
+     * @param \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLockedDetail[] $locked_detail It is an array, decribes lock position info of this holder, only shows when \"locked\": 1. This Array may contain multiple objects for multiple locking info. (Notice:When \"locked\":0, or lock address is a black hole address,  \"locked_detail\" will be no return.)
      *
      * @return $this
      */

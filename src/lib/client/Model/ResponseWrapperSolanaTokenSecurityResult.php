@@ -63,14 +63,14 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
         'closable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityClosable',
         'transfer_hook' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityTransferHook[]',
         'transfer_hook_upgradable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityTransferHookUpgradable',
-        'trusted_token' => 'string',
+        'trusted_token' => 'int',
         'default_account_state_upgradable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityDefaultAccountStateUpgradable',
         'none_transferable' => 'string',
         'default_account_state' => 'string',
         'mintable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityMintable',
         'balance_mutable_authority' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityBalanceMutableAuthority',
         'transfer_fee' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityTransferFee',
-        'holders' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLpHolders[]',
+        'holders' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityHolders[]',
         'freezable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityFreezable',
         'metadata_mutable' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityMetadataMutable',
         'dex' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityDex[]',
@@ -89,7 +89,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
         'closable' => null,
         'transfer_hook' => null,
         'transfer_hook_upgradable' => null,
-        'trusted_token' => null,
+        'trusted_token' => 'int32',
         'default_account_state_upgradable' => null,
         'none_transferable' => null,
         'default_account_state' => null,
@@ -451,7 +451,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
     /**
      * Gets trusted_token
      *
-     * @return string
+     * @return int
      */
     public function getTrustedToken()
     {
@@ -461,7 +461,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
     /**
      * Sets trusted_token
      *
-     * @param string $trusted_token If the token is a famous and trustworthy one. \"1\" means yes.
+     * @param int $trusted_token If the token is a famous and trustworthy one. \"1\" means yes.
      *
      * @return $this
      */
@@ -619,7 +619,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
     /**
      * Gets holders
      *
-     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLpHolders[]
+     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityHolders[]
      */
     public function getHolders()
     {
@@ -629,7 +629,7 @@ class ResponseWrapperSolanaTokenSecurityResult implements ModelInterface, ArrayA
     /**
      * Sets holders
      *
-     * @param \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLpHolders[] $holders List of top 10 addresses holding the token and their balances.
+     * @param \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityHolders[] $holders List of top 10 addresses holding the token and their balances.
      *
      * @return $this
      */

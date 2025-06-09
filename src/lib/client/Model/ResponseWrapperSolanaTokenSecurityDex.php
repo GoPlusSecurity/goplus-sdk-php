@@ -65,6 +65,7 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
         'type' => 'string',
         'dex_name' => 'string',
         'day' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityDay',
+        'burn_percent' => 'float',
         'lp_amount' => 'string',
         'fee_rate' => 'string'
     ];
@@ -84,6 +85,7 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
         'type' => null,
         'dex_name' => null,
         'day' => null,
+        'burn_percent' => null,
         'lp_amount' => null,
         'fee_rate' => null
     ];
@@ -124,6 +126,7 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
         'type' => 'type',
         'dex_name' => 'dex_name',
         'day' => 'day',
+        'burn_percent' => 'burn_percent',
         'lp_amount' => 'lp_amount',
         'fee_rate' => 'fee_rate'
     ];
@@ -143,6 +146,7 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
         'type' => 'setType',
         'dex_name' => 'setDexName',
         'day' => 'setDay',
+        'burn_percent' => 'setBurnPercent',
         'lp_amount' => 'setLpAmount',
         'fee_rate' => 'setFeeRate'
     ];
@@ -162,6 +166,7 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
         'type' => 'getType',
         'dex_name' => 'getDexName',
         'day' => 'getDay',
+        'burn_percent' => 'getBurnPercent',
         'lp_amount' => 'getLpAmount',
         'fee_rate' => 'getFeeRate'
     ];
@@ -233,6 +238,7 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['dex_name'] = isset($data['dex_name']) ? $data['dex_name'] : null;
         $this->container['day'] = isset($data['day']) ? $data['day'] : null;
+        $this->container['burn_percent'] = isset($data['burn_percent']) ? $data['burn_percent'] : null;
         $this->container['lp_amount'] = isset($data['lp_amount']) ? $data['lp_amount'] : null;
         $this->container['fee_rate'] = isset($data['fee_rate']) ? $data['fee_rate'] : null;
     }
@@ -473,6 +479,30 @@ class ResponseWrapperSolanaTokenSecurityDex implements ModelInterface, ArrayAcce
     public function setDay($day)
     {
         $this->container['day'] = $day;
+
+        return $this;
+    }
+
+    /**
+     * Gets burn_percent
+     *
+     * @return float
+     */
+    public function getBurnPercent()
+    {
+        return $this->container['burn_percent'];
+    }
+
+    /**
+     * Sets burn_percent
+     *
+     * @param float $burn_percent Percentage of burned LP
+     *
+     * @return $this
+     */
+    public function setBurnPercent($burn_percent)
+    {
+        $this->container['burn_percent'] = $burn_percent;
 
         return $this;
     }
