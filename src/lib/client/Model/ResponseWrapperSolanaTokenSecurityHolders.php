@@ -1,6 +1,6 @@
 <?php
 /**
- * TaTokenLockerLockInfoobject
+ * ResponseWrapperSolanaTokenSecurityHolders
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * TaTokenLockerLockInfoobject Class Doc Comment
+ * ResponseWrapperSolanaTokenSecurityHolders Class Doc Comment
  *
  * @category Class
- * @description Token Locker Lock 信息表
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
+class ResponseWrapperSolanaTokenSecurityHolders implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +48,7 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'TaTokenLockerLockInfoobject';
+    protected static $swaggerModelName = 'ResponseWrapperSolanaTokenSecurity_holders';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,14 +56,12 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'amount' => 'string',
-        'end_time' => 'int',
-        'is_lp_token' => 'int',
-        'lock_id' => 'string',
-        'owner' => 'string',
-        'start_time' => 'int',
-        'token' => 'string',
-        'unlocked_amount' => 'string'
+        'is_locked' => 'int',
+        'balance' => 'string',
+        'locked_detail' => '\Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLockedDetail[]',
+        'token_account' => 'string',
+        'tag' => 'string',
+        'percent' => 'string'
     ];
 
     /**
@@ -73,14 +70,12 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'amount' => null,
-        'end_time' => 'int64',
-        'is_lp_token' => 'int32',
-        'lock_id' => null,
-        'owner' => null,
-        'start_time' => 'int32',
-        'token' => null,
-        'unlocked_amount' => null
+        'is_locked' => 'int32',
+        'balance' => null,
+        'locked_detail' => null,
+        'token_account' => null,
+        'tag' => null,
+        'percent' => null
     ];
 
     /**
@@ -110,14 +105,12 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'amount' => 'amount',
-        'end_time' => 'endTime',
-        'is_lp_token' => 'isLpToken',
-        'lock_id' => 'lockId',
-        'owner' => 'owner',
-        'start_time' => 'startTime',
-        'token' => 'token',
-        'unlocked_amount' => 'unlockedAmount'
+        'is_locked' => 'is_locked',
+        'balance' => 'balance',
+        'locked_detail' => 'locked_detail',
+        'token_account' => 'token_account',
+        'tag' => 'tag',
+        'percent' => 'percent'
     ];
 
     /**
@@ -126,14 +119,12 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'amount' => 'setAmount',
-        'end_time' => 'setEndTime',
-        'is_lp_token' => 'setIsLpToken',
-        'lock_id' => 'setLockId',
-        'owner' => 'setOwner',
-        'start_time' => 'setStartTime',
-        'token' => 'setToken',
-        'unlocked_amount' => 'setUnlockedAmount'
+        'is_locked' => 'setIsLocked',
+        'balance' => 'setBalance',
+        'locked_detail' => 'setLockedDetail',
+        'token_account' => 'setTokenAccount',
+        'tag' => 'setTag',
+        'percent' => 'setPercent'
     ];
 
     /**
@@ -142,14 +133,12 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'amount' => 'getAmount',
-        'end_time' => 'getEndTime',
-        'is_lp_token' => 'getIsLpToken',
-        'lock_id' => 'getLockId',
-        'owner' => 'getOwner',
-        'start_time' => 'getStartTime',
-        'token' => 'getToken',
-        'unlocked_amount' => 'getUnlockedAmount'
+        'is_locked' => 'getIsLocked',
+        'balance' => 'getBalance',
+        'locked_detail' => 'getLockedDetail',
+        'token_account' => 'getTokenAccount',
+        'tag' => 'getTag',
+        'percent' => 'getPercent'
     ];
 
     /**
@@ -210,14 +199,12 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['end_time'] = isset($data['end_time']) ? $data['end_time'] : null;
-        $this->container['is_lp_token'] = isset($data['is_lp_token']) ? $data['is_lp_token'] : null;
-        $this->container['lock_id'] = isset($data['lock_id']) ? $data['lock_id'] : null;
-        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
-        $this->container['start_time'] = isset($data['start_time']) ? $data['start_time'] : null;
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
-        $this->container['unlocked_amount'] = isset($data['unlocked_amount']) ? $data['unlocked_amount'] : null;
+        $this->container['is_locked'] = isset($data['is_locked']) ? $data['is_locked'] : null;
+        $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
+        $this->container['locked_detail'] = isset($data['locked_detail']) ? $data['locked_detail'] : null;
+        $this->container['token_account'] = isset($data['token_account']) ? $data['token_account'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['percent'] = isset($data['percent']) ? $data['percent'] : null;
     }
 
     /**
@@ -245,193 +232,145 @@ class TaTokenLockerLockInfoobject implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets amount
-     *
-     * @return string
-     */
-    public function getAmount()
-    {
-        return $this->container['amount'];
-    }
-
-    /**
-     * Sets amount
-     *
-     * @param string $amount 累计总锁仓数量
-     *
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        $this->container['amount'] = $amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets end_time
+     * Gets is_locked
      *
      * @return int
      */
-    public function getEndTime()
+    public function getIsLocked()
     {
-        return $this->container['end_time'];
+        return $this->container['is_locked'];
     }
 
     /**
-     * Sets end_time
+     * Sets is_locked
      *
-     * @param int $end_time 解锁时间戳
+     * @param int $is_locked It describes whether the tokens owned by the holder are locked \"1\" means true; \"0\" means false;  (3) 'tag' describes the address's public tag. Example:Burn (Notice:About \"locked\":We only support the token lock addresses or black hole addresses that we have included. )
      *
      * @return $this
      */
-    public function setEndTime($end_time)
+    public function setIsLocked($is_locked)
     {
-        $this->container['end_time'] = $end_time;
+        $this->container['is_locked'] = $is_locked;
 
         return $this;
     }
 
     /**
-     * Gets is_lp_token
-     *
-     * @return int
-     */
-    public function getIsLpToken()
-    {
-        return $this->container['is_lp_token'];
-    }
-
-    /**
-     * Sets is_lp_token
-     *
-     * @param int $is_lp_token 是否为lp token -1:未知、0:否、1:是
-     *
-     * @return $this
-     */
-    public function setIsLpToken($is_lp_token)
-    {
-        $this->container['is_lp_token'] = $is_lp_token;
-
-        return $this;
-    }
-
-    /**
-     * Gets lock_id
+     * Gets balance
      *
      * @return string
      */
-    public function getLockId()
+    public function getBalance()
     {
-        return $this->container['lock_id'];
+        return $this->container['balance'];
     }
 
     /**
-     * Sets lock_id
+     * Sets balance
      *
-     * @param string $lock_id lock id
+     * @param string $balance Amount of tokens held.
      *
      * @return $this
      */
-    public function setLockId($lock_id)
+    public function setBalance($balance)
     {
-        $this->container['lock_id'] = $lock_id;
+        $this->container['balance'] = $balance;
 
         return $this;
     }
 
     /**
-     * Gets owner
+     * Gets locked_detail
+     *
+     * @return \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLockedDetail[]
+     */
+    public function getLockedDetail()
+    {
+        return $this->container['locked_detail'];
+    }
+
+    /**
+     * Sets locked_detail
+     *
+     * @param \Swagger\Client\Model\ResponseWrapperSolanaTokenSecurityLockedDetail[] $locked_detail It is an array, decribes lock position info of this holder, only shows when \"locked\":1. This Array may contain multiple objects for multiple locking info. (Notice:When \"locked\":0, or lock address is a black hole address,  \"locked_detail\" will be no return.)
+     *
+     * @return $this
+     */
+    public function setLockedDetail($locked_detail)
+    {
+        $this->container['locked_detail'] = $locked_detail;
+
+        return $this;
+    }
+
+    /**
+     * Gets token_account
      *
      * @return string
      */
-    public function getOwner()
+    public function getTokenAccount()
     {
-        return $this->container['owner'];
+        return $this->container['token_account'];
     }
 
     /**
-     * Sets owner
+     * Sets token_account
      *
-     * @param string $owner 用户地址 address
+     * @param string $token_account Address of the holder.
      *
      * @return $this
      */
-    public function setOwner($owner)
+    public function setTokenAccount($token_account)
     {
-        $this->container['owner'] = $owner;
+        $this->container['token_account'] = $token_account;
 
         return $this;
     }
 
     /**
-     * Gets start_time
-     *
-     * @return int
-     */
-    public function getStartTime()
-    {
-        return $this->container['start_time'];
-    }
-
-    /**
-     * Sets start_time
-     *
-     * @param int $start_time 开始时间戳
-     *
-     * @return $this
-     */
-    public function setStartTime($start_time)
-    {
-        $this->container['start_time'] = $start_time;
-
-        return $this;
-    }
-
-    /**
-     * Gets token
+     * Gets tag
      *
      * @return string
      */
-    public function getToken()
+    public function getTag()
     {
-        return $this->container['token'];
+        return $this->container['tag'];
     }
 
     /**
-     * Sets token
+     * Sets tag
      *
-     * @param string $token token contract address
+     * @param string $tag Tag information of the holder.
      *
      * @return $this
      */
-    public function setToken($token)
+    public function setTag($tag)
     {
-        $this->container['token'] = $token;
+        $this->container['tag'] = $tag;
 
         return $this;
     }
 
     /**
-     * Gets unlocked_amount
+     * Gets percent
      *
      * @return string
      */
-    public function getUnlockedAmount()
+    public function getPercent()
     {
-        return $this->container['unlocked_amount'];
+        return $this->container['percent'];
     }
 
     /**
-     * Sets unlocked_amount
+     * Sets percent
      *
-     * @param string $unlocked_amount 已解锁数量
+     * @param string $percent Percentage of total supply held.
      *
      * @return $this
      */
-    public function setUnlockedAmount($unlocked_amount)
+    public function setPercent($percent)
     {
-        $this->container['unlocked_amount'] = $unlocked_amount;
+        $this->container['percent'] = $percent;
 
         return $this;
     }
