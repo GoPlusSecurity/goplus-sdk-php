@@ -72,7 +72,7 @@ class TaNftLockerLockInfoobject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'end_time' => 'int32',
+        'end_time' => 'int64',
         'lock_id' => null,
         'nft_id' => null,
         'nft_position_manager' => null,
