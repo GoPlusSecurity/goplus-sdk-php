@@ -57,6 +57,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'b20_token' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityB20Token',
         'note' => 'string',
         'lp_total_supply' => 'string',
         'lp_holders' => '\Swagger\Client\Model\ResponseWrapperTokenSecurityLpHolders[]',
@@ -109,6 +110,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'b20_token' => null,
         'note' => null,
         'lp_total_supply' => null,
         'lp_holders' => null,
@@ -182,6 +184,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'b20_token' => 'b20_token',
         'note' => 'note',
         'lp_total_supply' => 'lp_total_supply',
         'lp_holders' => 'lp_holders',
@@ -234,6 +237,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'b20_token' => 'setB20Token',
         'note' => 'setNote',
         'lp_total_supply' => 'setLpTotalSupply',
         'lp_holders' => 'setLpHolders',
@@ -286,6 +290,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'b20_token' => 'getB20Token',
         'note' => 'getNote',
         'lp_total_supply' => 'getLpTotalSupply',
         'lp_holders' => 'getLpHolders',
@@ -390,6 +395,7 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['b20_token'] = isset($data['b20_token']) ? $data['b20_token'] : null;
         $this->container['note'] = isset($data['note']) ? $data['note'] : null;
         $this->container['lp_total_supply'] = isset($data['lp_total_supply']) ? $data['lp_total_supply'] : null;
         $this->container['lp_holders'] = isset($data['lp_holders']) ? $data['lp_holders'] : null;
@@ -459,6 +465,30 @@ class ResponseWrapperTokenSecurityResult implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets b20_token
+     *
+     * @return \Swagger\Client\Model\ResponseWrapperTokenSecurityB20Token
+     */
+    public function getB20Token()
+    {
+        return $this->container['b20_token'];
+    }
+
+    /**
+     * Sets b20_token
+     *
+     * @param \Swagger\Client\Model\ResponseWrapperTokenSecurityB20Token $b20_token b20_token
+     *
+     * @return $this
+     */
+    public function setB20Token($b20_token)
+    {
+        $this->container['b20_token'] = $b20_token;
+
+        return $this;
+    }
 
     /**
      * Gets note
