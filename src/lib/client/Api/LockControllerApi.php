@@ -87,6 +87,279 @@ class LockControllerApi
     }
 
     /**
+     * Operation getNftLockerLockInfosListUsingGET
+     *
+     * get lpv3 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ResponseWrapperPageResponseTaNftLockerLockInfo
+     */
+    public function getNftLockerLockInfosListUsingGET($page_num, $page_size)
+    {
+        list($response) = $this->getNftLockerLockInfosListUsingGETWithHttpInfo($page_num, $page_size);
+        return $response;
+    }
+
+    /**
+     * Operation getNftLockerLockInfosListUsingGETWithHttpInfo
+     *
+     * get lpv3 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ResponseWrapperPageResponseTaNftLockerLockInfo, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getNftLockerLockInfosListUsingGETWithHttpInfo($page_num, $page_size)
+    {
+        $returnType = '\Swagger\Client\Model\ResponseWrapperPageResponseTaNftLockerLockInfo';
+        $request = $this->getNftLockerLockInfosListUsingGETRequest($page_num, $page_size);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ResponseWrapperPageResponseTaNftLockerLockInfo',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getNftLockerLockInfosListUsingGETAsync
+     *
+     * get lpv3 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getNftLockerLockInfosListUsingGETAsync($page_num, $page_size)
+    {
+        return $this->getNftLockerLockInfosListUsingGETAsyncWithHttpInfo($page_num, $page_size)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getNftLockerLockInfosListUsingGETAsyncWithHttpInfo
+     *
+     * get lpv3 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getNftLockerLockInfosListUsingGETAsyncWithHttpInfo($page_num, $page_size)
+    {
+        $returnType = '\Swagger\Client\Model\ResponseWrapperPageResponseTaNftLockerLockInfo';
+        $request = $this->getNftLockerLockInfosListUsingGETRequest($page_num, $page_size);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getNftLockerLockInfosListUsingGET'
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getNftLockerLockInfosListUsingGETRequest($page_num, $page_size)
+    {
+        // verify the required parameter 'page_num' is set
+        if ($page_num === null || (is_array($page_num) && count($page_num) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page_num when calling getNftLockerLockInfosListUsingGET'
+            );
+        }
+        // verify the required parameter 'page_size' is set
+        if ($page_size === null || (is_array($page_size) && count($page_size) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page_size when calling getNftLockerLockInfosListUsingGET'
+            );
+        }
+
+        $resourcePath = '/open/api/v1/locks/lpv3s';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($page_num !== null) {
+            $queryParams['pageNum'] = ObjectSerializer::toQueryValue($page_num, 'int32');
+        }
+        // query params
+        if ($page_size !== null) {
+            $queryParams['pageSize'] = ObjectSerializer::toQueryValue($page_size, 'int32');
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getNftLockersUsingGET
      *
      * Get lpv3 locker info
@@ -643,6 +916,582 @@ class LockControllerApi
         // header params
         if ($authorization !== null) {
             $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getV4NftLockerLockInfosListUsingGET
+     *
+     * get lpv4 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ResponseWrapperPageResponseV4NftLockerLockInfos
+     */
+    public function getV4NftLockerLockInfosListUsingGET($page_num, $page_size)
+    {
+        list($response) = $this->getV4NftLockerLockInfosListUsingGETWithHttpInfo($page_num, $page_size);
+        return $response;
+    }
+
+    /**
+     * Operation getV4NftLockerLockInfosListUsingGETWithHttpInfo
+     *
+     * get lpv4 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ResponseWrapperPageResponseV4NftLockerLockInfos, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getV4NftLockerLockInfosListUsingGETWithHttpInfo($page_num, $page_size)
+    {
+        $returnType = '\Swagger\Client\Model\ResponseWrapperPageResponseV4NftLockerLockInfos';
+        $request = $this->getV4NftLockerLockInfosListUsingGETRequest($page_num, $page_size);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ResponseWrapperPageResponseV4NftLockerLockInfos',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getV4NftLockerLockInfosListUsingGETAsync
+     *
+     * get lpv4 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getV4NftLockerLockInfosListUsingGETAsync($page_num, $page_size)
+    {
+        return $this->getV4NftLockerLockInfosListUsingGETAsyncWithHttpInfo($page_num, $page_size)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getV4NftLockerLockInfosListUsingGETAsyncWithHttpInfo
+     *
+     * get lpv4 locker infos
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getV4NftLockerLockInfosListUsingGETAsyncWithHttpInfo($page_num, $page_size)
+    {
+        $returnType = '\Swagger\Client\Model\ResponseWrapperPageResponseV4NftLockerLockInfos';
+        $request = $this->getV4NftLockerLockInfosListUsingGETRequest($page_num, $page_size);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getV4NftLockerLockInfosListUsingGET'
+     *
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getV4NftLockerLockInfosListUsingGETRequest($page_num, $page_size)
+    {
+        // verify the required parameter 'page_num' is set
+        if ($page_num === null || (is_array($page_num) && count($page_num) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page_num when calling getV4NftLockerLockInfosListUsingGET'
+            );
+        }
+        // verify the required parameter 'page_size' is set
+        if ($page_size === null || (is_array($page_size) && count($page_size) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page_size when calling getV4NftLockerLockInfosListUsingGET'
+            );
+        }
+
+        $resourcePath = '/open/api/v1/locks/lpv4s';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($page_num !== null) {
+            $queryParams['pageNum'] = ObjectSerializer::toQueryValue($page_num, 'int32');
+        }
+        // query params
+        if ($page_size !== null) {
+            $queryParams['pageSize'] = ObjectSerializer::toQueryValue($page_size, 'int32');
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getV4NftLockersUsingGET
+     *
+     * get v4 nft locker info
+     *
+     * @param  string $chain_id chainId (required)
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     * @param  string $pool_id poolId (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ResponseWrapperV4LpLockerLockInfoResp
+     */
+    public function getV4NftLockersUsingGET($chain_id, $page_num, $page_size, $pool_id)
+    {
+        list($response) = $this->getV4NftLockersUsingGETWithHttpInfo($chain_id, $page_num, $page_size, $pool_id);
+        return $response;
+    }
+
+    /**
+     * Operation getV4NftLockersUsingGETWithHttpInfo
+     *
+     * get v4 nft locker info
+     *
+     * @param  string $chain_id chainId (required)
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     * @param  string $pool_id poolId (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ResponseWrapperV4LpLockerLockInfoResp, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getV4NftLockersUsingGETWithHttpInfo($chain_id, $page_num, $page_size, $pool_id)
+    {
+        $returnType = '\Swagger\Client\Model\ResponseWrapperV4LpLockerLockInfoResp';
+        $request = $this->getV4NftLockersUsingGETRequest($chain_id, $page_num, $page_size, $pool_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ResponseWrapperV4LpLockerLockInfoResp',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getV4NftLockersUsingGETAsync
+     *
+     * get v4 nft locker info
+     *
+     * @param  string $chain_id chainId (required)
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     * @param  string $pool_id poolId (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getV4NftLockersUsingGETAsync($chain_id, $page_num, $page_size, $pool_id)
+    {
+        return $this->getV4NftLockersUsingGETAsyncWithHttpInfo($chain_id, $page_num, $page_size, $pool_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getV4NftLockersUsingGETAsyncWithHttpInfo
+     *
+     * get v4 nft locker info
+     *
+     * @param  string $chain_id chainId (required)
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     * @param  string $pool_id poolId (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getV4NftLockersUsingGETAsyncWithHttpInfo($chain_id, $page_num, $page_size, $pool_id)
+    {
+        $returnType = '\Swagger\Client\Model\ResponseWrapperV4LpLockerLockInfoResp';
+        $request = $this->getV4NftLockersUsingGETRequest($chain_id, $page_num, $page_size, $pool_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getV4NftLockersUsingGET'
+     *
+     * @param  string $chain_id chainId (required)
+     * @param  int $page_num pageNum (required)
+     * @param  int $page_size pageSize (required)
+     * @param  string $pool_id poolId (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getV4NftLockersUsingGETRequest($chain_id, $page_num, $page_size, $pool_id)
+    {
+        // verify the required parameter 'chain_id' is set
+        if ($chain_id === null || (is_array($chain_id) && count($chain_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $chain_id when calling getV4NftLockersUsingGET'
+            );
+        }
+        // verify the required parameter 'page_num' is set
+        if ($page_num === null || (is_array($page_num) && count($page_num) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page_num when calling getV4NftLockersUsingGET'
+            );
+        }
+        // verify the required parameter 'page_size' is set
+        if ($page_size === null || (is_array($page_size) && count($page_size) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $page_size when calling getV4NftLockersUsingGET'
+            );
+        }
+        // verify the required parameter 'pool_id' is set
+        if ($pool_id === null || (is_array($pool_id) && count($pool_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $pool_id when calling getV4NftLockersUsingGET'
+            );
+        }
+
+        $resourcePath = '/open/api/v1/locks/lpv4';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($chain_id !== null) {
+            $queryParams['chainId'] = ObjectSerializer::toQueryValue($chain_id, null);
+        }
+        // query params
+        if ($page_num !== null) {
+            $queryParams['pageNum'] = ObjectSerializer::toQueryValue($page_num, 'int32');
+        }
+        // query params
+        if ($page_size !== null) {
+            $queryParams['pageSize'] = ObjectSerializer::toQueryValue($page_size, 'int32');
+        }
+        // query params
+        if ($pool_id !== null) {
+            $queryParams['poolId'] = ObjectSerializer::toQueryValue($pool_id, null);
         }
 
 
